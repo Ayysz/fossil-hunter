@@ -9,14 +9,14 @@
       "name": "brontosaurus",
       "habitat": "1",
       "color": "#FF0000",
-      "unlocked": 0
+      "unlocked": 1
     },
     {
       "id": "1",
       "name": "plesiasaurus",
       "habitat": "1",
       "color": "#FF0000",
-      "unlocked": 0
+      "unlocked": 1
     },
     {
       "id": "2",
