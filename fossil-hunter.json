@@ -837,6 +837,22 @@
         "name": "assets\\car\\Group (5).png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/dino/fossil-rock.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\dino\\fossil-rock.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/area/gurun/bg_brick_gurun.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\area\\gurun\\bg_brick_gurun.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -9527,9 +9543,9 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4057518905943838,
+        "zoomFactor": 0.18305734955560102,
         "windowMask": false,
-        "selectedLayer": "car"
+        "selectedLayer": "transition"
       },
       "objectsGroups": [
         {
@@ -9550,6 +9566,17 @@
               "name": "gurun1"
             }
           ]
+        },
+        {
+          "name": "obstacles_group",
+          "objects": [
+            {
+              "name": "obstacles"
+            },
+            {
+              "name": "fossil_rock"
+            }
+          ]
         }
       ],
       "variables": [
@@ -9562,6 +9589,31 @@
           "name": "default_width_roa",
           "type": "number",
           "value": 3108
+        },
+        {
+          "name": "Variable",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "total_repeats",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "obstacle_time_generate",
+          "type": "number",
+          "value": 5
+        },
+        {
+          "name": "offset_x_road",
+          "type": "number",
+          "value": 15
+        },
+        {
+          "name": "fossile_timer_spawn",
+          "type": "number",
+          "value": 5
         }
       ],
       "instances": [
@@ -9575,7 +9627,7 @@
           "name": "car_drill",
           "persistentUuid": "a63ce447-cd42-429c-8192-8c7b98736a2f",
           "width": 151,
-          "x": -185,
+          "x": -189,
           "y": 262,
           "zOrder": 1,
           "numberProperties": [],
@@ -9602,14 +9654,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 210,
+          "height": 197,
           "keepRatio": true,
           "layer": "point",
           "name": "obstacles",
           "persistentUuid": "0c526103-de69-4c30-a4f2-c896aad2cf76",
-          "width": 257,
+          "width": 241,
           "x": 2072,
-          "y": 493,
+          "y": 486,
           "zOrder": 100,
           "numberProperties": [],
           "stringProperties": [],
@@ -9619,14 +9671,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 210,
+          "height": 197,
           "keepRatio": true,
           "layer": "point",
           "name": "obstacles",
           "persistentUuid": "f676df3f-3be6-43f3-92ae-6eda44bfc143",
-          "width": 257,
+          "width": 241,
           "x": 2074,
-          "y": 24,
+          "y": 46,
           "zOrder": 100,
           "numberProperties": [],
           "stringProperties": [],
@@ -9636,14 +9688,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 210,
+          "height": 197,
           "keepRatio": true,
           "layer": "point",
           "name": "obstacles",
           "persistentUuid": "df5ac6e9-7dd0-4723-923f-4629c839989f",
-          "width": 257,
+          "width": 241,
           "x": 2075,
-          "y": 242,
+          "y": 251,
           "zOrder": 100,
           "numberProperties": [],
           "stringProperties": [],
@@ -9803,6 +9855,22 @@
               "value": 2
             }
           ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "transition",
+          "name": "transition",
+          "persistentUuid": "387f2051-9e7d-4e40-9f6a-65c4dcd883b7",
+          "width": 0,
+          "x": 0,
+          "y": 735,
+          "zOrder": 105,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -9837,6 +9905,11 @@
               "name": "road_id",
               "type": "number",
               "value": 2
+            },
+            {
+              "name": "offset_x_car",
+              "type": "number",
+              "value": 0
             }
           ],
           "effects": [],
@@ -9999,16 +10072,16 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 101.5,
-                            "y": 405
+                            "x": 105,
+                            "y": 377.5
                           },
                           {
-                            "x": 0,
-                            "y": 303
+                            "x": 21,
+                            "y": 287.5
                           },
                           {
-                            "x": 0,
-                            "y": 223
+                            "x": 19.5,
+                            "y": 239.5
                           },
                           {
                             "x": 227.5,
@@ -10019,8 +10092,8 @@
                             "y": 179.5
                           },
                           {
-                            "x": 177.5,
-                            "y": 405
+                            "x": 164,
+                            "y": 377
                           }
                         ]
                       ]
@@ -10066,16 +10139,16 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
-                            "y": 89.5
+                            "x": 25,
+                            "y": 109
                           },
                           {
-                            "x": 83,
-                            "y": 0
+                            "x": 102,
+                            "y": 16
                           },
                           {
-                            "x": 185.5,
-                            "y": 0
+                            "x": 177,
+                            "y": 31
                           },
                           {
                             "x": 405,
@@ -10086,8 +10159,8 @@
                             "y": 405
                           },
                           {
-                            "x": 0,
-                            "y": 183
+                            "x": 35,
+                            "y": 164
                           }
                         ]
                       ]
@@ -10099,7 +10172,7 @@
           ]
         },
         {
-          "adaptCollisionMaskAutomatically": true,
+          "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "car_drill",
           "type": "Sprite",
@@ -10162,12 +10235,12 @@
                             "y": 0
                           },
                           {
-                            "x": 253,
-                            "y": 231
+                            "x": 141,
+                            "y": 232
                           },
                           {
-                            "x": 0,
-                            "y": 231
+                            "x": 111.5,
+                            "y": 232
                           }
                         ]
                       ]
@@ -10204,12 +10277,12 @@
                             "y": 0
                           },
                           {
-                            "x": 253,
-                            "y": 231
+                            "x": 141,
+                            "y": 232
                           },
                           {
-                            "x": 0,
-                            "y": 231
+                            "x": 111.5,
+                            "y": 232
                           }
                         ]
                       ]
@@ -10246,12 +10319,12 @@
                             "y": 0
                           },
                           {
-                            "x": 253,
-                            "y": 231
+                            "x": 141,
+                            "y": 232
                           },
                           {
-                            "x": 0,
-                            "y": 231
+                            "x": 111.5,
+                            "y": 232
                           }
                         ]
                       ]
@@ -10288,12 +10361,12 @@
                             "y": 0
                           },
                           {
-                            "x": 253,
-                            "y": 231
+                            "x": 141,
+                            "y": 232
                           },
                           {
-                            "x": 0,
-                            "y": 231
+                            "x": 111.5,
+                            "y": 232
                           }
                         ]
                       ]
@@ -10851,49 +10924,247 @@
               "IsDestroyedWithParent": true
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "fossil_rock",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [
+            {
+              "effectType": "Blur",
+              "name": "blur",
+              "doubleParameters": {
+                "blur": 2.5,
+                "kernelSize": 5,
+                "quality": 1,
+                "resolution": 2
+              },
+              "stringParameters": {},
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Glow",
+              "name": "glow-effect",
+              "doubleParameters": {
+                "distance": 11,
+                "innerStrength": 1,
+                "outerStrength": 5
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
+          "behaviors": [
+            {
+              "name": "Flash",
+              "type": "Flash::Flash",
+              "HalfPeriodTime": 0.1,
+              "IsFlashing": false,
+              "FlashDuration": 0
+            },
+            {
+              "name": "FlashEffect",
+              "type": "Flash::FlashEffect",
+              "Effect": "Effect",
+              "HalfPeriodTime": 0.1,
+              "IsFlashing": false,
+              "FlashDuration": 0,
+              "EffectName": ""
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\dino\\fossil-rock.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 332,
+                            "y": 0
+                          },
+                          {
+                            "x": 332,
+                            "y": 330
+                          },
+                          {
+                            "x": 0,
+                            "y": 330
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "transition",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "gurun",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\area\\gurun\\bg_brick_gurun.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 1280,
+                            "y": 0
+                          },
+                          {
+                            "x": 1280,
+                            "y": 712
+                          },
+                          {
+                            "x": 0,
+                            "y": 712
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
           {
-            "objectName": "car_body"
+            "folderName": "road",
+            "children": [
+              {
+                "objectName": "tunnel_dig_effect"
+              },
+              {
+                "objectName": "NewPanelSprite"
+              },
+              {
+                "objectName": "gurun1_2"
+              },
+              {
+                "objectName": "gurun1"
+              }
+            ]
           },
           {
-            "objectName": "CartoonSmoke"
+            "folderName": "car_drill",
+            "children": [
+              {
+                "objectName": "CartoonSmoke"
+              },
+              {
+                "objectName": "car_drill"
+              },
+              {
+                "objectName": "car_body"
+              }
+            ]
           },
           {
-            "objectName": "car_drill"
+            "folderName": "point_sprite",
+            "children": [
+              {
+                "objectName": "create_road"
+              },
+              {
+                "objectName": "car_point"
+              },
+              {
+                "objectName": "road_point"
+              },
+              {
+                "objectName": "delete_road"
+              }
+            ]
           },
           {
-            "objectName": "create_road"
+            "folderName": "obstacle",
+            "children": [
+              {
+                "objectName": "obstacles"
+              },
+              {
+                "objectName": "fossil_rock"
+              }
+            ]
           },
           {
             "objectName": "debug"
           },
           {
-            "objectName": "gurun1"
-          },
-          {
-            "objectName": "gurun1_2"
-          },
-          {
-            "objectName": "delete_road"
-          },
-          {
-            "objectName": "NewPanelSprite"
-          },
-          {
-            "objectName": "car_point"
-          },
-          {
-            "objectName": "obstacles"
-          },
-          {
-            "objectName": "road_point"
-          },
-          {
-            "objectName": "tunnel_dig_effect"
+            "objectName": "transition"
           }
         ]
       },
@@ -10959,9 +11230,9 @@
                 "Tween",
                 "\"speed-up\"",
                 "speed",
-                "30",
+                "5",
                 "\"linear\"",
-                "10",
+                "2",
                 ""
               ]
             },
@@ -10972,6 +11243,15 @@
               "parameters": [
                 "car_body",
                 "\"play\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "car_body",
+                "\"fossil\""
               ]
             },
             {
@@ -11105,6 +11385,12 @@
                 "Tween",
                 "\"start_x_offset\""
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
@@ -11128,6 +11414,33 @@
                 "=",
                 "car_body.start_x_offset",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "DebuggerTools::ConsoleLog"
+              },
+              "parameters": [
+                "\"ACTIVE SMOOTH\"",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "debug",
+                "Text",
+                "=",
+                "ToString(FPS::FPS())"
               ]
             }
           ]
@@ -11183,7 +11496,7 @@
                 "car_body",
                 "SmoothCamera",
                 "=",
-                "600",
+                "500",
                 ""
               ]
             }
@@ -11211,16 +11524,11 @@
                 "car_body",
                 "SmoothCamera",
                 "=",
-                "450",
+                "car_body.start_x_offset",
                 ""
               ]
             }
           ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
         },
         {
           "colorB": 228,
@@ -11252,51 +11560,56 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "BuiltinCommonInstructions::Or"
+                        "value": "Tween::HasFinished"
                       },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "KeyFromTextReleased"
-                          },
-                          "parameters": [
-                            "",
-                            "\"w\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "KeyFromTextReleased"
-                          },
-                          "parameters": [
-                            "",
-                            "\"s\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Tween::HasFinished"
-                          },
-                          "parameters": [
-                            "car_body",
-                            "Tween",
-                            "\"down\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Tween::HasFinished"
-                          },
-                          "parameters": [
-                            "car_body",
-                            "Tween",
-                            "\"up\""
-                          ]
-                        }
+                      "parameters": [
+                        "car_body",
+                        "Tween",
+                        "\"up\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                      },
+                      "parameters": [
+                        "car_body",
+                        "Tween",
+                        "\"stable\"",
+                        "0",
+                        "\"linear\"",
+                        "0.4",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Tween::HasFinished"
+                      },
+                      "parameters": [
+                        "car_body",
+                        "Tween",
+                        "\"down\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
                   "actions": [
@@ -11354,33 +11667,16 @@
                       "conditions": [
                         {
                           "type": {
+                            "inverted": true,
                             "value": "NumberObjectVariable"
                           },
                           "parameters": [
                             "car_body",
                             "road_id",
-                            ">",
-                            "3"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "car_body",
-                            "road_id",
-                            "+",
+                            "<",
                             "1"
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                        },
                         {
                           "type": {
                             "value": "NumberObjectVariable"
@@ -11402,7 +11698,7 @@
                             "car_body",
                             "Tween",
                             "\"up\"",
-                            "-45",
+                            "-35",
                             "\"linear\"",
                             "0.4",
                             ""
@@ -11420,6 +11716,35 @@
                             "\"easeInOutQuad\"",
                             "0.7",
                             ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "car_body",
+                            "road_id",
+                            "<",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "car_body",
+                            "road_id",
+                            "+",
+                            "1"
                           ]
                         }
                       ]
@@ -11464,33 +11789,16 @@
                       "conditions": [
                         {
                           "type": {
+                            "inverted": true,
                             "value": "NumberObjectVariable"
                           },
                           "parameters": [
                             "car_body",
                             "road_id",
-                            "<",
-                            "1"
+                            ">",
+                            "3"
                           ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "car_body",
-                            "road_id",
-                            "-",
-                            "1"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                        },
                         {
                           "type": {
                             "value": "NumberObjectVariable"
@@ -11512,7 +11820,7 @@
                             "car_body",
                             "Tween",
                             "\"down\"",
-                            "45",
+                            "35",
                             "\"linear\"",
                             "0.4",
                             ""
@@ -11533,40 +11841,322 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "car_body",
+                            "road_id",
+                            ">",
+                            "3"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "car_body",
+                            "road_id",
+                            "-",
+                            "1"
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
                 {
-                  "folded": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CompareObjectTimer"
-                      },
-                      "parameters": [
-                        "car_body",
-                        "\"obstacle\"",
-                        ">",
-                        "15"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "car_body",
-                        "\"obstacle\""
-                      ]
-                    }
-                  ],
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Obstacle Generate",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "car_body",
+                            "\"obstacle\"",
+                            ">",
+                            "obstacle_time_generate"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "car_body",
+                            "\"fossil\"",
+                            ">=",
+                            "fossile_timer_spawn"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "car_body",
+                            "\"obstacle\""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "Layer"
+                              },
+                              "parameters": [
+                                "obstacles",
+                                "\"point\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Repeat",
+                              "repeatExpression": "total_repeats",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Layer"
+                                  },
+                                  "parameters": [
+                                    "obstacles",
+                                    "\"point\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "AjoutHasard"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "obstacles"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "obstacles",
+                                    "car_drill.X()+1000",
+                                    "obstacles.Y()",
+                                    "\"obstacle\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ResizableCapability::ResizableBehavior::SetSize"
+                                  },
+                                  "parameters": [
+                                    "obstacles",
+                                    "Resizable",
+                                    "198",
+                                    "161"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "obstacles",
+                                    "Animation",
+                                    "=",
+                                    "level_area+ToString(RandomInRange(0,2))"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "disabled": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "AjoutHasard"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "obstacles"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "obstacles",
+                                    "car_drill.X()+1000",
+                                    "obstacles.Y()",
+                                    "\"obstacle\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ResizableCapability::ResizableBehavior::SetSize"
+                                  },
+                                  "parameters": [
+                                    "obstacles",
+                                    "Resizable",
+                                    "198",
+                                    "161"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "obstacles",
+                                    "Animation",
+                                    "=",
+                                    "level_area+ToString(RandomInRange(0,2))"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "disabled": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Layer"
+                                  },
+                                  "parameters": [
+                                    "obstacles",
+                                    "\"obstacle\""
+                                  ]
+                                }
+                              ],
+                              "actions": []
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "SceneInstancesCount"
+                              },
+                              "parameters": [
+                                "",
+                                "gurun1_2",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "gurun1_2",
+                                "create_road.X()",
+                                "create_road.Y()",
+                                "\"road\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Untuk transisi dan bikin mundur road nya"
+                        },
+                        {
+                          "disabled": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "MettreX"
+                              },
+                              "parameters": [
+                                "gurun1",
+                                "-",
+                                "15"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "MettreX"
+                              },
+                              "parameters": [
+                                "gurun1_2",
+                                "=",
+                                "gurun1.BoundingBoxRight()"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "car_body",
+                            "\"fossil\"",
+                            ">=",
+                            "fossile_timer_spawn"
+                          ]
+                        },
                         {
                           "type": {
                             "value": "AjoutHasard"
@@ -11574,6 +12164,77 @@
                           "parameters": [
                             "",
                             "obstacles"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Layer"
+                          },
+                          "parameters": [
+                            "obstacles",
+                            "\"point\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "car_body",
+                            "\"fossil\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "fossil_rock",
+                            "car_drill.X()+1000",
+                            "obstacles.Y()",
+                            "\"obstacle\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResizableCapability::ResizableBehavior::SetSize"
+                          },
+                          "parameters": [
+                            "fossil_rock",
+                            "Resizable",
+                            "212",
+                            "211"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Flash::FlashEffect::Flash"
+                          },
+                          "parameters": [
+                            "fossil_rock",
+                            "FlashEffect",
+                            "0",
+                            "\"glow-effect\"",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "car_body",
+                            "\"play\"",
+                            ">",
+                            "10"
                           ]
                         },
                         {
@@ -11586,130 +12247,83 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "Create"
+                            "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "",
-                            "obstacles",
-                            "car_drill.X()+1000",
-                            "obstacles.Y()",
-                            "\"obstacle\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResizableCapability::ResizableBehavior::SetSize"
-                          },
-                          "parameters": [
-                            "obstacles",
-                            "Resizable",
-                            "198",
-                            "161"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "obstacles",
-                            "Animation",
+                            "obstacle_time_generate",
                             "=",
-                            "level_area+ToString(RandomInRange(0,2))"
-                          ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "disabled": true,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "ScalableCapability::ScalableBehavior::SetValue"
-                              },
-                              "parameters": [
-                                "obstacles",
-                                "Scale",
-                                "=",
-                                "0.48"
-                              ]
-                            }
+                            "4"
                           ]
                         }
                       ]
                     },
                     {
-                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "SceneInstancesCount"
+                            "value": "CompareObjectTimer"
                           },
                           "parameters": [
-                            "",
-                            "gurun1_2",
-                            "=",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "gurun1_2",
-                            "create_road.X()",
-                            "create_road.Y()",
-                            "\"road\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Untuk transisi dan bikin mundur road nya"
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "MettreX"
-                          },
-                          "parameters": [
-                            "gurun1",
-                            "-",
+                            "car_body",
+                            "\"play\"",
+                            ">",
                             "15"
                           ]
                         },
                         {
                           "type": {
-                            "value": "MettreX"
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "gurun1_2",
+                            "total_repeats",
                             "=",
-                            "gurun1.BoundingBoxRight()"
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "offset_x_road",
+                            "=",
+                            "17"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "obstacle_time_generate",
+                            "=",
+                            "3.6"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "car_body",
+                            "speed",
+                            "=",
+                            "6.5"
                           ]
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "parameters": []
                 },
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -11734,7 +12348,7 @@
                       "parameters": [
                         "gurun1",
                         "+",
-                        "15"
+                        "offset_x_road"
                       ]
                     }
                   ]
@@ -11750,7 +12364,7 @@
                       "parameters": [
                         "car_body",
                         "+",
-                        "5"
+                        "car_body.speed"
                       ]
                     },
                     {
@@ -11878,7 +12492,7 @@
                     "value": "Layer"
                   },
                   "parameters": [
-                    "obstacles",
+                    "obstacles_group",
                     "\"obstacle\""
                   ]
                 }
@@ -11889,7 +12503,7 @@
                     "value": "ChangeLayer"
                   },
                   "parameters": [
-                    "obstacles",
+                    "obstacles_group",
                     "\"car\""
                   ]
                 },
@@ -11898,7 +12512,7 @@
                     "value": "ChangePlan"
                   },
                   "parameters": [
-                    "obstacles",
+                    "obstacles_group",
                     "=",
                     "car_drill.ZOrder()+car_body.ZOrder()"
                   ]
@@ -11913,7 +12527,7 @@
                     "value": "Layer"
                   },
                   "parameters": [
-                    "obstacles",
+                    "obstacles_group",
                     "\"car\""
                   ]
                 }
@@ -11925,14 +12539,88 @@
                   "conditions": [
                     {
                       "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "obstacles"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "CollisionNP"
                       },
                       "parameters": [
                         "obstacles",
+                        "obstacles",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Layer"
+                      },
+                      "parameters": [
+                        "obstacles",
+                        "\"car\""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AjoutHasard"
+                          },
+                          "parameters": [
+                            "",
+                            "obstacles"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "obstacles",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "obstacles_group",
                         "delete_road",
                         "=",
                         "1",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Tween::IsPlaying"
+                      },
+                      "parameters": [
+                        "fossil_rock",
+                        "Tween",
+                        "\"got-fossil\""
                       ]
                     }
                   ],
@@ -11942,7 +12630,7 @@
                         "value": "Delete"
                       },
                       "parameters": [
-                        "obstacles",
+                        "obstacles_group",
                         ""
                       ]
                     }
@@ -11951,6 +12639,205 @@
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "fossil_rock",
+                        "car",
+                        "=",
+                        "1",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "car_body",
+                        "SmoothCamera",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PrioritizeLoadingOfScene"
+                          },
+                          "parameters": [
+                            "",
+                            "\"brick-game\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                          },
+                          "parameters": [
+                            "fossil_rock",
+                            "Tween",
+                            "\"got-fossil\"",
+                            "-330",
+                            "-340",
+                            "\"easeInOutQuad\"",
+                            "3",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "car_body",
+                            "speed",
+                            "=",
+                            "8"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Tween::HasFinished"
+                      },
+                      "parameters": [
+                        "fossil_rock",
+                        "Tween",
+                        "\"got-fossil\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                      },
+                      "parameters": [
+                        "transition",
+                        "Tween",
+                        "\"transition_brick_game\"",
+                        "-4",
+                        "\"easeInOutQuad\"",
+                        "4",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Tween::HasFinished"
+                      },
+                      "parameters": [
+                        "transition",
+                        "Tween",
+                        "\"transition_brick_game\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.8"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Scene"
+                      },
+                      "parameters": [
+                        "",
+                        "\"brick-game\"",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Delete the condition check tween if need"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "Tween::IsPlaying"
+                          },
+                          "parameters": [
+                            "car_body",
+                            "Tween",
+                            "\"down\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "Tween::IsPlaying"
+                          },
+                          "parameters": [
+                            "car_body",
+                            "Tween",
+                            "\"up\""
+                          ]
+                        }
+                      ]
+                    },
                     {
                       "type": {
                         "value": "BuiltinCommonInstructions::Or"
@@ -11988,57 +12875,57 @@
                         "value": "BuiltinCommonInstructions::Once"
                       },
                       "parameters": []
+                    },
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "car"
+                      ]
                     }
                   ],
-                  "actions": [],
-                  "events": [
+                  "actions": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Flash::Flash::Flash"
-                          },
-                          "parameters": [
-                            "car_body",
-                            "Flash",
-                            "1",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Flash::Flash::Flash"
-                          },
-                          "parameters": [
-                            "car_drill",
-                            "Flash",
-                            "1",
-                            ""
-                          ]
-                        }
+                      "type": {
+                        "value": "Flash::Flash::Flash"
+                      },
+                      "parameters": [
+                        "car_body",
+                        "Flash",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Flash::Flash::Flash"
+                      },
+                      "parameters": [
+                        "car_drill",
+                        "Flash",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "obstacles",
+                        "Tween",
+                        "\"destroy-obstacle\"",
+                        "0",
+                        "\"easeInOutQuad\"",
+                        "2.3",
+                        "yes"
                       ]
                     }
                   ]
                 }
               ]
-            },
-            {
-              "disabled": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "Layer"
-                  },
-                  "parameters": [
-                    "obstacles",
-                    "\"car\""
-                  ]
-                }
-              ],
-              "actions": []
             }
           ],
           "parameters": []
@@ -12373,6 +13260,59 @@
               }
             }
           ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "transition",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
         }
       ],
       "behaviorsSharedData": [
@@ -12399,6 +13339,10 @@
         {
           "name": "Flash",
           "type": "Flash::Flash"
+        },
+        {
+          "name": "FlashEffect",
+          "type": "Flash::FlashEffect"
         },
         {
           "name": "Flippable",
@@ -12435,22 +13379,118 @@
       ]
     },
     {
-      "b": 209,
+      "b": 90,
       "disableInputWhenNotFocused": true,
-      "mangledName": "puzzle_45game",
-      "name": "puzzle-game",
-      "r": 209,
+      "mangledName": "brick_45game",
+      "name": "brick-game",
+      "r": 248,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 209,
-      "uiSettings": {},
+      "v": 156,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.3111974942445202,
+        "windowMask": false,
+        "selectedLayer": ""
+      },
       "objectsGroups": [],
       "variables": [],
-      "instances": [],
-      "objects": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "start",
+          "name": "bg",
+          "persistentUuid": "b6406832-b406-43b2-81d3-fd0400897eae",
+          "width": 0,
+          "x": -2,
+          "y": -2,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "bg",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "gurun",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\area\\gurun\\bg_brick_gurun.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 1280,
+                            "y": 0
+                          },
+                          {
+                            "x": 1280,
+                            "y": 712
+                          },
+                          {
+                            "x": 0,
+                            "y": 712
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "objectsFolderStructure": {
-        "folderName": "__ROOT"
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "bg"
+          }
+        ]
       },
       "events": [],
       "layers": [
@@ -12480,6 +13520,112 @@
               "width": 0
             }
           ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "start",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "game",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
           "effects": [
             {
               "effectType": "Scene3D::HemisphereLight",
@@ -12565,8 +13711,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "brick_45game",
-      "name": "brick-game",
+      "mangledName": "puzzle_45game",
+      "name": "puzzle-game",
       "r": 209,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
@@ -46438,6 +47584,700 @@
           "sharedPropertyDescriptors": []
         }
       ],
+      "eventsBasedObjects": []
+    },
+    {
+      "author": "Ahnaf30e",
+      "category": "Advanced",
+      "extensionNamespace": "",
+      "fullName": "Frames per second (FPS)",
+      "gdevelopVersion": ">=5.5.222",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBkPSJNMzAsM2gtMkg0SDJDMS40LDMsMSwzLjQsMSw0czAuNCwxLDEsMWgxdjE2YzAsMC42LDAuNCwxLDEsMWg5LjhsLTUuNSw2LjNjLTAuNCwwLjQtMC4zLDEsMC4xLDEuNEM4LjUsMjkuOSw4LjgsMzAsOSwzMA0KCWMwLjMsMCwwLjYtMC4xLDAuOC0wLjNsNS4yLTZWMjhjMCwwLjYsMC40LDEsMSwxczEtMC40LDEtMXYtNC4zbDUuMiw2YzAuMiwwLjIsMC41LDAuMywwLjgsMC4zYzAuMiwwLDAuNS0wLjEsMC43LTAuMg0KCWMwLjQtMC40LDAuNS0xLDAuMS0xLjRMMTguMiwyMkgyOGMwLjYsMCwxLTAuNCwxLTFWNWgxYzAuNiwwLDEtMC40LDEtMVMzMC42LDMsMzAsM3ogTTI0LjgsOC42bC00LDZjLTAuMywwLjQtMC44LDAuNi0xLjMsMC4zDQoJTDE1LjgsMTNoLTMuNGwtMy43LDMuN0M4LjUsMTYuOSw4LjMsMTcsOCwxN3MtMC41LTAuMS0wLjctMC4zYy0wLjQtMC40LTAuNC0xLDAtMS40bDQtNGMwLjItMC4yLDAuNC0wLjMsMC43LTAuM2g0DQoJYzAuMiwwLDAuMywwLDAuNCwwLjFsMy4yLDEuNmwzLjUtNS4zYzAuMy0wLjUsMC45LTAuNiwxLjQtMC4zQzI1LDcuNSwyNS4xLDguMSwyNC44LDguNnoiLz4NCjwvc3ZnPg0K",
+      "name": "FPS",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Glyphster Pack/Master/SVG/SEO/SEO_board_performance_profit.svg",
+      "shortDescription": "Calculate and display the frames per second (FPS) of the game.",
+      "version": "1.2.1",
+      "description": [
+        "Provides an expression to get the current FPS and a text object behavior to display the current FPS.",
+        "",
+        "Frames Per Second (FPS) describes how many times in the last second your game logic was executed. ",
+        "This includes running behaviors and events, and then rendering the new game state into the game window. The higher the FPS, the more fluid and performant your game looks.",
+        "",
+        "Note: Use the Performance Profiler (inside in the Debugger) for detailed performance information about your game."
+      ],
+      "origin": {
+        "identifier": "FPS",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "fps",
+        "frames",
+        "per",
+        "second",
+        "performance",
+        "speed"
+      ],
+      "authorIds": [
+        "onPsboRtDkUHNOsx7OPr8R8G1oj2",
+        "gqDaZjCfevOOxBYkK6zlhtZnXCg1"
+      ],
+      "dependencies": [],
+      "globalVariables": [],
+      "sceneVariables": [
+        {
+          "folded": true,
+          "name": "FrameTimestamps",
+          "type": "array",
+          "children": []
+        },
+        {
+          "folded": true,
+          "name": "TimeElapsed",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "eventsFunctions": [
+        {
+          "fullName": "",
+          "functionType": "Action",
+          "name": "onSceneLoaded",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PushNumber"
+                  },
+                  "parameters": [
+                    "FrameTimestamps",
+                    "Time(\"timestamp\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "Action",
+          "name": "onScenePostEvents",
+          "sentence": "",
+          "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Keep timestamps for every frame inside the lookback period",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Record how much time has elapsed"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "TimeElapsed",
+                        "=",
+                        "Time(\"timestamp\") - FrameTimestamps[0]"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Remove any data before the last second from the beginning of the array"
+                },
+                {
+                  "infiniteLoopWarning": true,
+                  "type": "BuiltinCommonInstructions::While",
+                  "whileConditions": [
+                    {
+                      "type": {
+                        "value": "VariableChildCount"
+                      },
+                      "parameters": [
+                        "FrameTimestamps",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "FrameTimestamps[0]",
+                        "<",
+                        "Time(\"timestamp\") - 1000"
+                      ]
+                    }
+                  ],
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "RemoveVariableAt"
+                      },
+                      "parameters": [
+                        "FrameTimestamps",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Add the current timestamp to the end of the array"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PushNumber"
+                      },
+                      "parameters": [
+                        "FrameTimestamps",
+                        "Time(\"timestamp\")"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            }
+          ],
+          "parameters": [],
+          "objectGroups": []
+        },
+        {
+          "description": "Frames per second (FPS) during the last second.",
+          "fullName": "Frames Per Second (FPS)",
+          "functionType": "Expression",
+          "name": "FPS",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "VariableChildCount(FrameTimestamps) / (TimeElapsed / 1000)"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [],
+          "objectGroups": []
+        },
+        {
+          "description": "Frames per second (FPS) during the last second. [Deprecated]",
+          "fullName": "Frames Per Second (FPS) [Deprecated]",
+          "functionType": "Expression",
+          "name": "PreciseFPS",
+          "private": true,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "FPS::FPS()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "The accuracy of the FPS",
+              "longDescription": "This tells how many numbers after the period should be shown.",
+              "name": "accuracy",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "eventsBasedBehaviors": [
+        {
+          "description": "Makes a text object display the current FPS.",
+          "fullName": "FPS Displayer",
+          "name": "FPSDisplayer",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Generate the raw FPS text"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "UnformattedFPS",
+                        "=",
+                        "ToString(roundTo(FPS::FPS(), DecimalDigits))"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Add trailing zeroes, if needed"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "DecimalDigits",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "StrFind(UnformattedFPS, \".\")",
+                            "=",
+                            "-1"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetStringVariable"
+                              },
+                              "parameters": [
+                                "UnformattedFPS",
+                                "+",
+                                "\".\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Repeat",
+                          "repeatExpression": "DecimalDigits",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetStringVariable"
+                              },
+                              "parameters": [
+                                "UnformattedFPS",
+                                "+",
+                                "\"0\""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Show the formatted FPS text including the prefix"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Text",
+                            "=",
+                            "prefix + UnformattedFPS"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "folded": true,
+                      "name": "UnformattedFPS",
+                      "type": "string",
+                      "value": ""
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "FPS::FPSDisplayer",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "",
+              "type": "Behavior",
+              "label": "Text capability",
+              "extraInformation": [
+                "TextContainerCapability::TextContainerBehavior"
+              ],
+              "choices": [],
+              "name": "Text"
+            },
+            {
+              "value": "FPS: ",
+              "type": "String",
+              "label": "FPS counter prefix",
+              "name": "prefix"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "unit": "Dimensionless",
+              "label": "Number of decimal digits",
+              "name": "DecimalDigits"
+            }
+          ],
+          "sharedPropertyDescriptors": []
+        }
+      ],
+      "eventsBasedObjects": []
+    },
+    {
+      "author": "",
+      "category": "User interface",
+      "extensionNamespace": "",
+      "fullName": "Pop-up",
+      "gdevelopVersion": ">=5.5.222",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLW1lc3NhZ2UtYWxlcnQiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTMgMTFIMTFWNUgxM00xMyAxNUgxMVYxM0gxM00yMCAySDRDMi45IDIgMiAyLjkgMiA0VjIyTDYgMThIMjBDMjEuMSAxOCAyMiAxNy4xIDIyIDE2VjRDMjIgMi45IDIxLjEgMiAyMCAyWiIgLz48L3N2Zz4=",
+      "name": "PopUp",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/message-alert.svg",
+      "shortDescription": "Display pop-ups to alert, ask confirmation, and let user type a response in text box.",
+      "version": "1.0.0",
+      "description": [
+        "This extension adds actions to display three kinds of pop-ups.",
+        "",
+        "## Alert",
+        " - Pops-up a message that will pause the game until dismissed by the player.",
+        "",
+        "## Confirmation",
+        " - Pops-up a dialogue containing a message with the option to either confirm or cancel.",
+        "",
+        "## Prompt",
+        "**Note that this pop-up type is unsupported on previews and PC exports.**",
+        " - Displays a message to the player with a text field to write an answer in. The player will also have the option to either confirm or discard their input.",
+        ""
+      ],
+      "origin": {
+        "identifier": "PopUp",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "pop up",
+        "alert",
+        "message",
+        "prompt",
+        "confirm",
+        "dialog"
+      ],
+      "authorIds": [
+        "HBp2oDKV87gKFbdd1wyV1jRYRC13",
+        "2OwwM8ToR9dx9RJ2sAKTcrLmCB92",
+        "ZgrsWuRTAkXgeuPV9bo0zuEcA2w1"
+      ],
+      "dependencies": [],
+      "globalVariables": [],
+      "sceneVariables": [],
+      "eventsFunctions": [
+        {
+          "description": "The response to a pop-up message is filled.",
+          "fullName": "Existing prompt response",
+          "functionType": "Condition",
+          "name": "PromptValidResponse",
+          "sentence": "Response from the pop-up prompt is filled",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "const promptResponse = runtimeScene.getVariables().get(\"__PopUp\").getChild(\"Prompt\").getAsString();",
+                "eventsFunctionContext.returnValue = promptResponse !== \"\";",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [],
+          "objectGroups": []
+        },
+        {
+          "description": "Return the text response by user to prompt.",
+          "fullName": "Response to prompt",
+          "functionType": "StringExpression",
+          "name": "PromptResponse",
+          "sentence": "Open prompt with message : _PARAM1_ with ID: _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "eventsFunctionContext.returnValue = runtimeScene.getVariables().get(\"__PopUp\").getChild(\"Prompt\").getAsString();\r",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "expressionType": {
+            "type": "string"
+          },
+          "parameters": [],
+          "objectGroups": []
+        },
+        {
+          "description": "Displays a prompt in a pop-up that prompts the user for input. This action return the text input or the false boolean if canceled.",
+          "fullName": "Prompt",
+          "functionType": "Action",
+          "group": "Web browsers",
+          "name": "Prompt",
+          "sentence": "Open a prompt pop-up box with message: _PARAM1_ (placeholder: _PARAM2_)",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "const message = eventsFunctionContext.getArgument(\"Message\");",
+                "const defaultText = eventsFunctionContext.getArgument(\"DefaultText\");",
+                "",
+                "const response = prompt(message, defaultText);",
+                "runtimeScene",
+                "    .getVariables()",
+                "    .get(\"__PopUp\")",
+                "    .getChild(\"Prompt\")",
+                "    .setString(response || \"\");",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Prompt message",
+              "name": "Message",
+              "type": "string"
+            },
+            {
+              "description": "Input placeholder",
+              "name": "DefaultText",
+              "type": "string"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Ask confirmation of user with a message in a dialog box with an OK button, and a Cancel button.",
+          "fullName": "Confirm",
+          "functionType": "Action",
+          "name": "Confirm",
+          "sentence": "Open a confirmation pop-up box with message: _PARAM1_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "const isConfirmed = confirm(eventsFunctionContext.getArgument(\"Message\"));",
+                "runtimeScene",
+                "    .getVariables()",
+                "    .get(\"__PopUp\")",
+                "    .getChild(\"Confirm\")",
+                "    .setBoolean(isConfirmed);",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Confirmation message",
+              "longDescription": "The text to display in the confirm box.",
+              "name": "Message",
+              "type": "string"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Check if a confirmation was accepted.",
+          "fullName": "Pop-up message confirmed",
+          "functionType": "Condition",
+          "name": "ConfimationResponse",
+          "sentence": "Pop-up message is confirmed",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "eventsFunctionContext.returnValue = runtimeScene.getVariables().get(\"__PopUp\").getChild(\"Confirm\").getAsBoolean();\r",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            }
+          ],
+          "parameters": [],
+          "objectGroups": []
+        },
+        {
+          "description": "Displays an alert box with a message and an OK button in a pop-up window.",
+          "fullName": "Alert",
+          "functionType": "Action",
+          "name": "Alert",
+          "sentence": "Open an alert pop-up box with message: _PARAM1_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "alert(eventsFunctionContext.getArgument(\"Message\"));\r",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Alert message",
+              "name": "Message",
+              "type": "string"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "eventsBasedBehaviors": [],
       "eventsBasedObjects": []
     }
   ],
