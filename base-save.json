@@ -1,85 +1,90 @@
 {
   "setting": {
     "sfx": 50,
-    "bgm": 50
+    "sfx_last": 0,
+    "bgm": 50,
+    "bgm_last": 0
   },
   "dino": [
     {
       "id": "0",
       "name": "brontosaurus",
-      "habitat": "1",
+      "habitat": 1,
       "color": "#FF0000",
       "unlocked": 1
     },
     {
       "id": "1",
       "name": "plesiasaurus",
-      "habitat": "1",
+      "habitat": 1,
       "color": "#FF0000",
       "unlocked": 1
     },
     {
       "id": "2",
       "name": "petranodon",
-      "habitat": "1",
+      "habitat": 1,
       "color": "#FF0000",
       "unlocked": 0
     },
     {
       "id": "3",
-      "name": "spinosaurus",
-      "habitat": "2",
+      "name": "parasuaralaphus",
+      "habitat": 2,
       "color": "#FF0000",
-      "unlocked": 0
+      "unlocked": 1
     },
     {
       "id": "4",
       "name": "stegosaurus",
-      "habitat": "2",
+      "habitat": 2,
       "color": "#FF0000",
       "unlocked": 0
     },
     {
       "id": "5",
-      "name": "parasuaralaphus",
-      "habitat": "2",
+      "name": "spinosaurus",
+      "habitat": 2,
       "color": "#FF0000",
       "unlocked": 0
     },
     {
       "id": "6",
       "name": "tyranosaurus",
-      "habitat": "3",
+      "habitat": 3,
       "color": "#FF0000",
       "unlocked": 0
     },
     {
       "id": "7",
       "name": "allosaurus",
-      "habitat": "3",
+      "habitat": 3,
       "color": "#FF0000",
-      "unlocked": 0
+      "unlocked": 1
     },
     {
       "id": "8",
       "name": "triceratops",
-      "habitat": "3",
+      "habitat": 3,
       "color": "#FF0000",
-      "unlocked": 0
+      "unlocked": 1
     }
   ],
-  "habitat": [
-    {
-      "id": 0,
-      "color": "#FF0000"
+  "habitat": {
+    "1": {
+      "name": "gurun",
+      "color": "#F89C5A",
+      "outline": "124;67;26"
     },
-    {
-      "id": 1,
-      "color": "#00FF00"
+    "2": {
+      "name": "hutan",
+      "color": "#A197A9",
+      "outline": "53;60;69"
     },
-    {
-      "id": 2,
-      "color": "#0000FF"
+    "3": {
+      "name": "berapi",
+      "color": "#807363",
+      "outline": "91;77;67"
     }
-  ]
+  }
 }
