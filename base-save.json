@@ -53,23 +53,143 @@
     },
     {
       "id": "1",
-      "name": "plesiasaurus",
-      "habitat": 1,
-      "color": "#FF0000",
-      "unlocked": 1
-    },
-    {
-      "id": "2",
       "name": "petranodon",
       "habitat": 1,
       "color": "#FF0000",
+      "point": [
+        {
+          "scale_hint": 1,
+          "scale": 0.5,
+          "angle_hint": 0,
+          "angle": 0  
+        },
+        {
+          "scale_hint": 1,
+          "scale": 0.6,
+          "angle_hint": 0,
+          "angle": 25
+        },
+        {
+          "scale_hint": 1,
+          "scale": 0.62,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "scale_hint": 1,
+          "scale": 0.4,
+          "angle_hint": 0,
+          "angle": 90
+        },
+        {
+          "scale_hint": 1,
+          "scale": 0.41,
+          "angle_hint": 0,
+          "angle": 45
+        }
+      ],
       "unlocked": 0
+    },
+    {
+      "id": "2",
+      "name": "plesiasaurus",
+      "habitat": 1,
+      "color": "#FF0000",
+      "point": [
+        {
+          "name" : "ekor",
+          "scale_hint": 1,
+          "scale": 0.5,
+          "angle_hint": 0,
+          "angle": -45  
+        },
+        {
+          "name" : "kaki belakang",
+          "scale_hint": 1,
+          "scale": 0.5,
+          "angle_hint": 0,
+          "angle": 45
+        },
+        {
+          "name" : "kaki depan",
+          "scale_hint": 1,
+          "scale": 0.5,
+          "angle_hint": 0,
+          "angle": -45
+        },
+        {
+          "name" : "kepala",
+          "scale_hint": 1,
+          "scale": 0.6,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "name": "leher",
+          "scale_hint": 1,
+          "scale": 0.35,
+          "angle_hint": 0,
+          "angle": 45
+        },
+        {
+          "name": "rusuk",
+          "scale_hint": 1,
+          "scale": 0.35,
+          "angle_hint": 0,
+          "angle": 45
+        }
+      ],
+      "unlocked": 1
     },
     {
       "id": "3",
       "name": "parasuaralaphus",
       "habitat": 2,
       "color": "#FF0000",
+      "point": [
+        {
+          "name" : "ekor",
+          "scale_hint": 1,
+          "scale": 0.5,
+          "angle_hint": 0,
+          "angle": -45  
+        },
+        {
+          "name" : "kaki depan",
+          "scale_hint": 1,
+          "scale": 0.5,
+          "angle_hint": 0,
+          "angle": 45
+        },
+        {
+          "name" : "kepala",
+          "scale_hint": 1,
+          "scale": 0.5,
+          "angle_hint": 0,
+          "angle": -45
+        },
+        {
+          "name" : "leher",
+          "scale_hint": 1,
+          "scale": 0.6,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "name": "rusuk",
+          "scale_hint": 1,
+          "scale": 0.35,
+          "angle_hint": 0,
+          "angle": 45
+        },
+        {
+          "name": "kaki belakang",
+          "scale_hint": 1,
+          "scale": 0.35,
+          "angle_hint": 0,
+          "angle": 45
+        }
+      ],
       "unlocked": 1
     },
     {
@@ -77,6 +197,50 @@
       "name": "stegosaurus",
       "habitat": 2,
       "color": "#FF0000",
+      "point": [
+        {
+          "name" : "punuk",
+          "scale_hint": 1,
+          "scale": 0.3,
+          "angle_hint": 0,
+          "angle": -35  
+        },
+        {
+          "name" : "ekor",
+          "scale_hint": 1,
+          "scale": 0.5,
+          "angle_hint": 0,
+          "angle": 45
+        },
+        {
+          "name" : "kaki belakang",
+          "scale_hint": 1,
+          "scale": 0.5,
+          "angle_hint": 0,
+          "angle": -45
+        },
+        {
+          "name" : "kaki depan",
+          "scale_hint": 1,
+          "scale": 0.6,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "name": "kepala",
+          "scale_hint": 1,
+          "scale": 0.8,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "name": "rusuk",
+          "scale_hint": 1,
+          "scale": 0.35,
+          "angle_hint": 0,
+          "angle": 45
+        }
+      ],
       "unlocked": 0
     },
     {
@@ -84,6 +248,57 @@
       "name": "spinosaurus",
       "habitat": 2,
       "color": "#FF0000",
+      "point": [
+        {
+          "name" : "ekor",
+          "scale_hint": 1,
+          "scale": 0.485,
+          "angle_hint": 0,
+          "angle": -35  
+        },
+        {
+          "name" : "punuk",
+          "scale_hint": 1,
+          "scale": 0.25,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "name" : "kaki belakang",
+          "scale_hint": 1,
+          "scale": 0.44,
+          "angle_hint": 0,
+          "angle": -45
+        },
+        {
+          "name" : "kaki depan",
+          "scale_hint": 1,
+          "scale": 0.6,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "name": "kepala",
+          "scale_hint": 1,
+          "scale": 0.7,
+          "angle_hint": 0,
+          "angle": 35
+        },
+        {
+          "name": "leher",
+          "scale_hint": 1,
+          "scale": 0.7,
+          "angle_hint": 0,
+          "angle": 45
+        },
+        {
+          "name": "rusuk",
+          "scale_hint": 1,
+          "scale": 0.59,
+          "angle_hint": 0,
+          "angle": 28
+        }
+      ],
       "unlocked": 0
     },
     {
@@ -91,6 +306,50 @@
       "name": "tyranosaurus",
       "habitat": 3,
       "color": "#FF0000",
+      "point": [
+        {
+          "name" : "kaki belakang",
+          "scale_hint": 1,
+          "scale": 0.45,
+          "angle_hint": 0,
+          "angle": -25
+        },
+        {
+          "name" : "kaki depan",
+          "scale_hint": 1,
+          "scale": 0.8,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "name" : "kepala",
+          "scale_hint": 1,
+          "scale": 0.5,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "name" : "leher",
+          "scale_hint": 1,
+          "scale": 0.78,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "name": "rusuk",
+          "scale_hint": 1,
+          "scale": 0.55,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "name": "ekor",
+          "scale_hint": 1,
+          "scale": 0.6,
+          "angle_hint": 0,
+          "angle": 35
+        }
+      ],
       "unlocked": 0
     },
     {
@@ -98,6 +357,43 @@
       "name": "triceratops",
       "habitat": 3,
       "color": "#FF0000",
+      "point": [
+        {
+          "name" : "ekor",
+          "scale_hint": 0.9,
+          "scale": 0.45,
+          "angle_hint": 0,
+          "angle": -25
+        },
+        {
+          "name" : "kaki belakang",
+          "scale_hint": 1,
+          "scale": 0.42,
+          "angle_hint": 0,
+          "angle": -35
+        },
+        {
+          "name" : "kaki depan",
+          "scale_hint": 1,
+          "scale": 0.43,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "name" : "kepala",
+          "scale_hint": 1,
+          "scale": 0.35,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "name": "rusuk",
+          "scale_hint": 1,
+          "scale": 0.44,
+          "angle_hint": 0,
+          "angle": 0
+        }
+      ],
       "unlocked": 0
     },
     {
@@ -105,6 +401,50 @@
       "name": "allosaurus",
       "habitat": 3,
       "color": "#FF0000",
+      "point": [
+        {
+          "name" : "rusuk",
+          "scale_hint": 1,
+          "scale": 0.83,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "name" : "leher",
+          "scale_hint": 1,
+          "scale": 0.9,
+          "angle_hint": 0,
+          "angle": -35
+        },
+        {
+          "name" : "kepala",
+          "scale_hint": 1,
+          "scale": 0.6,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "name" : "kaki depan",
+          "scale_hint": 1,
+          "scale": 0.8,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "name": "kaki belakang",
+          "scale_hint": 1,
+          "scale": 0.44,
+          "angle_hint": 0,
+          "angle": 0
+        },
+        {
+          "name": "ekor",
+          "scale_hint": 1,
+          "scale": 0.44,
+          "angle_hint": 0,
+          "angle": -35
+        }
+      ],
       "unlocked": 1
     }
   ],

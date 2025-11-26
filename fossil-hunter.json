@@ -1511,6 +1511,80 @@
         "name": "assets\\dino\\allo\\allo ekor.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/ui/Group 97.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ui\\Group 97.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/effect/puff-1/Group (1).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\effect\\puff-1\\Group (1).png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/effect/puff-1/Group (2).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\effect\\puff-1\\Group (2).png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/effect/puff-1/Group 44.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\effect\\puff-1\\Group 44.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/effect/puff-1/Group 45.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\effect\\puff-1\\Group 45.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/effect/puff-1/Group.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\effect\\puff-1\\Group.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite6",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/BGM/BGM - Level Magma.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\BGM\\BGM - Level Magma.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/dino/trex/trex ekor.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\dino\\trex\\trex ekor.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -3453,6 +3527,11 @@
                       "name": "0.6",
                       "x": 399,
                       "y": 395
+                    },
+                    {
+                      "name": "puff",
+                      "x": 392,
+                      "y": 343.5
                     }
                   ],
                   "originPoint": {
@@ -3690,85 +3769,6 @@
           ]
         },
         {
-          "name": "para-gray",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets\\dino\\gray\\para-gray.png",
-                  "points": [
-                    {
-                      "name": "0.1",
-                      "x": 149,
-                      "y": 489
-                    },
-                    {
-                      "name": "0.2",
-                      "x": 328,
-                      "y": 497
-                    },
-                    {
-                      "name": "0.3",
-                      "x": 475.5,
-                      "y": 485.5
-                    },
-                    {
-                      "name": "0.4",
-                      "x": 576.5,
-                      "y": 47.5
-                    },
-                    {
-                      "name": "0.5",
-                      "x": 501,
-                      "y": 208
-                    },
-                    {
-                      "name": "0.6",
-                      "x": 399,
-                      "y": 395
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 630,
-                        "y": 0
-                      },
-                      {
-                        "x": 630,
-                        "y": 628
-                      },
-                      {
-                        "x": 0,
-                        "y": 628
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "pero-gray",
           "useMultipleDirections": false,
           "directions": [
@@ -3781,34 +3781,34 @@
                   "image": "assets\\dino\\gray\\pero-gray.png",
                   "points": [
                     {
-                      "name": "0.1",
-                      "x": 149,
-                      "y": 489
+                      "name": "1.1",
+                      "x": 313,
+                      "y": 484.5
                     },
                     {
-                      "name": "0.2",
-                      "x": 328,
-                      "y": 497
+                      "name": "1.2",
+                      "x": 683,
+                      "y": 362
                     },
                     {
-                      "name": "0.3",
-                      "x": 475.5,
-                      "y": 485.5
+                      "name": "1.3",
+                      "x": 515,
+                      "y": 382
                     },
                     {
-                      "name": "0.4",
-                      "x": 576.5,
-                      "y": 47.5
+                      "name": "1.4",
+                      "x": 437.5,
+                      "y": 176.5
                     },
                     {
-                      "name": "0.5",
-                      "x": 501,
-                      "y": 208
+                      "name": "1.5",
+                      "x": 202,
+                      "y": 441.5
                     },
                     {
-                      "name": "0.6",
-                      "x": 399,
-                      "y": 395
+                      "name": "puff",
+                      "x": 412.5,
+                      "y": 369.5
                     }
                   ],
                   "originPoint": {
@@ -3860,34 +3860,39 @@
                   "image": "assets\\dino\\gray\\plesi-gray.png",
                   "points": [
                     {
-                      "name": "0.1",
-                      "x": 149,
-                      "y": 489
+                      "name": "2.1",
+                      "x": 146,
+                      "y": 364
                     },
                     {
-                      "name": "0.2",
-                      "x": 328,
-                      "y": 497
+                      "name": "2.2",
+                      "x": 246,
+                      "y": 419.5
                     },
                     {
-                      "name": "0.3",
-                      "x": 475.5,
-                      "y": 485.5
+                      "name": "2.3",
+                      "x": 460,
+                      "y": 438.5
                     },
                     {
-                      "name": "0.4",
-                      "x": 576.5,
-                      "y": 47.5
+                      "name": "2.4",
+                      "x": 727.5,
+                      "y": 69
                     },
                     {
-                      "name": "0.5",
-                      "x": 501,
-                      "y": 208
+                      "name": "2.5",
+                      "x": 636,
+                      "y": 199
                     },
                     {
-                      "name": "0.6",
-                      "x": 399,
-                      "y": 395
+                      "name": "2.6",
+                      "x": 448.5,
+                      "y": 341
+                    },
+                    {
+                      "name": "puff",
+                      "x": 405.5,
+                      "y": 329.5
                     }
                   ],
                   "originPoint": {
@@ -3927,7 +3932,7 @@
           ]
         },
         {
-          "name": "spino-gray",
+          "name": "para-gray",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -3936,37 +3941,42 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\dino\\gray\\spino-gray.png",
+                  "image": "assets\\dino\\gray\\para-gray.png",
                   "points": [
                     {
-                      "name": "0.1",
-                      "x": 149,
-                      "y": 489
+                      "name": "3.1",
+                      "x": 172.5,
+                      "y": 317
                     },
                     {
-                      "name": "0.2",
-                      "x": 328,
-                      "y": 497
+                      "name": "3.2",
+                      "x": 626.5,
+                      "y": 284
                     },
                     {
-                      "name": "0.3",
-                      "x": 475.5,
-                      "y": 485.5
+                      "name": "3.3",
+                      "x": 743,
+                      "y": 90.5
                     },
                     {
-                      "name": "0.4",
-                      "x": 576.5,
-                      "y": 47.5
+                      "name": "3.4",
+                      "x": 661,
+                      "y": 181.5
                     },
                     {
-                      "name": "0.5",
-                      "x": 501,
-                      "y": 208
+                      "name": "3.5",
+                      "x": 505,
+                      "y": 247.5
                     },
                     {
-                      "name": "0.6",
-                      "x": 399,
-                      "y": 395
+                      "name": "3.6",
+                      "x": 360.5,
+                      "y": 369.5
+                    },
+                    {
+                      "name": "puff",
+                      "x": 469,
+                      "y": 234
                     }
                   ],
                   "originPoint": {
@@ -4018,34 +4028,39 @@
                   "image": "assets\\dino\\gray\\stego-gray.png",
                   "points": [
                     {
-                      "name": "0.1",
-                      "x": 149,
-                      "y": 489
+                      "name": "4.1",
+                      "x": 411,
+                      "y": 145.5
                     },
                     {
-                      "name": "0.2",
-                      "x": 328,
-                      "y": 497
+                      "name": "4.2",
+                      "x": 164.5,
+                      "y": 249
                     },
                     {
-                      "name": "0.3",
-                      "x": 475.5,
-                      "y": 485.5
+                      "name": "4.3",
+                      "x": 352,
+                      "y": 278.5
                     },
                     {
-                      "name": "0.4",
-                      "x": 576.5,
-                      "y": 47.5
+                      "name": "4.4",
+                      "x": 582.5,
+                      "y": 280.5
                     },
                     {
-                      "name": "0.5",
-                      "x": 501,
-                      "y": 208
+                      "name": "4.5",
+                      "x": 779.5,
+                      "y": 206.5
                     },
                     {
-                      "name": "0.6",
-                      "x": 399,
-                      "y": 395
+                      "name": "4.6",
+                      "x": 552,
+                      "y": 211
+                    },
+                    {
+                      "name": "puff",
+                      "x": 464.5,
+                      "y": 170.5
                     }
                   ],
                   "originPoint": {
@@ -4085,7 +4100,7 @@
           ]
         },
         {
-          "name": "trex-big-gray",
+          "name": "spino-gray",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -4094,37 +4109,47 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\dino\\gray\\trex-big-gray.png",
+                  "image": "assets\\dino\\gray\\spino-gray.png",
                   "points": [
                     {
-                      "name": "0.1",
-                      "x": 149,
-                      "y": 489
+                      "name": "5.1",
+                      "x": 153.5,
+                      "y": 296
                     },
                     {
-                      "name": "0.2",
-                      "x": 328,
-                      "y": 497
+                      "name": "5.2",
+                      "x": 376,
+                      "y": 164
                     },
                     {
-                      "name": "0.3",
-                      "x": 475.5,
-                      "y": 485.5
+                      "name": "5.3",
+                      "x": 357,
+                      "y": 366
                     },
                     {
-                      "name": "0.4",
-                      "x": 576.5,
-                      "y": 47.5
+                      "name": "5.4",
+                      "x": 603.5,
+                      "y": 288.5
                     },
                     {
-                      "name": "0.5",
-                      "x": 501,
-                      "y": 208
+                      "name": "5.5",
+                      "x": 738,
+                      "y": 122
                     },
                     {
-                      "name": "0.6",
-                      "x": 399,
-                      "y": 395
+                      "name": "5.6",
+                      "x": 617.5,
+                      "y": 190
+                    },
+                    {
+                      "name": "5.7",
+                      "x": 478.5,
+                      "y": 253
+                    },
+                    {
+                      "name": "puff",
+                      "x": 464,
+                      "y": 239
                     }
                   ],
                   "originPoint": {
@@ -4135,8 +4160,8 @@
                   "centerPoint": {
                     "automatic": true,
                     "name": "centre",
-                    "x": 0,
-                    "y": 0
+                    "x": 422,
+                    "y": 262.5
                   },
                   "customCollisionMask": [
                     [
@@ -4176,34 +4201,39 @@
                   "image": "assets\\dino\\gray\\trex-gray.png",
                   "points": [
                     {
-                      "name": "0.1",
-                      "x": 149,
-                      "y": 489
+                      "name": "6.1",
+                      "x": 314,
+                      "y": 418.5
                     },
                     {
-                      "name": "0.2",
-                      "x": 328,
-                      "y": 497
+                      "name": "6.2",
+                      "x": 475,
+                      "y": 282.5
                     },
                     {
-                      "name": "0.3",
-                      "x": 475.5,
-                      "y": 485.5
+                      "name": "6.3",
+                      "x": 560,
+                      "y": 109
                     },
                     {
-                      "name": "0.4",
-                      "x": 576.5,
-                      "y": 47.5
+                      "name": "6.4",
+                      "x": 454,
+                      "y": 160.5
                     },
                     {
-                      "name": "0.5",
-                      "x": 501,
-                      "y": 208
+                      "name": "6.5",
+                      "x": 335,
+                      "y": 273.5
                     },
                     {
-                      "name": "0.6",
-                      "x": 399,
-                      "y": 395
+                      "name": "6.6",
+                      "x": 124.5,
+                      "y": 330.5
+                    },
+                    {
+                      "name": "puff",
+                      "x": 343,
+                      "y": 234.5
                     }
                   ],
                   "originPoint": {
@@ -4255,34 +4285,118 @@
                   "image": "assets\\dino\\gray\\tricera-gray.png",
                   "points": [
                     {
-                      "name": "0.1",
-                      "x": 149,
-                      "y": 489
+                      "name": "7.1",
+                      "x": 147.5,
+                      "y": 281
                     },
                     {
-                      "name": "0.2",
-                      "x": 328,
-                      "y": 497
+                      "name": "7.2",
+                      "x": 327.5,
+                      "y": 307.5
                     },
                     {
-                      "name": "0.3",
-                      "x": 475.5,
-                      "y": 485.5
+                      "name": "7.3",
+                      "x": 543,
+                      "y": 318.5
                     },
                     {
-                      "name": "0.4",
-                      "x": 576.5,
-                      "y": 47.5
+                      "name": "7.4",
+                      "x": 689.5,
+                      "y": 147.5
                     },
                     {
-                      "name": "0.5",
-                      "x": 501,
-                      "y": 208
+                      "name": "7.5",
+                      "x": 498,
+                      "y": 234
                     },
                     {
-                      "name": "0.6",
-                      "x": 399,
-                      "y": 395
+                      "name": "puff",
+                      "x": 451,
+                      "y": 173
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 630,
+                        "y": 0
+                      },
+                      {
+                        "x": 630,
+                        "y": 628
+                      },
+                      {
+                        "x": 0,
+                        "y": 628
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "trex-big-gray",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\dino\\gray\\trex-big-gray.png",
+                  "points": [
+                    {
+                      "name": "8.1",
+                      "x": 503,
+                      "y": 233
+                    },
+                    {
+                      "name": "8.2",
+                      "x": 561.5,
+                      "y": 147
+                    },
+                    {
+                      "name": "8.3",
+                      "x": 649.5,
+                      "y": 99.5
+                    },
+                    {
+                      "name": "8.4",
+                      "x": 585.5,
+                      "y": 250.5
+                    },
+                    {
+                      "name": "8.5",
+                      "x": 436,
+                      "y": 328.5
+                    },
+                    {
+                      "name": "8.6",
+                      "x": 192,
+                      "y": 272.5
+                    },
+                    {
+                      "name": "puff",
+                      "x": 469,
+                      "y": 203
                     }
                   ],
                   "originPoint": {
@@ -4433,9 +4547,9 @@
           "PreviousState": "Idle"
         },
         {
-          "checkCollisionMask": true,
           "name": "Draggable",
-          "type": "DraggableBehavior::Draggable"
+          "type": "DraggableBehavior::Draggable",
+          "checkCollisionMask": true
         },
         {
           "name": "Sticker",
@@ -5620,6 +5734,35 @@
                 {
                   "hasCustomCollisionMask": false,
                   "image": "assets\\dino\\trex\\trex rusuk.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "6.6",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\dino\\trex\\trex ekor.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -7605,6 +7748,101 @@
               ]
             }
           ]
+        },
+        {
+          "name": "6.6",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\dino\\trex\\trex ekor.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "transition_pink",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "NewSprite",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "NewSprite6",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     }
@@ -7698,6 +7936,9 @@
       },
       {
         "objectName": "debug_text"
+      },
+      {
+        "objectName": "transition_pink"
       }
     ]
   },
@@ -7798,6 +8039,11 @@
           "name": "level_number",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "scene",
+          "type": "string",
+          "value": "0"
         }
       ]
     },
@@ -23356,13 +23602,6 @@
           "target": "load-save"
         },
         {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "sound"
-        },
-        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -23439,6 +23678,16 @@
                 "=",
                 "150"
               ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "current_level.level_number",
+                "=",
+                "6"
+              ]
             }
           ],
           "events": [
@@ -23468,6 +23717,13 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Link",
+              "include": {
+                "includeConfig": 0
+              },
+              "target": "sound"
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -28605,7 +28861,7 @@
       "name": "puzzle-game",
       "r": 209,
       "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
+      "stopSoundsOnStartup": false,
       "title": "",
       "v": 209,
       "uiSettings": {
@@ -28618,7 +28874,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5653158055126323,
+        "zoomFactor": 0.17708595277543962,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -28638,7 +28894,29 @@
           ]
         }
       ],
-      "variables": [],
+      "variables": [
+        {
+          "name": "win",
+          "type": "structure",
+          "children": [
+            {
+              "name": "max",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "point",
+              "type": "string",
+              "value": "0"
+            },
+            {
+              "name": "random_time",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -28916,7 +29194,7 @@
           "name": "point_box_puzzle",
           "persistentUuid": "54d0d0fb-3995-4df6-85ac-f12fda5e93e9",
           "width": 0,
-          "x": 1128,
+          "x": 1108,
           "y": 543,
           "zOrder": 112,
           "numberProperties": [],
@@ -28932,7 +29210,7 @@
           "name": "point_box_puzzle",
           "persistentUuid": "cc971033-b2ab-4d68-8afc-444735d2b05c",
           "width": 0,
-          "x": 1125,
+          "x": 1105,
           "y": 163,
           "zOrder": 112,
           "numberProperties": [],
@@ -28948,9 +29226,43 @@
           "name": "point_box_puzzle",
           "persistentUuid": "541ad402-1548-41ae-aedf-7e7c3db05910",
           "width": 0,
-          "x": 1125,
+          "x": 1105,
           "y": 350,
           "zOrder": 112,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 721,
+          "keepRatio": true,
+          "layer": "",
+          "name": "border_puzzle",
+          "persistentUuid": "1c3c5ae4-e4ed-4acb-a7fd-f9f9b5765a88",
+          "width": 328,
+          "x": 930,
+          "y": 3,
+          "zOrder": 81,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 731,
+          "keepRatio": true,
+          "layer": "transition",
+          "name": "transition_pink",
+          "persistentUuid": "a98359ed-362b-438b-8989-673ca92a30c8",
+          "width": 1276,
+          "x": -1,
+          "y": -4,
+          "zOrder": 113,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -29043,14 +29355,19 @@
               "name": "point_name",
               "type": "string",
               "value": "0"
+            },
+            {
+              "name": "id_point",
+              "type": "number",
+              "value": 0
             }
           ],
           "effects": [],
           "behaviors": [
             {
-              "checkCollisionMask": true,
               "name": "Draggable",
-              "type": "DraggableBehavior::Draggable"
+              "type": "DraggableBehavior::Draggable",
+              "checkCollisionMask": true
             },
             {
               "name": "Tween",
@@ -29114,7 +29431,18 @@
           "name": "point_box_puzzle",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "filled",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "id",
+              "type": "number",
+              "value": 0
+            }
+          ],
           "effects": [],
           "behaviors": [],
           "animations": [
@@ -29167,6 +29495,275 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "border_puzzle",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\ui\\Group 97.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 333,
+                            "y": 0
+                          },
+                          {
+                            "x": 333,
+                            "y": 732
+                          },
+                          {
+                            "x": 0,
+                            "y": 732
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "puff_effect",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\effect\\puff-1\\Group 44.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 68.5,
+                        "y": 75
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 68.5,
+                        "y": 75
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 129,
+                            "y": 0
+                          },
+                          {
+                            "x": 129,
+                            "y": 156
+                          },
+                          {
+                            "x": 0,
+                            "y": 156
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\effect\\puff-1\\Group (1).png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 155.5,
+                        "y": 213
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 155.5,
+                        "y": 213
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 129,
+                            "y": 0
+                          },
+                          {
+                            "x": 129,
+                            "y": 156
+                          },
+                          {
+                            "x": 0,
+                            "y": 156
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\effect\\puff-1\\Group.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 150.5,
+                        "y": 155.5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 150.5,
+                        "y": 155.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 129,
+                            "y": 0
+                          },
+                          {
+                            "x": 129,
+                            "y": 156
+                          },
+                          {
+                            "x": 0,
+                            "y": 156
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\effect\\puff-1\\Group (2).png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 239,
+                        "y": 296.5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 239,
+                        "y": 296.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 129,
+                            "y": 0
+                          },
+                          {
+                            "x": 129,
+                            "y": 156
+                          },
+                          {
+                            "x": 0,
+                            "y": 156
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\effect\\puff-1\\Group 45.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 296,
+                        "y": 296.5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 296,
+                        "y": 296.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 129,
+                            "y": 0
+                          },
+                          {
+                            "x": 129,
+                            "y": 156
+                          },
+                          {
+                            "x": 0,
+                            "y": 156
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -29180,6 +29777,12 @@
           },
           {
             "objectName": "point_box_puzzle"
+          },
+          {
+            "objectName": "border_puzzle"
+          },
+          {
+            "objectName": "puff_effect"
           }
         ]
       },
@@ -29241,6 +29844,35 @@
               "parameters": [
                 "",
                 "\"sound\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "point_box_puzzle"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "transition_pink",
+                "Opacity",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "current_level.level_number",
+                "=",
+                "8"
               ]
             }
           ],
@@ -29372,6 +30004,17 @@
                     "Effect",
                     "\"Effect\"",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                  },
+                  "parameters": [
+                    "dino_gray",
+                    "Animation",
+                    "=",
+                    "current_level.level_number"
                   ]
                 },
                 {
@@ -29588,34 +30231,7 @@
                   ]
                 },
                 {
-                  "disabled": true,
                   "folded": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "bones_puzzle",
-                        "box_puzzle",
-                        "",
-                        "",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::ForEach",
-                      "object": "bones_puzzle",
-                      "conditions": [],
-                      "actions": []
-                    }
-                  ]
-                },
-                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [],
@@ -29740,6 +30356,16 @@
                             },
                             {
                               "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "box_puzzle",
+                                "=",
+                                "border_puzzle.ZOrder()+1"
+                              ]
+                            },
+                            {
+                              "type": {
                                 "value": "Sticker::Sticker::Stick"
                               },
                               "parameters": [
@@ -29850,13 +30476,233 @@
                   ]
                 }
               ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "point_box_puzzle",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "point_box_puzzle",
+                        "id",
+                        "=",
+                        "counter"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "counter",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "variables": [
+                {
+                  "name": "counter",
+                  "type": "number",
+                  "value": 1
+                }
+              ]
             }
           ]
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AjoutObjConcern"
+              },
+              "parameters": [
+                "",
+                "point_box_puzzle"
+              ]
+            },
+            {
+              "type": {
+                "value": "AjoutObjConcern"
+              },
+              "parameters": [
+                "",
+                "box_puzzle"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "point_box_puzzle",
+                "filled",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "box_puzzle",
+                "id_point",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "AjoutHasard"
+              },
+              "parameters": [
+                "",
+                "point_box_puzzle"
+              ]
+            },
+            {
+              "type": {
+                "value": "AjoutHasard"
+              },
+              "parameters": [
+                "",
+                "box_puzzle"
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "Tween::IsPlaying"
+              },
+              "parameters": [
+                "box_puzzle",
+                "Tween",
+                "\"box-move-to-point-go-bit\""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "Tween::IsPlaying"
+              },
+              "parameters": [
+                "box_puzzle",
+                "Tween",
+                "\"box-move-to-point-stable\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "box_puzzle",
+                "Tween",
+                "\"box-move-to-point-go-bit\"",
+                "(point_box_puzzle.X()-(box_puzzle.Width()/2))-55",
+                "point_box_puzzle.Y()-(box_puzzle.Height()/2)",
+                "\"linear\"",
+                "0.5",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "point_box_puzzle",
+                "filled",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "0.5"
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "box_puzzle",
+                "Tween",
+                "\"box-move-to-point-stable\"",
+                "(point_box_puzzle.X()-(box_puzzle.Width()/2))",
+                "point_box_puzzle.Y()-(box_puzzle.Height()/2)",
+                "\"linear\"",
+                "0.5",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "0.5"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "box_puzzle",
+                "x",
+                "=",
+                "box_puzzle.X()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "box_puzzle",
+                "y",
+                "=",
+                "box_puzzle.Y()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "box_puzzle",
+                "id_point",
+                "=",
+                "point_box_puzzle.id"
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 30,
+          "colorG": 192,
+          "colorR": 207,
           "creationTime": 0,
           "folded": true,
           "name": "btn-pause-logic",
@@ -30486,241 +31332,143 @@
           ]
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DraggableBehavior::Dragged"
-              },
-              "parameters": [
-                "box_puzzle",
-                "Draggable"
-              ]
-            },
-            {
-              "type": {
-                "value": "Sticker::IsStuck"
-              },
-              "parameters": [
-                "",
-                "bones_puzzle",
-                "Sticker",
-                "box_puzzle",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetBooleanObjectVariable"
-              },
-              "parameters": [
-                "box_puzzle",
-                "is_dragged",
-                "True",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "OpacityCapability::OpacityBehavior::SetValue"
-              },
-              "parameters": [
-                "box_puzzle",
-                "Opacity",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "EffectCapability::EffectBehavior::EnableEffect"
-              },
-              "parameters": [
-                "bones_puzzle",
-                "Effect",
-                "\"Effect\"",
-                "yes"
-              ]
-            }
-          ],
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Drag-n-drop box logic",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::Once"
+                    "value": "DraggableBehavior::Dragged"
                   },
-                  "parameters": []
+                  "parameters": [
+                    "box_puzzle",
+                    "Draggable"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Sticker::IsStuck"
+                  },
+                  "parameters": [
+                    "",
+                    "bones_puzzle",
+                    "Sticker",
+                    "box_puzzle",
+                    ""
+                  ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "box_puzzle",
+                    "is_dragged",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "box_puzzle",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EffectCapability::EffectBehavior::EnableEffect"
                   },
                   "parameters": [
                     "bones_puzzle",
-                    "Tween",
-                    "\"bone-scale-drag\"",
-                    "1",
-                    "\"linear\"",
-                    "0.3",
-                    "",
+                    "Effect",
+                    "\"Effect\"",
                     "yes"
                   ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectAngleTween2"
-                  },
-                  "parameters": [
-                    "bones_puzzle",
-                    "Tween",
-                    "\"bone-angle-drag\"",
-                    "0",
-                    "\"linear\"",
-                    "0.3",
-                    ""
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DraggableBehavior::Dropped"
-              },
-              "parameters": [
-                "box_puzzle",
-                "Draggable"
-              ]
-            },
-            {
-              "type": {
-                "value": "Sticker::IsStuck"
-              },
-              "parameters": [
-                "",
-                "bones_puzzle",
-                "Sticker",
-                "box_puzzle",
-                ""
-              ]
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "bones_puzzle",
-                    "bones_puzzle_hint",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
                 }
               ],
-              "actions": [
+              "events": [
                 {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
-                  },
-                  "parameters": [
-                    "box_puzzle",
-                    "Tween",
-                    "\"box-back\"",
-                    "box_puzzle.x",
-                    "box_puzzle.y",
-                    "\"linear\"",
-                    "0.8",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectScaleTween3"
-                  },
-                  "parameters": [
-                    "bones_puzzle",
-                    "Tween",
-                    "\"bone-scale-drop\"",
-                    "bones_puzzle.scale",
-                    "\"linear\"",
-                    "0.6",
-                    "",
-                    "yes"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectAngleTween2"
-                  },
-                  "parameters": [
-                    "bones_puzzle",
-                    "Tween",
-                    "\"bone-angle-drop\"",
-                    "bones_puzzle.angle",
-                    "\"linear\"",
-                    "0.3",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Wait"
-                  },
-                  "parameters": [
-                    "0.8"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                  },
-                  "parameters": [
-                    "box_puzzle",
-                    "Tween",
-                    "\"box-show\"",
-                    "255",
-                    "\"linear\"",
-                    "0.3",
-                    ""
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                      },
+                      "parameters": [
+                        "bones_puzzle",
+                        "Tween",
+                        "\"bone-scale-drag\"",
+                        "1",
+                        "\"linear\"",
+                        "0.3",
+                        "",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                      },
+                      "parameters": [
+                        "bones_puzzle",
+                        "Tween",
+                        "\"bone-angle-drag\"",
+                        "0",
+                        "\"linear\"",
+                        "0.3",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "CollisionNP"
+                    "value": "DraggableBehavior::Dropped"
                   },
                   "parameters": [
+                    "box_puzzle",
+                    "Draggable"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Sticker::IsStuck"
+                  },
+                  "parameters": [
+                    "",
                     "bones_puzzle",
-                    "bones_puzzle_hint",
-                    "",
-                    "",
+                    "Sticker",
+                    "box_puzzle",
                     ""
                   ]
                 }
@@ -30732,13 +31480,15 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::Name"
+                        "inverted": true,
+                        "value": "CollisionNP"
                       },
                       "parameters": [
+                        "bones_puzzle",
                         "bones_puzzle_hint",
-                        "Animation",
-                        "!=",
-                        "box_puzzle.point_name"
+                        "",
+                        "",
+                        ""
                       ]
                     },
                     {
@@ -30822,124 +31572,765 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::Name"
+                        "value": "CollisionNP"
                       },
                       "parameters": [
+                        "bones_puzzle",
                         "bones_puzzle_hint",
-                        "Animation",
-                        "=",
-                        "box_puzzle.point_name"
+                        "",
+                        "",
+                        ""
                       ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::Name"
+                          },
+                          "parameters": [
+                            "bones_puzzle_hint",
+                            "Animation",
+                            "!=",
+                            "box_puzzle.point_name"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                          },
+                          "parameters": [
+                            "box_puzzle",
+                            "Tween",
+                            "\"box-back\"",
+                            "box_puzzle.x",
+                            "box_puzzle.y",
+                            "\"linear\"",
+                            "0.8",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                          },
+                          "parameters": [
+                            "bones_puzzle",
+                            "Tween",
+                            "\"bone-scale-drop\"",
+                            "bones_puzzle.scale",
+                            "\"linear\"",
+                            "0.6",
+                            "",
+                            "yes"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                          },
+                          "parameters": [
+                            "bones_puzzle",
+                            "Tween",
+                            "\"bone-angle-drop\"",
+                            "bones_puzzle.angle",
+                            "\"linear\"",
+                            "0.3",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.8"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "box_puzzle",
+                            "Tween",
+                            "\"box-show\"",
+                            "255",
+                            "\"linear\"",
+                            "0.3",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::Name"
+                          },
+                          "parameters": [
+                            "bones_puzzle_hint",
+                            "Animation",
+                            "=",
+                            "box_puzzle.point_name"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "point_box_puzzle",
+                            "id",
+                            "=",
+                            "box_puzzle.id_point"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "Tween::IsPlaying"
+                              },
+                              "parameters": [
+                                "bones_puzzle_hint",
+                                "Tween",
+                                "\"bones-show\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Tween::RemoveTween"
+                              },
+                              "parameters": [
+                                "bones_puzzle_hint",
+                                "Tween",
+                                "\"bones-show\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "OpacityCapability::OpacityBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "bones_puzzle_hint",
+                                "Opacity",
+                                "=",
+                                "255*0.12"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "box_puzzle",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                              },
+                              "parameters": [
+                                "bones_puzzle_hint",
+                                "Tween",
+                                "\"bone-scale-correct-\"+bones_puzzle_hint.Animation::Name()",
+                                "255",
+                                "\"linear\"",
+                                "0.8",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "bones_puzzle_hint",
+                                "+",
+                                "55"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "point_box_puzzle",
+                                "filled",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "bones_puzzle"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "box_puzzle"
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "DraggableBehavior::Dragged"
+                  },
+                  "parameters": [
+                    "box_puzzle",
+                    "Draggable"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Sticker::IsStuck"
+                  },
+                  "parameters": [
+                    "",
+                    "bones_puzzle",
+                    "Sticker",
+                    "box_puzzle",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "box_puzzle",
+                    "is_dragged",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EffectCapability::EffectBehavior::EnableEffect"
+                  },
+                  "parameters": [
+                    "bones_puzzle",
+                    "Effect",
+                    "\"Effect\"",
+                    "no"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "LayerVisible"
+                  },
+                  "parameters": [
+                    "",
+                    "\"setting\""
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "LayerVisible"
+                  },
+                  "parameters": [
+                    "",
+                    "\"sound\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "box_puzzle",
+                    "Draggable",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "LayerVisible"
+                      },
+                      "parameters": [
+                        "",
+                        "\"setting\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "LayerVisible"
+                      },
+                      "parameters": [
+                        "",
+                        "\"sound\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "box_puzzle",
+                    "Draggable",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Win-event",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"a\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "puff_effect",
+                    "dino_gray.PointX(\"5.7\")",
+                    "dino_gray.PointY(\"5.7\")",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "puff_effect",
+                    "Scale",
+                    "=",
+                    "0.8"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.37"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "win.max",
+                    "=",
+                    "VariableChildCount(game.dino[current_level.level_number].point)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "win.random_time",
+                    "=",
+                    "RandomInRange(1, win.max-2)"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "win.random_time",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "win.point",
+                        "=",
+                        "current_level.level_number+\".\"+ToString(RandomInRange(1, win.max))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "puff_effect",
+                        "dino_gray.PointX(win.point)",
+                        "dino_gray.PointY(win.point)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "puff_effect",
+                        "Scale",
+                        "=",
+                        "0.8"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                  },
+                  "parameters": [
+                    "puff_effect",
+                    "Animation"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PrioritizeLoadingOfScene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"check-dino\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "puff_effect",
+                    "Tween",
+                    "\"puff-delete\"",
+                    "0",
+                    "\"linear\"",
+                    "0.15",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "win.random_time*0.02"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShowLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"transition\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "transition_pink",
+                    "Tween",
+                    "\"transition-to-show-dino\"",
+                    "255",
+                    "\"linear\"",
+                    "2.5",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "transition_pink",
+                    "Tween",
+                    "\"transition-to-show-dino\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"check-dino\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "bones_puzzle_hint"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::Value"
+                  },
+                  "parameters": [
+                    "bones_puzzle_hint",
+                    "Opacity",
+                    ">=",
+                    "250"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PickedInstancesCount"
+                  },
+                  "parameters": [
+                    "bones_puzzle_hint",
+                    "=",
+                    "VariableChildCount(game.dino[current_level.level_number].point)"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "Delete"
+                        "value": "Create"
                       },
                       "parameters": [
-                        "box_puzzle",
+                        "",
+                        "puff_effect",
+                        "dino_gray.PointX(\"5.7\")",
+                        "dino_gray.PointY(\"5.7\")",
                         ""
                       ]
                     },
                     {
                       "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
                       },
                       "parameters": [
-                        "bones_puzzle_hint",
-                        "Tween",
-                        "\"bone-scale-correct-\"+bones_puzzle_hint.Animation::Name()",
-                        "255",
-                        "\"linear\"",
-                        "0.8",
-                        ""
+                        "puff_effect",
+                        "Scale",
+                        "=",
+                        "0.8"
                       ]
                     },
                     {
                       "type": {
-                        "value": "ChangePlan"
+                        "value": "Wait"
                       },
                       "parameters": [
-                        "bones_puzzle_hint",
-                        "+",
-                        "1"
+                        "0.37"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "win.max",
+                        "=",
+                        "VariableChildCount(game.dino[current_level.level_number].point)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "win.random_time",
+                        "=",
+                        "RandomInRange(1, win.max-2)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "repeatExpression": "win.random_time",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "win.point",
+                            "=",
+                            "current_level.level_number+\".\"+ToString(RandomInRange(1, win.max))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "puff_effect",
+                            "dino_gray.PointX(win.point)",
+                            "dino_gray.PointY(win.point)",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "puff_effect",
+                            "Scale",
+                            "=",
+                            "0.8"
+                          ]
+                        }
                       ]
                     }
                   ]
                 }
               ]
             }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "AjoutObjConcern"
-              },
-              "parameters": [
-                "",
-                "bones_puzzle"
-              ]
-            },
-            {
-              "type": {
-                "value": "AjoutObjConcern"
-              },
-              "parameters": [
-                "",
-                "box_puzzle"
-              ]
-            },
-            {
-              "type": {
-                "inverted": true,
-                "value": "DraggableBehavior::Dragged"
-              },
-              "parameters": [
-                "box_puzzle",
-                "Draggable"
-              ]
-            },
-            {
-              "type": {
-                "value": "Sticker::IsStuck"
-              },
-              "parameters": [
-                "",
-                "bones_puzzle",
-                "Sticker",
-                "box_puzzle",
-                ""
-              ]
-            }
           ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetBooleanObjectVariable"
-              },
-              "parameters": [
-                "box_puzzle",
-                "is_dragged",
-                "False",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "EffectCapability::EffectBehavior::EnableEffect"
-              },
-              "parameters": [
-                "bones_puzzle",
-                "Effect",
-                "\"Effect\"",
-                "no"
-              ]
-            }
-          ]
+          "parameters": []
         }
       ],
       "layers": [
@@ -31165,6 +32556,59 @@
               }
             }
           ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "transition",
+          "renderingType": "",
+          "visibility": false,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
         }
       ],
       "behaviorsSharedData": [
@@ -31229,7 +32673,7 @@
       "name": "check-dino",
       "r": 209,
       "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
+      "stopSoundsOnStartup": false,
       "title": "",
       "v": 209,
       "uiSettings": {
@@ -31242,18 +32686,184 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.546875,
+        "zoomFactor": 0.39251611754882226,
         "windowMask": false,
         "selectedLayer": ""
       },
       "objectsGroups": [],
       "variables": [],
-      "instances": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 718,
+          "keepRatio": true,
+          "layer": "transition",
+          "name": "transition_pink",
+          "persistentUuid": "82b8949f-2748-48a1-b457-6c4feb61b614",
+          "width": 1278,
+          "x": 0,
+          "y": 0,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "tablet",
+          "persistentUuid": "171f4f80-f9b6-4784-9046-bd5d44c8661f",
+          "width": 0,
+          "x": 77,
+          "y": 116,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
       "objects": [],
       "objectsFolderStructure": {
         "folderName": "__ROOT"
       },
-      "events": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "sound"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "debug"
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": true,
+          "folded": true,
+          "name": "Transition-start",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "transition_pink",
+                    "Opacity",
+                    "=",
+                    "255"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShowLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"transition\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "transition_pink",
+                    "Tween",
+                    "\"transition-pink-fade-out\"",
+                    "0",
+                    "\"linear\"",
+                    "1.8",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "transition_pink",
+                    "Tween",
+                    "\"transition-pink-fade-out\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "LayerVisible"
+                  },
+                  "parameters": [
+                    "",
+                    "\"transition\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "transition_pink"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "HideLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"transition\""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        }
+      ],
       "layers": [
         {
           "ambientLightColorB": 200,
@@ -31281,6 +32891,59 @@
               "width": 0
             }
           ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "transition",
+          "renderingType": "",
+          "visibility": false,
+          "cameras": [],
           "effects": [
             {
               "effectType": "Scene3D::HemisphereLight",
@@ -31550,6 +33213,16 @@
           "actions": [
             {
               "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "current_level.scene",
+                "=",
+                "CurrentSceneName()"
+              ]
+            },
+            {
+              "type": {
                 "value": "PanelSpriteSlider::PanelSpriteSlider::SetLabelShown"
               },
               "parameters": [
@@ -31616,16 +33289,26 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "BuiltinCommonInstructions::CompareStrings"
+                        "value": "StringVariable"
                       },
                       "parameters": [
-                        "CurrentSceneName()",
+                        "current_level.scene",
                         "=",
                         "\"brick-game\""
                       ]
                     }
                   ],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "DebuggerTools::ConsoleLog"
+                      },
+                      "parameters": [
+                        "\"READ SCENE NOW \"+current_level.level_area",
+                        "",
+                        ""
+                      ]
+                    },
                     {
                       "type": {
                         "value": "StopMusicCanal"
@@ -31689,6 +33372,36 @@
                           "parameters": [
                             "",
                             "assets\\BGM\\BGM - Level Hutan.wav",
+                            "2",
+                            "yes",
+                            "60",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "current_level.level_area",
+                            "=",
+                            "\"berapi\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlayMusicCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "assets\\BGM\\BGM - Level Magma.mp3",
                             "2",
                             "yes",
                             "60",
@@ -76130,7 +77843,7 @@
           "name": "bones_puzzle",
           "persistentUuid": "109a60c8-7804-439e-8f8e-67153e086bc1",
           "width": 0,
-          "x": 182,
+          "x": 310,
           "y": 155,
           "zOrder": 7,
           "numberProperties": [],
@@ -76146,7 +77859,7 @@
           "name": "bones_puzzle",
           "persistentUuid": "2d859a7a-bea8-465b-a60a-329789e050af",
           "width": 0,
-          "x": 741,
+          "x": 869,
           "y": 213,
           "zOrder": 7,
           "numberProperties": [],
@@ -76162,7 +77875,7 @@
           "name": "bones_puzzle",
           "persistentUuid": "022fac16-ef75-4020-a41d-11a840c6c148",
           "width": 0,
-          "x": 452,
+          "x": 580,
           "y": 275,
           "zOrder": 7,
           "numberProperties": [],
@@ -76170,7 +77883,7 @@
           "initialVariables": []
         },
         {
-          "angle": 3,
+          "angle": 330,
           "customSize": false,
           "height": 0,
           "keepRatio": true,
@@ -76178,8 +77891,8 @@
           "name": "bones_puzzle",
           "persistentUuid": "d03a73b0-3f8b-4c55-a88c-fbe07df20383",
           "width": 0,
-          "x": 204,
-          "y": 425,
+          "x": 133,
+          "y": 317,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -76194,8 +77907,24 @@
           "name": "bones_puzzle",
           "persistentUuid": "4943a8ff-1351-4242-81d7-5c4d299c5a6a",
           "width": 0,
-          "x": 649,
+          "x": 777,
           "y": 384,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 3,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "game",
+          "name": "bones_puzzle",
+          "persistentUuid": "81681b3b-3140-460c-ad96-cf4118f77771",
+          "width": 0,
+          "x": 332,
+          "y": 425,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -76996,8 +78725,8 @@
           "name": "dino_gray",
           "persistentUuid": "6c7865f3-27df-4de6-8601-d7f667be5fdb",
           "width": 0,
-          "x": 235,
-          "y": 46,
+          "x": 143,
+          "y": 104,
           "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
@@ -77013,8 +78742,8 @@
           "name": "box_puzzle",
           "persistentUuid": "e84355c7-be0f-4ad1-8844-878574847af3",
           "width": 132,
-          "x": 1103,
-          "y": 480,
+          "x": 1504,
+          "y": 487,
           "zOrder": 21,
           "numberProperties": [],
           "stringProperties": [],
@@ -77030,8 +78759,8 @@
           "name": "box_puzzle",
           "persistentUuid": "d2972226-450f-43d3-9942-c55717093a71",
           "width": 132,
-          "x": 919,
-          "y": 181,
+          "x": 1320,
+          "y": 188,
           "zOrder": 21,
           "numberProperties": [],
           "stringProperties": [],
@@ -77047,8 +78776,8 @@
           "name": "box_puzzle",
           "persistentUuid": "97f9bb88-1fca-4d6f-ab7e-8f9d85c16d4e",
           "width": 132,
-          "x": 920,
-          "y": 323,
+          "x": 1321,
+          "y": 330,
           "zOrder": 21,
           "numberProperties": [],
           "stringProperties": [],
@@ -77064,8 +78793,8 @@
           "name": "box_puzzle",
           "persistentUuid": "7289b055-2c01-4ec3-8052-21c4e47e868b",
           "width": 132,
-          "x": 918,
-          "y": 473,
+          "x": 1319,
+          "y": 480,
           "zOrder": 21,
           "numberProperties": [],
           "stringProperties": [],
@@ -77081,8 +78810,8 @@
           "name": "box_puzzle",
           "persistentUuid": "e1cec399-99cf-469a-b134-a8d5774aa29e",
           "width": 132,
-          "x": 1103,
-          "y": 172,
+          "x": 1504,
+          "y": 179,
           "zOrder": 21,
           "numberProperties": [],
           "stringProperties": [],
@@ -77098,8 +78827,8 @@
           "name": "box_puzzle",
           "persistentUuid": "e47ef12b-c228-463d-9314-634398e057f1",
           "width": 132,
-          "x": 1103,
-          "y": 331,
+          "x": 1504,
+          "y": 338,
           "zOrder": 21,
           "numberProperties": [],
           "stringProperties": [],
@@ -77116,7 +78845,1094 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5117784035210184,
+        "zoomFactor": 0.37971210019479396,
+        "windowMask": false,
+        "selectedLayer": ""
+      }
+    },
+    {
+      "associatedLayout": "puzzle-game",
+      "name": "puzzle-1",
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "dino_gray",
+          "persistentUuid": "6c7865f3-27df-4de6-8601-d7f667be5fdb",
+          "width": 0,
+          "x": 84,
+          "y": 78,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "d2972226-450f-43d3-9942-c55717093a71",
+          "width": 132,
+          "x": 1320,
+          "y": 188,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "97f9bb88-1fca-4d6f-ab7e-8f9d85c16d4e",
+          "width": 132,
+          "x": 1321,
+          "y": 330,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "7289b055-2c01-4ec3-8052-21c4e47e868b",
+          "width": 132,
+          "x": 1319,
+          "y": 480,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "e1cec399-99cf-469a-b134-a8d5774aa29e",
+          "width": 132,
+          "x": 1504,
+          "y": 179,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "e47ef12b-c228-463d-9314-634398e057f1",
+          "width": 132,
+          "x": 1504,
+          "y": 338,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "editionSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.2725359896772935,
+        "windowMask": false,
+        "selectedLayer": ""
+      }
+    },
+    {
+      "associatedLayout": "puzzle-game",
+      "name": "puzzle-2",
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "dino_gray",
+          "persistentUuid": "6c7865f3-27df-4de6-8601-d7f667be5fdb",
+          "width": 0,
+          "x": 84,
+          "y": 78,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "d2972226-450f-43d3-9942-c55717093a71",
+          "width": 132,
+          "x": 1320,
+          "y": 188,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "97f9bb88-1fca-4d6f-ab7e-8f9d85c16d4e",
+          "width": 132,
+          "x": 1321,
+          "y": 330,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "7289b055-2c01-4ec3-8052-21c4e47e868b",
+          "width": 132,
+          "x": 1319,
+          "y": 480,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "e1cec399-99cf-469a-b134-a8d5774aa29e",
+          "width": 132,
+          "x": 1504,
+          "y": 179,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "e47ef12b-c228-463d-9314-634398e057f1",
+          "width": 132,
+          "x": 1504,
+          "y": 495,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "d5668a00-5f7e-400b-aeee-db0fec82051a",
+          "width": 132,
+          "x": 1504,
+          "y": 338,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "editionSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.2725359896772935,
+        "windowMask": false,
+        "selectedLayer": ""
+      }
+    },
+    {
+      "associatedLayout": "puzzle-game",
+      "name": "puzzle-3",
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "dino_gray",
+          "persistentUuid": "6c7865f3-27df-4de6-8601-d7f667be5fdb",
+          "width": 0,
+          "x": 26,
+          "y": 126,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "d2972226-450f-43d3-9942-c55717093a71",
+          "width": 132,
+          "x": 1320,
+          "y": 188,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "97f9bb88-1fca-4d6f-ab7e-8f9d85c16d4e",
+          "width": 132,
+          "x": 1321,
+          "y": 330,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "7289b055-2c01-4ec3-8052-21c4e47e868b",
+          "width": 132,
+          "x": 1319,
+          "y": 480,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "e1cec399-99cf-469a-b134-a8d5774aa29e",
+          "width": 132,
+          "x": 1504,
+          "y": 179,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "e47ef12b-c228-463d-9314-634398e057f1",
+          "width": 132,
+          "x": 1504,
+          "y": 495,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "d5668a00-5f7e-400b-aeee-db0fec82051a",
+          "width": 132,
+          "x": 1504,
+          "y": 338,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "editionSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.2725359896772935,
+        "windowMask": false,
+        "selectedLayer": ""
+      }
+    },
+    {
+      "associatedLayout": "puzzle-game",
+      "name": "puzzle-4",
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "dino_gray",
+          "persistentUuid": "6c7865f3-27df-4de6-8601-d7f667be5fdb",
+          "width": 0,
+          "x": 26,
+          "y": 126,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "d2972226-450f-43d3-9942-c55717093a71",
+          "width": 132,
+          "x": 1320,
+          "y": 188,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "97f9bb88-1fca-4d6f-ab7e-8f9d85c16d4e",
+          "width": 132,
+          "x": 1321,
+          "y": 330,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "7289b055-2c01-4ec3-8052-21c4e47e868b",
+          "width": 132,
+          "x": 1319,
+          "y": 480,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "e1cec399-99cf-469a-b134-a8d5774aa29e",
+          "width": 132,
+          "x": 1504,
+          "y": 179,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "e47ef12b-c228-463d-9314-634398e057f1",
+          "width": 132,
+          "x": 1504,
+          "y": 495,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "d5668a00-5f7e-400b-aeee-db0fec82051a",
+          "width": 132,
+          "x": 1504,
+          "y": 338,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "editionSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.2725359896772935,
+        "windowMask": false,
+        "selectedLayer": ""
+      }
+    },
+    {
+      "associatedLayout": "puzzle-game",
+      "name": "puzzle-5",
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "dino_gray",
+          "persistentUuid": "6c7865f3-27df-4de6-8601-d7f667be5fdb",
+          "width": 0,
+          "x": 26,
+          "y": 126,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "d2972226-450f-43d3-9942-c55717093a71",
+          "width": 132,
+          "x": 1320,
+          "y": 171,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "97f9bb88-1fca-4d6f-ab7e-8f9d85c16d4e",
+          "width": 132,
+          "x": 1321,
+          "y": 330,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "7289b055-2c01-4ec3-8052-21c4e47e868b",
+          "width": 132,
+          "x": 1319,
+          "y": 480,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "e1cec399-99cf-469a-b134-a8d5774aa29e",
+          "width": 132,
+          "x": 1690,
+          "y": 231,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "e47ef12b-c228-463d-9314-634398e057f1",
+          "width": 132,
+          "x": 1504,
+          "y": 480,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "d5668a00-5f7e-400b-aeee-db0fec82051a",
+          "width": 132,
+          "x": 1504,
+          "y": 326,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "cb81d761-4cde-4a8c-be80-c0fded0ff0c1",
+          "width": 132,
+          "x": 1504,
+          "y": 167,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "editionSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.2725359896772935,
+        "windowMask": false,
+        "selectedLayer": ""
+      }
+    },
+    {
+      "associatedLayout": "puzzle-game",
+      "name": "puzzle-6",
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "dino_gray",
+          "persistentUuid": "6c7865f3-27df-4de6-8601-d7f667be5fdb",
+          "width": 0,
+          "x": 134,
+          "y": 122,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "d2972226-450f-43d3-9942-c55717093a71",
+          "width": 132,
+          "x": 1320,
+          "y": 171,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "97f9bb88-1fca-4d6f-ab7e-8f9d85c16d4e",
+          "width": 132,
+          "x": 1321,
+          "y": 330,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "7289b055-2c01-4ec3-8052-21c4e47e868b",
+          "width": 132,
+          "x": 1319,
+          "y": 480,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "e47ef12b-c228-463d-9314-634398e057f1",
+          "width": 132,
+          "x": 1504,
+          "y": 480,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "d5668a00-5f7e-400b-aeee-db0fec82051a",
+          "width": 132,
+          "x": 1504,
+          "y": 326,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "cb81d761-4cde-4a8c-be80-c0fded0ff0c1",
+          "width": 132,
+          "x": 1504,
+          "y": 167,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "editionSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.2725359896772935,
+        "windowMask": false,
+        "selectedLayer": ""
+      }
+    },
+    {
+      "associatedLayout": "puzzle-game",
+      "name": "puzzle-7",
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "dino_gray",
+          "persistentUuid": "6c7865f3-27df-4de6-8601-d7f667be5fdb",
+          "width": 0,
+          "x": 30,
+          "y": 185,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "d2972226-450f-43d3-9942-c55717093a71",
+          "width": 132,
+          "x": 1320,
+          "y": 171,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "97f9bb88-1fca-4d6f-ab7e-8f9d85c16d4e",
+          "width": 132,
+          "x": 1321,
+          "y": 330,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "7289b055-2c01-4ec3-8052-21c4e47e868b",
+          "width": 132,
+          "x": 1319,
+          "y": 480,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "e47ef12b-c228-463d-9314-634398e057f1",
+          "width": 132,
+          "x": 1504,
+          "y": 480,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "d5668a00-5f7e-400b-aeee-db0fec82051a",
+          "width": 132,
+          "x": 1504,
+          "y": 326,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "editionSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.2725359896772935,
+        "windowMask": false,
+        "selectedLayer": ""
+      }
+    },
+    {
+      "associatedLayout": "puzzle-game",
+      "name": "puzzle-8",
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "dino_gray",
+          "persistentUuid": "6c7865f3-27df-4de6-8601-d7f667be5fdb",
+          "width": 0,
+          "x": 30,
+          "y": 185,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "d2972226-450f-43d3-9942-c55717093a71",
+          "width": 132,
+          "x": 1320,
+          "y": 171,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "97f9bb88-1fca-4d6f-ab7e-8f9d85c16d4e",
+          "width": 132,
+          "x": 1321,
+          "y": 330,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "7289b055-2c01-4ec3-8052-21c4e47e868b",
+          "width": 132,
+          "x": 1319,
+          "y": 480,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "e47ef12b-c228-463d-9314-634398e057f1",
+          "width": 132,
+          "x": 1504,
+          "y": 480,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "d5668a00-5f7e-400b-aeee-db0fec82051a",
+          "width": 132,
+          "x": 1509,
+          "y": 169,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 132,
+          "keepRatio": true,
+          "layer": "",
+          "name": "box_puzzle",
+          "persistentUuid": "310a2f44-524b-4f52-80b2-3d11c7981b07",
+          "width": 132,
+          "x": 1504,
+          "y": 326,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "editionSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.2725359896772935,
         "windowMask": false,
         "selectedLayer": ""
       }
