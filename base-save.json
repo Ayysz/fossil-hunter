@@ -10,7 +10,7 @@
       "id": "0",
       "name": "brontosaurus",
       "habitat": 1,
-      "color": "#FF0000",
+      "color": "#E3D116",
       "point": [
         {
           "scale_hint": 1,
@@ -55,7 +55,7 @@
       "id": "1",
       "name": "petranodon",
       "habitat": 1,
-      "color": "#FF0000",
+      "color": "#0089BD",
       "point": [
         {
           "scale_hint": 1,
@@ -94,7 +94,7 @@
       "id": "2",
       "name": "plesiasaurus",
       "habitat": 1,
-      "color": "#FF0000",
+      "color": "#00A79D",
       "point": [
         {
           "name" : "ekor",
@@ -145,7 +145,7 @@
       "id": "3",
       "name": "parasuaralaphus",
       "habitat": 2,
-      "color": "#FF0000",
+      "color": "#662D91",
       "point": [
         {
           "name" : "ekor",
@@ -196,7 +196,7 @@
       "id": "4",
       "name": "stegosaurus",
       "habitat": 2,
-      "color": "#FF0000",
+      "color": "#F70244",
       "point": [
         {
           "name" : "punuk",
@@ -247,7 +247,7 @@
       "id": "5",
       "name": "spinosaurus",
       "habitat": 2,
-      "color": "#FF0000",
+      "color": "#009D72",
       "point": [
         {
           "name" : "ekor",
@@ -305,7 +305,7 @@
       "id": "6",
       "name": "tyranosaurus",
       "habitat": 3,
-      "color": "#FF0000",
+      "color": "#FF0505",
       "point": [
         {
           "name" : "kaki belakang",
@@ -356,7 +356,7 @@
       "id": "7",
       "name": "triceratops",
       "habitat": 3,
-      "color": "#FF0000",
+      "color": "#F57B10",
       "point": [
         {
           "name" : "ekor",
@@ -400,7 +400,7 @@
       "id": "8",
       "name": "allosaurus",
       "habitat": 3,
-      "color": "#FF0000",
+      "color": "#A4D413",
       "point": [
         {
           "name" : "rusuk",
