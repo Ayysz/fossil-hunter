@@ -3361,16 +3361,6 @@
             "vehicle_body",
             ""
           ]
-        },
-        {
-          "type": {
-            "value": "SetStringVariable"
-          },
-          "parameters": [
-            "current_level.level_area",
-            "=",
-            "\"berapi\""
-          ]
         }
       ],
       "events": [
@@ -3379,6 +3369,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Setup First Road",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5762,6 +5753,10 @@
     {
       "name": "ScreenWrap",
       "type": "ScreenWrap::ScreenWrap"
+    },
+    {
+      "name": "ShakeObject_PositionAngle",
+      "type": "ShakeObject::ShakeObject_PositionAngle"
     },
     {
       "name": "ShakeObject_PositionAngleScale",

@@ -1669,6 +1669,10 @@
       "type": "ScreenWrap::ScreenWrap"
     },
     {
+      "name": "ShakeObject_PositionAngle",
+      "type": "ShakeObject::ShakeObject_PositionAngle"
+    },
+    {
       "name": "ShakeObject_PositionAngleScale",
       "type": "ShakeObject::ShakeObject_PositionAngleScale"
     },

@@ -12,26 +12,9 @@
       "name": "hutan_bg",
       "persistentUuid": "2bb54c39-6870-4417-8b4e-c37d866fe0c0",
       "width": 1277,
-      "x": 4,
+      "x": 0,
       "y": 2,
       "zOrder": 1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 1,
-      "height": 686,
-      "keepRatio": true,
-      "layer": "smentara",
-      "name": "hutan_phon_tiled",
-      "persistentUuid": "f29c1b77-f139-4703-999b-27c987be9e4f",
-      "width": 1631,
-      "x": -188,
-      "y": 522,
-      "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -247,6 +230,22 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 158,
+      "layer": "",
+      "name": "hutan_tanah_dalam",
+      "persistentUuid": "34403e16-143e-4f51-9e73-2865022483f5",
+      "width": 1282,
+      "x": -1,
+      "y": 1458,
+      "zOrder": 5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -261,7 +260,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.35534345588169886,
+    "zoomFactor": 0.36732575450588356,
     "windowMask": false,
     "selectedLayer": "machine_drill"
   }
