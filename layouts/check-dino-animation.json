@@ -1877,7 +1877,6 @@
       "target": "debug"
     },
     {
-      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -1889,29 +1888,44 @@
           ]
         }
       ],
-      "actions": [
+      "actions": [],
+      "events": [
         {
-          "type": {
-            "value": "SetNumberVariable"
-          },
-          "parameters": [
-            "current_level.level_number",
-            "=",
-            "8"
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SystemInfo::IsPreview"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "current_level.level_number",
+                "=",
+                "8"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "current_level.level_area",
+                "=",
+                "game.habitat[game.dino[current_level.level_number].habitat].name"
+              ]
+            }
           ]
         },
-        {
-          "type": {
-            "value": "SetStringVariable"
-          },
-          "parameters": [
-            "current_level.level_area",
-            "=",
-            "game.habitat[game.dino[current_level.level_number].habitat].name"
-          ]
-        }
-      ],
-      "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -2069,6 +2083,7 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2480,7 +2495,7 @@
                   "parameters": [
                     "tablet",
                     "=",
-                    "dino_gray.CenterX()",
+                    "CameraWidth(\"\",0)/2",
                     "=",
                     "dino_gray.CenterY()+CameraHeight(\"\", 0)"
                   ]
@@ -2559,28 +2574,163 @@
               ]
             }
           ]
-        },
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Peek Dino Bones",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "folded": true,
-          "name": "Peek Dino Bones",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Layer"
+              },
+              "parameters": [
+                "tablet",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "Layer"
+                    "value": "Tween::HasFinished"
                   },
                   "parameters": [
                     "tablet",
+                    "Tween",
+                    "\"tablet-in\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                  },
+                  "parameters": [
+                    "dino_name",
+                    "Tween",
+                    "\"dino-name-position-tablet-in\"",
+                    "tablet.BoundingBoxTop()-dino_name.Height()",
+                    "\"linear\"",
+                    "0.3",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "dino_gray",
+                    "Tween",
+                    "\"dino-gray-fade-in\"",
+                    "255",
+                    "\"linear\"",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "dino_gray",
+                    "=",
+                    "tablet.ZOrder()+1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "is_peek",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "tablet",
+                    "Tween",
+                    "\"tablet-out\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "is_peek",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Tween::IsPlaying"
+                  },
+                  "parameters": [
+                    "tablet",
+                    "Tween",
+                    "\"tablet-in\""
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Tween::IsPlaying"
+                  },
+                  "parameters": [
+                    "tablet",
+                    "Tween",
+                    "\"tablet-out\""
                   ]
                 }
               ],
@@ -2591,19 +2741,92 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "Tween::HasFinished"
+                        "value": "BooleanVariable"
                       },
                       "parameters": [
-                        "tablet",
-                        "Tween",
-                        "\"tablet-in\""
+                        "is_peek",
+                        "True",
+                        ""
                       ]
                     },
                     {
                       "type": {
-                        "value": "BuiltinCommonInstructions::Once"
+                        "value": "ButtonStates::ButtonFSM::IsClicked"
                       },
-                      "parameters": []
+                      "parameters": [
+                        "backdrop",
+                        "ButtonFSM",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "dino_gray",
+                        "Tween",
+                        "\"dino-gray-fade-out\"",
+                        "0",
+                        "\"linear\"",
+                        "0.4",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                      },
+                      "parameters": [
+                        "dino_name",
+                        "Tween",
+                        "\"dino-name-position-tablet-out\"",
+                        "dino_name.y",
+                        "\"linear\"",
+                        "0.3",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                      },
+                      "parameters": [
+                        "tablet",
+                        "Tween",
+                        "\"tablet-out\"",
+                        "tablet.Y()+CameraHeight(\"\", 0)",
+                        "\"linear\"",
+                        "1",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "is_peek",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ButtonStates::ButtonFSM::IsClicked"
+                      },
+                      "parameters": [
+                        "backdrop",
+                        "ButtonFSM",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
@@ -2612,228 +2835,20 @@
                         "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
                       },
                       "parameters": [
-                        "dino_name",
+                        "tablet",
                         "Tween",
-                        "\"dino-name-position-tablet-in\"",
-                        "tablet.BoundingBoxTop()-dino_name.Height()",
-                        "\"linear\"",
-                        "0.3",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                      },
-                      "parameters": [
-                        "dino_gray",
-                        "Tween",
-                        "\"dino-gray-fade-in\"",
-                        "255",
+                        "\"tablet-in\"",
+                        "tablet.Y()-CameraHeight(\"\", 0)",
                         "\"linear\"",
                         "1",
                         ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ChangePlan"
-                      },
-                      "parameters": [
-                        "dino_gray",
-                        "=",
-                        "tablet.ZOrder()+1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "is_peek",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "Tween::HasFinished"
-                      },
-                      "parameters": [
-                        "tablet",
-                        "Tween",
-                        "\"tablet-out\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "is_peek",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "Tween::IsPlaying"
-                      },
-                      "parameters": [
-                        "tablet",
-                        "Tween",
-                        "\"tablet-in\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "Tween::IsPlaying"
-                      },
-                      "parameters": [
-                        "tablet",
-                        "Tween",
-                        "\"tablet-out\""
-                      ]
-                    }
-                  ],
-                  "actions": [],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BooleanVariable"
-                          },
-                          "parameters": [
-                            "is_peek",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ButtonStates::ButtonFSM::IsClicked"
-                          },
-                          "parameters": [
-                            "backdrop",
-                            "ButtonFSM",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                          },
-                          "parameters": [
-                            "dino_gray",
-                            "Tween",
-                            "\"dino-gray-fade-out\"",
-                            "0",
-                            "\"linear\"",
-                            "0.4",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
-                          },
-                          "parameters": [
-                            "dino_name",
-                            "Tween",
-                            "\"dino-name-position-tablet-out\"",
-                            "dino_name.y",
-                            "\"linear\"",
-                            "0.3",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
-                          },
-                          "parameters": [
-                            "tablet",
-                            "Tween",
-                            "\"tablet-out\"",
-                            "tablet.Y()+CameraHeight(\"\", 0)",
-                            "\"linear\"",
-                            "1",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BooleanVariable"
-                          },
-                          "parameters": [
-                            "is_peek",
-                            "False",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ButtonStates::ButtonFSM::IsClicked"
-                          },
-                          "parameters": [
-                            "backdrop",
-                            "ButtonFSM",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
-                          },
-                          "parameters": [
-                            "tablet",
-                            "Tween",
-                            "\"tablet-in\"",
-                            "tablet.Y()-CameraHeight(\"\", 0)",
-                            "\"linear\"",
-                            "1",
-                            ""
-                          ]
-                        }
                       ]
                     }
                   ]
                 }
               ]
             }
-          ],
-          "parameters": []
+          ]
         }
       ],
       "parameters": []

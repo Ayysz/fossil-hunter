@@ -45,7 +45,7 @@
       "name": "berapi_tanah",
       "persistentUuid": "b5521dad-8963-4437-b05e-e4b478a82af9",
       "width": 0,
-      "x": -9,
+      "x": 0,
       "y": 903,
       "zOrder": 5,
       "numberProperties": [],
@@ -228,7 +228,7 @@
       "name": "berapi_tanah_dalam",
       "persistentUuid": "fab74143-c607-4fb1-aa80-67d2b0e68c77",
       "width": 1280,
-      "x": -9,
+      "x": 0,
       "y": 1243,
       "zOrder": 5,
       "numberProperties": [],
@@ -248,7 +248,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.3216911764705891,
+    "zoomFactor": 0.2817259932079563,
     "windowMask": false,
     "selectedLayer": ""
   }

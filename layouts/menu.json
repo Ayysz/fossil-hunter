@@ -794,6 +794,24 @@
             "color": "255;255;255"
           },
           "booleanParameters": {}
+        },
+        {
+          "effectType": "OldFilm",
+          "name": "locked",
+          "doubleParameters": {
+            "animationFrequency": 60,
+            "noise": 0.3,
+            "noiseSize": 1,
+            "scratch": 0.5,
+            "scratchDensity": 0.3,
+            "scratchWidth": 1,
+            "sepia": 0.3,
+            "vignetting": 0.3,
+            "vignettingAlpha": 1,
+            "vignettingBlur": 0.3
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
         }
       ],
       "behaviors": [
@@ -2697,69 +2715,414 @@
               ]
             }
           ]
-        },
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "icon-dino",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "icon-dino",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Tween::HasFinished"
+              },
+              "parameters": [
+                "light_projector",
+                "Tween",
+                "\"t-height-light-projector\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [],
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "Tween::HasFinished"
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
                   },
                   "parameters": [
-                    "light_projector",
+                    "area",
+                    "Animation",
+                    "=",
+                    "index_area"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "area",
                     "Tween",
-                    "\"t-height-light-projector\""
+                    "\"area-show-\"+ToString(index_area)",
+                    "255",
+                    "\"linear\"",
+                    "RandomFloatInRange(0.5, 1)",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Tween Opacity Area"
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Tween::HasFinished"
+              },
+              "parameters": [
+                "area",
+                "Tween",
+                "\"area-show-\"+ToString(index_area)"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "index_area",
+                "+",
+                "1"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "area"
                   ]
                 },
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::Once"
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
                   },
-                  "parameters": []
+                  "parameters": [
+                    "area",
+                    "Animation",
+                    "=",
+                    "index_area"
+                  ]
                 }
               ],
-              "actions": [],
-              "events": [
+              "actions": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::Name"
-                      },
-                      "parameters": [
-                        "area",
-                        "Animation",
-                        "=",
-                        "index_area"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                      },
-                      "parameters": [
-                        "area",
-                        "Tween",
-                        "\"area-show-\"+ToString(index_area)",
-                        "255",
-                        "\"linear\"",
-                        "RandomFloatInRange(0.5, 1)",
-                        ""
-                      ]
-                    }
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "area",
+                    "Tween",
+                    "\"area-show-\"+ToString(index_area)",
+                    "255",
+                    "\"linear\"",
+                    "RandomFloatInRange(0.5, 1)",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::Value"
+              },
+              "parameters": [
+                "home_btn",
+                "Opacity",
+                "<",
+                "150"
+              ]
+            },
+            {
+              "type": {
+                "value": "AjoutObjConcern"
+              },
+              "parameters": [
+                "",
+                "area"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::Value"
+              },
+              "parameters": [
+                "area",
+                "Opacity",
+                "=",
+                "255"
+              ]
+            },
+            {
+              "type": {
+                "value": "PickedInstancesCount"
+              },
+              "parameters": [
+                "area",
+                ">=",
+                "SceneInstancesCount(area)"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "icon_dino",
+                    "id",
+                    "=",
+                    "index_icon_dino"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "icon_dino",
+                    "Tween",
+                    "\"icon-dino-show-\"+ToString(index_icon_dino)",
+                    "255",
+                    "\"linear\"",
+                    "RandomFloatInRange(0.5, 1)",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "dino_start",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "icon_dino",
+                    "Scale",
+                    "=",
+                    "0.9"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "icon_dino",
+                    "area",
+                    "=",
+                    "game.dino[icon_dino.id].habitat"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "area",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "area",
+                    "x",
+                    "=",
+                    "area.X()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "area",
+                    "y",
+                    "=",
+                    "area.Y()"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "dino_start",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Adding eclipse movement to icon dino so more smooth and change the variable unlocked to true"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "icon_dino",
+                    "id",
+                    "=",
+                    "index_icon_dino"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "game.dino[index_icon_dino].unlocked",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "EffectCapability::EffectBehavior::EnableEffect"
+                  },
+                  "parameters": [
+                    "icon_dino",
+                    "Effect",
+                    "\"locked\"",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "icon_dino",
+                    "Animation",
+                    "=",
+                    "index_icon_dino+\"-1\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EllipseMovement::EllipseMovement::SetLoopDuration"
+                  },
+                  "parameters": [
+                    "icon_dino",
+                    "EllipseMovement",
+                    "2",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EllipseMovement::EllipseMovement::SetRadiusY"
+                  },
+                  "parameters": [
+                    "icon_dino",
+                    "EllipseMovement",
+                    "2",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "icon_dino",
+                    "unlocked",
+                    "True",
+                    ""
                   ]
                 }
               ]
@@ -2774,10 +3137,9 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Tween Opacity Area"
+              "comment": "Create Manual Tween one by one"
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -2785,9 +3147,9 @@
                     "value": "Tween::HasFinished"
                   },
                   "parameters": [
-                    "area",
+                    "icon_dino",
                     "Tween",
-                    "\"area-show-\"+ToString(index_area)"
+                    "\"icon-dino-show-\"+ToString(index_icon_dino)"
                   ]
                 }
               ],
@@ -2797,7 +3159,7 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "index_area",
+                    "index_icon_dino",
                     "+",
                     "1"
                   ]
@@ -2813,97 +3175,9 @@
                       },
                       "parameters": [
                         "",
-                        "area"
+                        "icon_dino"
                       ]
                     },
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::Name"
-                      },
-                      "parameters": [
-                        "area",
-                        "Animation",
-                        "=",
-                        "index_area"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                      },
-                      "parameters": [
-                        "area",
-                        "Tween",
-                        "\"area-show-\"+ToString(index_area)",
-                        "255",
-                        "\"linear\"",
-                        "RandomFloatInRange(0.5, 1)",
-                        ""
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "OpacityCapability::OpacityBehavior::Value"
-                  },
-                  "parameters": [
-                    "home_btn",
-                    "Opacity",
-                    "<",
-                    "150"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "AjoutObjConcern"
-                  },
-                  "parameters": [
-                    "",
-                    "area"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "OpacityCapability::OpacityBehavior::Value"
-                  },
-                  "parameters": [
-                    "area",
-                    "Opacity",
-                    "=",
-                    "255"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PickedInstancesCount"
-                  },
-                  "parameters": [
-                    "area",
-                    ">=",
-                    "SceneInstancesCount(area)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
                     {
                       "type": {
                         "value": "NumberObjectVariable"
@@ -2919,26 +3193,13 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                        "value": "SetStringObjectVariable"
                       },
                       "parameters": [
                         "icon_dino",
-                        "Tween",
-                        "\"icon-dino-show-\"+ToString(index_icon_dino)",
-                        "255",
-                        "\"linear\"",
-                        "RandomFloatInRange(0.5, 1)",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "dino_start",
-                        "True",
-                        ""
+                        "area",
+                        "=",
+                        "game.dino[icon_dino.id].habitat"
                       ]
                     },
                     {
@@ -2954,42 +3215,222 @@
                     },
                     {
                       "type": {
-                        "value": "SetStringObjectVariable"
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
                       },
                       "parameters": [
                         "icon_dino",
-                        "area",
-                        "=",
-                        "game.dino[icon_dino.id].habitat"
+                        "Tween",
+                        "\"icon-dino-show-\"+ToString(index_icon_dino)",
+                        "255",
+                        "\"linear\"",
+                        "RandomFloatInRange(0.5, 1)",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Check all animation dino is finished"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AjoutObjConcern"
+              },
+              "parameters": [
+                "",
+                "icon_dino"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::Value"
+              },
+              "parameters": [
+                "icon_dino",
+                "Opacity",
+                "=",
+                "255"
+              ]
+            },
+            {
+              "type": {
+                "value": "PickedInstancesCount"
+              },
+              "parameters": [
+                "icon_dino",
+                ">=",
+                "SceneInstancesCount(icon_dino)"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "dino_start",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ShowLayer"
+              },
+              "parameters": [
+                "",
+                "\"home\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+              },
+              "parameters": [
+                "home_btn",
+                "Tween",
+                "\"show-home-first\"",
+                "255",
+                "\"easeInOutQuad\"",
+                "1",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::Value"
+              },
+              "parameters": [
+                "home_btn",
+                "Opacity",
+                ">=",
+                "150"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "dino_start",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Tween::IsPlaying"
+                      },
+                      "parameters": [
+                        "dino-and-area",
+                        "Tween",
+                        "\"dino-and-area-hide\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Tween::IsPlaying"
+                      },
+                      "parameters": [
+                        "dino-and-area",
+                        "Tween",
+                        "\"dino-and-area-show\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Visible"
+                      },
+                      "parameters": [
+                        "icon_dino"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "icon_dino",
+                        "ButtonFSM",
+                        ""
                       ]
                     }
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "area",
-                  "conditions": [],
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Visible"
+                      },
+                      "parameters": [
+                        "icon_dino"
+                      ]
+                    }
+                  ],
                   "actions": [
                     {
                       "type": {
-                        "value": "SetNumberObjectVariable"
+                        "value": "ActivateBehavior"
                       },
                       "parameters": [
-                        "area",
-                        "x",
-                        "=",
-                        "area.X()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "area",
-                        "y",
-                        "=",
-                        "area.Y()"
+                        "icon_dino",
+                        "ButtonFSM",
+                        "yes"
                       ]
                     }
                   ]
@@ -2997,36 +3438,46 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "BooleanVariable"
+                    "inverted": true,
+                    "value": "ButtonStates::ButtonFSM::IsHovered"
                   },
                   "parameters": [
-                    "dino_start",
-                    "True",
+                    "icon_dino",
+                    "ButtonFSM",
                     ""
                   ]
                 }
               ],
-              "actions": [],
-              "events": [
+              "actions": [
                 {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
+                  "type": {
+                    "value": "SetNumberVariable"
                   },
-                  "comment": "Adding eclipse movement to icon dino so more smooth and change the variable unlocked to true"
-                },
+                  "parameters": [
+                    "hover_id_dino",
+                    "=",
+                    "99"
+                  ]
+                }
+              ],
+              "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "icon_dino"
+                      ]
+                    },
                     {
                       "type": {
                         "value": "NumberObjectVariable"
@@ -3035,167 +3486,87 @@
                         "icon_dino",
                         "id",
                         "=",
-                        "index_icon_dino"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "NumberVariable"
-                      },
-                      "parameters": [
-                        "game.dino[index_icon_dino].unlocked",
-                        "=",
-                        "1"
+                        "id_dino_clicked"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                        "value": "ActivateBehavior"
                       },
                       "parameters": [
                         "icon_dino",
-                        "Animation",
-                        "=",
-                        "index_icon_dino+\"-1\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "EllipseMovement::EllipseMovement::SetLoopDuration"
-                      },
-                      "parameters": [
-                        "icon_dino",
-                        "EllipseMovement",
-                        "2",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "EllipseMovement::EllipseMovement::SetRadiusY"
-                      },
-                      "parameters": [
-                        "icon_dino",
-                        "EllipseMovement",
-                        "2",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "icon_dino",
-                        "unlocked",
-                        "True",
+                        "ButtonScaleTween",
                         ""
                       ]
                     }
                   ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Create Manual Tween one by one"
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "Tween::HasFinished"
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "icon_dino"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
                       },
                       "parameters": [
                         "icon_dino",
-                        "Tween",
-                        "\"icon-dino-show-\"+ToString(index_icon_dino)"
+                        "id",
+                        "!=",
+                        "id_dino_clicked"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "text",
+                        "id",
+                        "!=",
+                        "hover_id_dino"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "text",
+                        "id",
+                        "!=",
+                        "id_dino_clicked"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "SetNumberVariable"
+                        "value": "Cache"
                       },
                       "parameters": [
-                        "index_icon_dino",
-                        "+",
-                        "1"
+                        "text"
                       ]
-                    }
-                  ],
-                  "events": [
+                    },
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "AjoutObjConcern"
-                          },
-                          "parameters": [
-                            "",
-                            "icon_dino"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "icon_dino",
-                            "id",
-                            "=",
-                            "index_icon_dino"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "icon_dino",
-                            "area",
-                            "=",
-                            "game.dino[icon_dino.id].habitat"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ScalableCapability::ScalableBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "icon_dino",
-                            "Scale",
-                            "=",
-                            "0.9"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                          },
-                          "parameters": [
-                            "icon_dino",
-                            "Tween",
-                            "\"icon-dino-show-\"+ToString(index_icon_dino)",
-                            "255",
-                            "\"linear\"",
-                            "RandomFloatInRange(0.5, 1)",
-                            ""
-                          ]
-                        }
+                      "type": {
+                        "value": "EffectCapability::EffectBehavior::EnableEffect"
+                      },
+                      "parameters": [
+                        "icon_dino",
+                        "Effect",
+                        "\"Effect\"",
+                        ""
                       ]
                     }
                   ]
@@ -3203,234 +3574,65 @@
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Check all animation dino is finished"
-            },
-            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "AjoutObjConcern"
+                    "value": "ButtonStates::ButtonFSM::IsHovered"
+                  },
+                  "parameters": [
+                    "icon_dino",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectPickingTools::PickHighestZCondition"
                   },
                   "parameters": [
                     "",
-                    "icon_dino"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "OpacityCapability::OpacityBehavior::Value"
-                  },
-                  "parameters": [
                     "icon_dino",
-                    "Opacity",
-                    "=",
-                    "255"
+                    ""
                   ]
-                },
-                {
-                  "type": {
-                    "value": "PickedInstancesCount"
-                  },
-                  "parameters": [
-                    "icon_dino",
-                    ">=",
-                    "SceneInstancesCount(icon_dino)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "SetBooleanVariable"
+                    "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "dino_start",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ShowLayer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"home\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                  },
-                  "parameters": [
-                    "home_btn",
-                    "Tween",
-                    "\"show-home-first\"",
-                    "255",
-                    "\"easeInOutQuad\"",
-                    "1",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "OpacityCapability::OpacityBehavior::Value"
-                  },
-                  "parameters": [
-                    "home_btn",
-                    "Opacity",
-                    ">=",
-                    "150"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "dino_start",
-                    "",
-                    ""
+                    "hover_id_dino",
+                    "=",
+                    "icon_dino.id"
                   ]
                 }
               ],
-              "actions": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "Tween::IsPlaying"
-                          },
-                          "parameters": [
-                            "dino-and-area",
-                            "Tween",
-                            "\"dino-and-area-hide\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "Tween::IsPlaying"
-                          },
-                          "parameters": [
-                            "dino-and-area",
-                            "Tween",
-                            "\"dino-and-area-show\""
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "actions": [],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "Visible"
-                          },
-                          "parameters": [
-                            "icon_dino"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ActivateBehavior"
-                          },
-                          "parameters": [
-                            "icon_dino",
-                            "ButtonFSM",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "Visible"
-                          },
-                          "parameters": [
-                            "icon_dino"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ActivateBehavior"
-                          },
-                          "parameters": [
-                            "icon_dino",
-                            "ButtonFSM",
-                            "yes"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "folded": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "ButtonStates::ButtonFSM::IsHovered"
+                        "value": "NumberObjectVariable"
                       },
                       "parameters": [
-                        "icon_dino",
-                        "ButtonFSM",
-                        ""
+                        "text",
+                        "id",
+                        "=",
+                        "icon_dino.id"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "SetNumberVariable"
+                        "value": "Montre"
                       },
                       "parameters": [
-                        "hover_id_dino",
-                        "=",
-                        "99"
+                        "text",
+                        ""
                       ]
                     }
                   ],
@@ -3440,91 +3642,34 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "AjoutObjConcern"
-                          },
-                          "parameters": [
-                            "",
-                            "icon_dino"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
+                            "value": "BooleanObjectVariable"
                           },
                           "parameters": [
                             "icon_dino",
-                            "id",
-                            "=",
-                            "id_dino_clicked"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ActivateBehavior"
-                          },
-                          "parameters": [
-                            "icon_dino",
-                            "ButtonScaleTween",
+                            "unlocked",
+                            "False",
                             ""
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "AjoutObjConcern"
-                          },
-                          "parameters": [
-                            "",
-                            "icon_dino"
-                          ]
                         },
                         {
                           "type": {
-                            "value": "NumberObjectVariable"
+                            "value": "BuiltinCommonInstructions::Once"
                           },
-                          "parameters": [
-                            "icon_dino",
-                            "id",
-                            "!=",
-                            "id_dino_clicked"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "text",
-                            "id",
-                            "!=",
-                            "hover_id_dino"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "text",
-                            "id",
-                            "!=",
-                            "id_dino_clicked"
-                          ]
+                          "parameters": []
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "value": "Cache"
+                            "value": "PlaySoundCanal"
                           },
                           "parameters": [
-                            "text"
+                            "",
+                            "assets\\SFX\\Menu & UI\\Button.wav",
+                            "1",
+                            "",
+                            "50",
+                            "0.5"
                           ]
                         },
                         {
@@ -3535,73 +3680,103 @@
                             "icon_dino",
                             "Effect",
                             "\"Effect\"",
-                            ""
+                            "no"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextObject::Text::SetOutlineEnabled"
+                          },
+                          "parameters": [
+                            "text",
+                            "no"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "text",
+                            "Text",
+                            "=",
+                            "text.default_locked.text"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextObject::ChangeColor"
+                          },
+                          "parameters": [
+                            "text",
+                            "text.default_locked.color"
                           ]
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "ButtonStates::ButtonFSM::IsHovered"
-                      },
-                      "parameters": [
-                        "icon_dino",
-                        "ButtonFSM",
-                        ""
-                      ]
                     },
-                    {
-                      "type": {
-                        "value": "ObjectPickingTools::PickHighestZCondition"
-                      },
-                      "parameters": [
-                        "",
-                        "icon_dino",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "hover_id_dino",
-                        "=",
-                        "icon_dino.id"
-                      ]
-                    }
-                  ],
-                  "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "NumberObjectVariable"
+                            "value": "BooleanObjectVariable"
                           },
                           "parameters": [
-                            "text",
-                            "id",
-                            "=",
-                            "icon_dino.id"
+                            "icon_dino",
+                            "unlocked",
+                            "True",
+                            ""
                           ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "value": "Montre"
+                            "value": "EffectCapability::EffectBehavior::EnableEffect"
+                          },
+                          "parameters": [
+                            "icon_dino",
+                            "Effect",
+                            "\"Effect\"",
+                            "yes"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextObject::Text::SetOutlineEnabled"
                           },
                           "parameters": [
                             "text",
-                            ""
+                            "yes"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "text",
+                            "Text",
+                            "=",
+                            "game.dino[icon_dino.id].name"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextObject::Text::SetOutlineColor"
+                          },
+                          "parameters": [
+                            "text",
+                            "\"255;255;255\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextObject::ChangeColor"
+                          },
+                          "parameters": [
+                            "text",
+                            "game.dino[icon_dino.id].color"
                           ]
                         }
                       ],
@@ -3611,15 +3786,32 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "BooleanObjectVariable"
+                                "value": "NumberObjectVariable"
                               },
                               "parameters": [
                                 "icon_dino",
-                                "unlocked",
-                                "False",
-                                ""
+                                "id",
+                                "!=",
+                                "id_dino_clicked"
                               ]
-                            },
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "icon_dino",
+                                "ButtonScaleTween",
+                                "yes"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
                             {
                               "type": {
                                 "value": "BuiltinCommonInstructions::Once"
@@ -3637,48 +3829,268 @@
                                 "assets\\SFX\\Menu & UI\\Button.wav",
                                 "1",
                                 "",
-                                "50",
-                                "0.5"
+                                "70",
+                                "4.5"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "icon_dino",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "clicked",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Ini kalo true muncul langsung ke bagian dino aja"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "icon_dino",
+                        "unlocked",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "When icon dino with same clicked again"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "icon_dino",
+                            "id",
+                            "=",
+                            "id_dino_clicked"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "text",
+                            "id",
+                            "=",
+                            "icon_dino.id"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "id_dino_clicked",
+                            "=",
+                            "99"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "clicked",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "icon_dino",
+                            "id",
+                            "!=",
+                            "id_dino_clicked"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "clicked",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "id_dino_clicked",
+                            "=",
+                            "icon_dino.id"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Hide other dino and area"
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AjoutObjConcern"
+                              },
+                              "parameters": [
+                                "",
+                                "area"
                               ]
                             },
                             {
                               "type": {
-                                "value": "EffectCapability::EffectBehavior::EnableEffect"
+                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                              },
+                              "parameters": [
+                                "area",
+                                "Animation",
+                                "!=",
+                                "game.dino[id_dino_clicked].habitat"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AjoutObjConcern"
+                              },
+                              "parameters": [
+                                "",
+                                "icon_dino"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "StringObjectVariable"
                               },
                               "parameters": [
                                 "icon_dino",
-                                "Effect",
-                                "\"Effect\"",
-                                "no"
+                                "area",
+                                "!=",
+                                "game.dino[id_dino_clicked].habitat"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "icon_dino",
+                                "ButtonFSM",
+                                ""
                               ]
                             },
                             {
                               "type": {
-                                "value": "TextObject::Text::SetOutlineEnabled"
+                                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
                               },
                               "parameters": [
-                                "text",
-                                "no"
+                                "dino-and-area",
+                                "Tween",
+                                "\"dino-and-area-hide\"",
+                                "0",
+                                "\"linear\"",
+                                "0.4",
+                                ""
                               ]
                             },
                             {
                               "type": {
-                                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                                "value": "Wait"
                               },
                               "parameters": [
-                                "text",
-                                "Text",
-                                "=",
-                                "text.default_locked.text"
+                                "0.4"
                               ]
                             },
                             {
                               "type": {
-                                "value": "TextObject::ChangeColor"
+                                "value": "Cache"
                               },
                               "parameters": [
-                                "text",
-                                "text.default_locked.color"
+                                "dino-and-area"
                               ]
                             }
                           ]
@@ -3688,17 +4100,144 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "BooleanObjectVariable"
+                                "inverted": true,
+                                "value": "Tween::IsPlaying"
+                              },
+                              "parameters": [
+                                "area",
+                                "Tween",
+                                "\"area-to-back\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                              },
+                              "parameters": [
+                                "area",
+                                "Animation",
+                                "=",
+                                "game.dino[icon_dino.id].habitat"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "Tween::IsPlaying"
+                              },
+                              "parameters": [
+                                "area",
+                                "Tween",
+                                "\"area-to-point\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AjoutObjConcern"
+                              },
+                              "parameters": [
+                                "",
+                                "icon_dino"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "StringObjectVariable"
                               },
                               "parameters": [
                                 "icon_dino",
-                                "unlocked",
-                                "True",
-                                ""
+                                "area",
+                                "=",
+                                "game.dino[id_dino_clicked].habitat"
                               ]
                             }
                           ],
                           "actions": [
+                            {
+                              "type": {
+                                "value": "Sticker::Sticker::Stick"
+                              },
+                              "parameters": [
+                                "icon_dino",
+                                "Sticker",
+                                "area",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                              },
+                              "parameters": [
+                                "area",
+                                "Tween",
+                                "\"area-to-point\"",
+                                "point.CenterX()-(area.Width()/2)",
+                                "\"linear\"",
+                                "0.8",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "dino-and-area",
+                                "=",
+                                "5"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ShowLayer"
+                              },
+                              "parameters": [
+                                "",
+                                "\"choice-game\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                              },
+                              "parameters": [
+                                "btn-choice-level",
+                                "Tween",
+                                "\"btn-choice-level-show\"",
+                                "255",
+                                "\"easeInOutQuad\"",
+                                "0.8",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "text",
+                                "id",
+                                "=",
+                                "id_dino_clicked"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Montre"
+                              },
+                              "parameters": [
+                                "text",
+                                ""
+                              ]
+                            },
                             {
                               "type": {
                                 "value": "EffectCapability::EffectBehavior::EnableEffect"
@@ -3708,6 +4247,15 @@
                                 "Effect",
                                 "\"Effect\"",
                                 "yes"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "TextObject::Text::SetOutlineColor"
+                              },
+                              "parameters": [
+                                "text",
+                                "\"255;255;255\""
                               ]
                             },
                             {
@@ -3732,15 +4280,6 @@
                             },
                             {
                               "type": {
-                                "value": "TextObject::Text::SetOutlineColor"
-                              },
-                              "parameters": [
-                                "text",
-                                "\"255;255;255\""
-                              ]
-                            },
-                            {
-                              "type": {
                                 "value": "TextObject::ChangeColor"
                               },
                               "parameters": [
@@ -3755,34 +4294,6 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "icon_dino",
-                                    "id",
-                                    "!=",
-                                    "id_dino_clicked"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "ActivateBehavior"
-                                  },
-                                  "parameters": [
-                                    "icon_dino",
-                                    "ButtonScaleTween",
-                                    "yes"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
                                     "value": "BuiltinCommonInstructions::Once"
                                   },
                                   "parameters": []
@@ -3791,15 +4302,17 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "PlaySoundCanal"
+                                    "value": "Tween::TweenBehavior::AddObjectScaleTween3"
                                   },
                                   "parameters": [
+                                    "icon_dino",
+                                    "Tween",
+                                    "\"icon-dino-scale-up\"",
+                                    "1.05",
+                                    "\"linear\"",
+                                    "0.3",
                                     "",
-                                    "assets\\SFX\\Menu & UI\\Button.wav",
-                                    "1",
-                                    "",
-                                    "70",
-                                    "4.5"
+                                    "yes"
                                   ]
                                 }
                               ]
@@ -3807,51 +4320,19 @@
                           ]
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "ButtonStates::ButtonFSM::IsClicked"
-                      },
-                      "parameters": [
-                        "icon_dino",
-                        "ButtonFSM",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "clicked",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Ini kalo true muncul langsung ke bagian dino aja"
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
+                        {
+                          "type": {
+                            "value": "AjoutObjConcern"
+                          },
+                          "parameters": [
+                            "",
+                            "icon_dino"
+                          ]
+                        },
                         {
                           "type": {
                             "value": "BooleanObjectVariable"
@@ -3862,434 +4343,84 @@
                             "True",
                             ""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "icon_dino",
+                            "id",
+                            "!=",
+                            "id_dino_clicked"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                          },
+                          "parameters": [
+                            "icon_dino",
+                            "Tween",
+                            "\"icon-dino-scale-down\"",
+                            "0.9",
+                            "\"linear\"",
+                            "0.3",
+                            "",
+                            "yes"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "text"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "EffectCapability::EffectBehavior::EnableEffect"
+                          },
+                          "parameters": [
+                            "icon_dino",
+                            "Effect",
+                            "\"Effect\"",
+                            "no"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "When icon dino with same clicked again"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "clicked",
+                            "False",
+                            ""
+                          ]
                         }
                       ],
                       "actions": [],
                       "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 109,
-                            "g": 230,
-                            "r": 255,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
-                          },
-                          "comment": "When icon dino with same clicked again"
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "icon_dino",
-                                "id",
-                                "=",
-                                "id_dino_clicked"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "text",
-                                "id",
-                                "=",
-                                "icon_dino.id"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "id_dino_clicked",
-                                "=",
-                                "99"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetBooleanVariable"
-                              },
-                              "parameters": [
-                                "clicked",
-                                "False",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "icon_dino",
-                                "id",
-                                "!=",
-                                "id_dino_clicked"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BooleanVariable"
-                              },
-                              "parameters": [
-                                "clicked",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "id_dino_clicked",
-                                "=",
-                                "icon_dino.id"
-                              ]
-                            }
-                          ],
-                          "events": [
-                            {
-                              "type": "BuiltinCommonInstructions::Comment",
-                              "color": {
-                                "b": 109,
-                                "g": 230,
-                                "r": 255,
-                                "textB": 0,
-                                "textG": 0,
-                                "textR": 0
-                              },
-                              "comment": "Hide other dino and area"
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "AjoutObjConcern"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "area"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "AnimatableCapability::AnimatableBehavior::Name"
-                                  },
-                                  "parameters": [
-                                    "area",
-                                    "Animation",
-                                    "!=",
-                                    "game.dino[id_dino_clicked].habitat"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "AjoutObjConcern"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "icon_dino"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "StringObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "icon_dino",
-                                    "area",
-                                    "!=",
-                                    "game.dino[id_dino_clicked].habitat"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "ActivateBehavior"
-                                  },
-                                  "parameters": [
-                                    "icon_dino",
-                                    "ButtonFSM",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                                  },
-                                  "parameters": [
-                                    "dino-and-area",
-                                    "Tween",
-                                    "\"dino-and-area-hide\"",
-                                    "0",
-                                    "\"linear\"",
-                                    "0.4",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Wait"
-                                  },
-                                  "parameters": [
-                                    "0.4"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Cache"
-                                  },
-                                  "parameters": [
-                                    "dino-and-area"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "inverted": true,
-                                    "value": "Tween::IsPlaying"
-                                  },
-                                  "parameters": [
-                                    "area",
-                                    "Tween",
-                                    "\"area-to-back\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "AnimatableCapability::AnimatableBehavior::Name"
-                                  },
-                                  "parameters": [
-                                    "area",
-                                    "Animation",
-                                    "=",
-                                    "game.dino[icon_dino.id].habitat"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "inverted": true,
-                                    "value": "Tween::IsPlaying"
-                                  },
-                                  "parameters": [
-                                    "area",
-                                    "Tween",
-                                    "\"area-to-point\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "AjoutObjConcern"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "icon_dino"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "StringObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "icon_dino",
-                                    "area",
-                                    "=",
-                                    "game.dino[id_dino_clicked].habitat"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "Sticker::Sticker::Stick"
-                                  },
-                                  "parameters": [
-                                    "icon_dino",
-                                    "Sticker",
-                                    "area",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
-                                  },
-                                  "parameters": [
-                                    "area",
-                                    "Tween",
-                                    "\"area-to-point\"",
-                                    "point.CenterX()-(area.Width()/2)",
-                                    "\"linear\"",
-                                    "0.8",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "ChangePlan"
-                                  },
-                                  "parameters": [
-                                    "dino-and-area",
-                                    "=",
-                                    "5"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "ShowLayer"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "\"choice-game\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                                  },
-                                  "parameters": [
-                                    "btn-choice-level",
-                                    "Tween",
-                                    "\"btn-choice-level-show\"",
-                                    "255",
-                                    "\"easeInOutQuad\"",
-                                    "0.8",
-                                    ""
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "text",
-                                    "id",
-                                    "=",
-                                    "id_dino_clicked"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "Montre"
-                                  },
-                                  "parameters": [
-                                    "text",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "EffectCapability::EffectBehavior::EnableEffect"
-                                  },
-                                  "parameters": [
-                                    "icon_dino",
-                                    "Effect",
-                                    "\"Effect\"",
-                                    "yes"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "TextObject::Text::SetOutlineColor"
-                                  },
-                                  "parameters": [
-                                    "text",
-                                    "\"255;255;255\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "TextObject::Text::SetOutlineEnabled"
-                                  },
-                                  "parameters": [
-                                    "text",
-                                    "yes"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                                  },
-                                  "parameters": [
-                                    "text",
-                                    "Text",
-                                    "=",
-                                    "game.dino[icon_dino.id].name"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "TextObject::ChangeColor"
-                                  },
-                                  "parameters": [
-                                    "text",
-                                    "game.dino[icon_dino.id].color"
-                                  ]
-                                }
-                              ],
-                              "events": [
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "BuiltinCommonInstructions::Once"
-                                      },
-                                      "parameters": []
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
-                                      },
-                                      "parameters": [
-                                        "icon_dino",
-                                        "Tween",
-                                        "\"icon-dino-scale-up\"",
-                                        "1.05",
-                                        "\"linear\"",
-                                        "0.3",
-                                        "",
-                                        "yes"
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
@@ -4299,209 +4430,184 @@
                               },
                               "parameters": [
                                 "",
-                                "icon_dino"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "icon_dino",
-                                "unlocked",
-                                "True",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "icon_dino",
-                                "id",
-                                "!=",
-                                "id_dino_clicked"
+                                "dino-and-area"
                               ]
                             }
                           ],
                           "actions": [
                             {
                               "type": {
-                                "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                                "value": "ActivateBehavior"
                               },
                               "parameters": [
                                 "icon_dino",
+                                "ButtonFSM",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                              },
+                              "parameters": [
+                                "btn-choice-level",
                                 "Tween",
-                                "\"icon-dino-scale-down\"",
-                                "0.9",
-                                "\"linear\"",
-                                "0.3",
+                                "\"btn-choice-level-show\"",
+                                "0",
+                                "\"easeInOutQuad\"",
+                                "0.6",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Wait"
+                              },
+                              "parameters": [
+                                "0.4"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "HideLayer"
+                              },
+                              "parameters": [
                                 "",
-                                "yes"
+                                "\"choice-game\""
                               ]
                             },
                             {
                               "type": {
-                                "value": "Cache"
+                                "value": "Montre"
                               },
                               "parameters": [
-                                "text"
+                                "dino-and-area",
+                                ""
                               ]
                             },
                             {
                               "type": {
-                                "value": "EffectCapability::EffectBehavior::EnableEffect"
+                                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
                               },
                               "parameters": [
-                                "icon_dino",
-                                "Effect",
-                                "\"Effect\"",
-                                "no"
+                                "dino-and-area",
+                                "Tween",
+                                "\"dino-and-area-show\"",
+                                "255",
+                                "\"linear\"",
+                                "0.8",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Wait"
+                              },
+                              "parameters": [
+                                "0.3"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                              },
+                              "parameters": [
+                                "area",
+                                "Tween",
+                                "\"area-to-back\"",
+                                "area.x",
+                                "\"linear\"",
+                                "0.8",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "dino-and-area",
+                                "=",
+                                "4"
                               ]
                             }
                           ]
-                        },
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "icon_dino",
+                        "unlocked",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "current_level.level_number",
+                        "=",
+                        "icon_dino.id"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "current_level.level_area",
+                        "=",
+                        "game.dino[icon_dino.id].habitat"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "next_scene",
+                        "=",
+                        "\"endless-game\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
                         {
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 109,
-                            "g": 230,
-                            "r": 255,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
+                          "type": {
+                            "inverted": true,
+                            "value": "DoesSceneExist"
                           },
-                          "comment": "When icon dino with same clicked again"
-                        },
+                          "parameters": [
+                            "",
+                            "next_scene"
+                          ]
+                        }
+                      ],
+                      "actions": [
                         {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BooleanVariable"
-                              },
-                              "parameters": [
-                                "clicked",
-                                "False",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [],
-                          "events": [
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "AjoutObjConcern"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "dino-and-area"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "ActivateBehavior"
-                                  },
-                                  "parameters": [
-                                    "icon_dino",
-                                    "ButtonFSM",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                                  },
-                                  "parameters": [
-                                    "btn-choice-level",
-                                    "Tween",
-                                    "\"btn-choice-level-show\"",
-                                    "0",
-                                    "\"easeInOutQuad\"",
-                                    "0.6",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Wait"
-                                  },
-                                  "parameters": [
-                                    "0.4"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "HideLayer"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "\"choice-game\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Montre"
-                                  },
-                                  "parameters": [
-                                    "dino-and-area",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                                  },
-                                  "parameters": [
-                                    "dino-and-area",
-                                    "Tween",
-                                    "\"dino-and-area-show\"",
-                                    "255",
-                                    "\"linear\"",
-                                    "0.8",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Wait"
-                                  },
-                                  "parameters": [
-                                    "0.3"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
-                                  },
-                                  "parameters": [
-                                    "area",
-                                    "Tween",
-                                    "\"area-to-back\"",
-                                    "area.x",
-                                    "\"linear\"",
-                                    "0.8",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "ChangePlan"
-                                  },
-                                  "parameters": [
-                                    "dino-and-area",
-                                    "=",
-                                    "4"
-                                  ]
-                                }
-                              ]
-                            }
+                          "type": {
+                            "value": "PopUp::Alert"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Scene Not Found Pls Contact The Developer\"",
+                            ""
                           ]
                         }
                       ]
@@ -4511,100 +4617,23 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "BooleanObjectVariable"
+                            "value": "DoesSceneExist"
                           },
                           "parameters": [
-                            "icon_dino",
-                            "unlocked",
-                            "False",
-                            ""
+                            "",
+                            "next_scene"
                           ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "value": "SetNumberVariable"
+                            "value": "Scene"
                           },
                           "parameters": [
-                            "current_level.level_number",
-                            "=",
-                            "icon_dino.id"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringVariable"
-                          },
-                          "parameters": [
-                            "current_level.level_area",
-                            "=",
-                            "game.dino[icon_dino.id].habitat"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringVariable"
-                          },
-                          "parameters": [
-                            "next_scene",
-                            "=",
-                            "\"endless-game\""
-                          ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": true,
-                                "value": "DoesSceneExist"
-                              },
-                              "parameters": [
-                                "",
-                                "next_scene"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PopUp::Alert"
-                              },
-                              "parameters": [
-                                "",
-                                "\"Scene Not Found Pls Contact The Developer\"",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "DoesSceneExist"
-                              },
-                              "parameters": [
-                                "",
-                                "next_scene"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Scene"
-                              },
-                              "parameters": [
-                                "",
-                                "\"loading\"",
-                                ""
-                              ]
-                            }
+                            "",
+                            "\"loading\"",
+                            ""
                           ]
                         }
                       ]
@@ -4613,392 +4642,391 @@
                 }
               ]
             }
-          ],
-          "parameters": []
-        },
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "btn-logic",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "btn-logic",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "LayerVisible"
+              },
+              "parameters": [
+                "home_btn",
+                "\"home\""
+              ]
+            }
+          ],
+          "actions": [],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "LayerVisible"
+                    "value": "ButtonStates::ButtonFSM::IsHovered"
                   },
                   "parameters": [
                     "home_btn",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\SFX\\Menu & UI\\Button.wav",
+                    "1",
+                    "",
+                    "70",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "home_btn",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "next_scene",
+                    "=",
                     "\"home\""
                   ]
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "ButtonStates::ButtonFSM::IsHovered"
-                      },
-                      "parameters": [
-                        "home_btn",
-                        "ButtonFSM",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PlaySoundCanal"
-                      },
-                      "parameters": [
-                        "",
-                        "assets\\SFX\\Menu & UI\\Button.wav",
-                        "1",
-                        "",
-                        "70",
-                        ""
-                      ]
-                    }
-                  ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "ButtonStates::ButtonFSM::IsClicked"
-                      },
-                      "parameters": [
-                        "home_btn",
-                        "ButtonFSM",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetStringVariable"
-                      },
-                      "parameters": [
-                        "next_scene",
-                        "=",
-                        "\"home\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Scene"
-                      },
-                      "parameters": [
-                        "",
-                        "\"loading\"",
-                        ""
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
                   "type": {
-                    "inverted": true,
-                    "value": "LayerVisible"
+                    "value": "Scene"
                   },
                   "parameters": [
                     "",
-                    "\"choice-game\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "btn-choice-level",
-                    "ButtonFSM",
+                    "\"loading\"",
                     ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "btn-choice-level",
-                    "ButtonScaleTween",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "LayerVisible"
-                  },
-                  "parameters": [
-                    "",
-                    "\"choice-game\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "btn-choice-level",
-                    "ButtonFSM",
-                    "yes"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "btn-choice-level",
-                    "ButtonScaleTween",
-                    "yes"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "ButtonStates::ButtonFSM::IsHovered"
-                      },
-                      "parameters": [
-                        "btn-choice-level",
-                        "ButtonFSM",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PlaySoundCanal"
-                      },
-                      "parameters": [
-                        "",
-                        "assets\\SFX\\Menu & UI\\Button.wav",
-                        "1",
-                        "",
-                        "70",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "ButtonStates::ButtonFSM::IsClicked"
-                      },
-                      "parameters": [
-                        "btn_gali_fosil",
-                        "ButtonFSM",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "current_level.level_number",
-                        "=",
-                        "id_dino_clicked"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetStringVariable"
-                      },
-                      "parameters": [
-                        "current_level.level_area",
-                        "=",
-                        "game.habitat[game.dino[id_dino_clicked].habitat].name"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetStringVariable"
-                      },
-                      "parameters": [
-                        "next_scene",
-                        "=",
-                        "\"brick-game\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Scene"
-                      },
-                      "parameters": [
-                        "",
-                        "\"loading\"",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "ButtonStates::ButtonFSM::IsClicked"
-                      },
-                      "parameters": [
-                        "btn_susun_kerangka",
-                        "ButtonFSM",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetStringVariable"
-                      },
-                      "parameters": [
-                        "current_level.level_area",
-                        "=",
-                        "game.habitat[game.dino[id_dino_clicked].habitat].name"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "current_level.level_number",
-                        "=",
-                        "id_dino_clicked"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetStringVariable"
-                      },
-                      "parameters": [
-                        "next_scene",
-                        "=",
-                        "\"puzzle-game\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Scene"
-                      },
-                      "parameters": [
-                        "",
-                        "\"loading\"",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "ButtonStates::ButtonFSM::IsClicked"
-                      },
-                      "parameters": [
-                        "btn_lihat_dino",
-                        "ButtonFSM",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetStringVariable"
-                      },
-                      "parameters": [
-                        "current_level.level_area",
-                        "=",
-                        "game.habitat[game.dino[id_dino_clicked].habitat].name"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "current_level.level_number",
-                        "=",
-                        "id_dino_clicked"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetStringVariable"
-                      },
-                      "parameters": [
-                        "next_scene",
-                        "=",
-                        "\"check-dino\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Scene"
-                      },
-                      "parameters": [
-                        "",
-                        "\"loading\"",
-                        ""
-                      ]
-                    }
                   ]
                 }
               ]
             }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "LayerVisible"
+              },
+              "parameters": [
+                "",
+                "\"choice-game\""
+              ]
+            }
           ],
-          "parameters": []
+          "actions": [
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "btn-choice-level",
+                "ButtonFSM",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "btn-choice-level",
+                "ButtonScaleTween",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "LayerVisible"
+              },
+              "parameters": [
+                "",
+                "\"choice-game\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "btn-choice-level",
+                "ButtonFSM",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "btn-choice-level",
+                "ButtonScaleTween",
+                "yes"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsHovered"
+                  },
+                  "parameters": [
+                    "btn-choice-level",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\SFX\\Menu & UI\\Button.wav",
+                    "1",
+                    "",
+                    "70",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "btn_gali_fosil",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "current_level.level_number",
+                    "=",
+                    "id_dino_clicked"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "current_level.level_area",
+                    "=",
+                    "game.habitat[game.dino[id_dino_clicked].habitat].name"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "next_scene",
+                    "=",
+                    "\"brick-game\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"loading\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "btn_susun_kerangka",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "current_level.level_area",
+                    "=",
+                    "game.habitat[game.dino[id_dino_clicked].habitat].name"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "current_level.level_number",
+                    "=",
+                    "id_dino_clicked"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "next_scene",
+                    "=",
+                    "\"puzzle-game\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"loading\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "btn_lihat_dino",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "current_level.level_area",
+                    "=",
+                    "game.habitat[game.dino[id_dino_clicked].habitat].name"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "current_level.level_number",
+                    "=",
+                    "id_dino_clicked"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "next_scene",
+                    "=",
+                    "\"check-dino-animation\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"loading\"",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "parameters": []

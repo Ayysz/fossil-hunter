@@ -7,7 +7,7 @@
     "revision": 0
   },
   "properties": {
-    "adaptGameResolutionAtRuntime": true,
+    "adaptGameResolutionAtRuntime": false,
     "antialiasingMode": "MSAA",
     "antialisingEnabledOnMobile": false,
     "folderProject": true,
@@ -17570,6 +17570,10 @@
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/start-endless-game"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/endless-game"
     },
     {
@@ -17582,15 +17586,11 @@
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/check-dinoragdoll"
-    },
-    {
-      "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/check-dino-animation"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/start-endless-game"
+      "referenceTo": "/layouts/check-dinoragdoll"
     }
   ],
   "externalEvents": [
