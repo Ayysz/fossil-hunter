@@ -68,26 +68,25 @@
               ]
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "value": "PlayMusicCanal"
-              },
-              "parameters": [
-                "",
-                "assets\\BGM\\BGM - Menu Loop 2.mp3",
-                "2",
-                "yes",
-                "0",
-                ""
-              ]
-            }
-          ],
+          "actions": [],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
+                {
+                  "type": {
+                    "value": "PlayMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\BGM\\BGM - Menu Loop 2.mp3",
+                    "2",
+                    "yes",
+                    "0",
+                    ""
+                  ]
+                },
                 {
                   "type": {
                     "value": "Wait"
@@ -110,7 +109,7 @@
               ]
             },
             {
-              "folded": true,
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -120,7 +119,78 @@
                   "parameters": [
                     "current_level.scene",
                     "=",
-                    "\"brick-game\""
+                    "\"home\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "current_level.scene",
+                    "=",
+                    "\"menu\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlayMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\BGM\\BGM - Menu Loop 1.wav",
+                    "3",
+                    "yes",
+                    "0",
+                    "1.05"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FadeMusicVolume"
+                  },
+                  "parameters": [
+                    "",
+                    "3",
+                    "15*(game.setting.bgm/100)",
+                    "3.5"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "current_level.scene",
+                    "=",
+                    "\"home\""
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "current_level.scene",
+                    "=",
+                    "\"menu\""
                   ]
                 }
               ],
@@ -241,6 +311,190 @@
                         "1.5"
                       ]
                     }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "disabled": true,
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MusicPlaying"
+              },
+              "parameters": [
+                "",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "StringVariable"
+              },
+              "parameters": [
+                "current_level.scene",
+                "!=",
+                "\"loading\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FadeMusicVolume"
+              },
+              "parameters": [
+                "",
+                "2",
+                "0",
+                "3.5"
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "3.5"
+              ]
+            },
+            {
+              "type": {
+                "value": "StopMusicCanal"
+              },
+              "parameters": [
+                "",
+                "2"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "current_level.scene",
+                    "=",
+                    "\"home\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\BGM\\BGM - Menu Loop 2.mp3",
+                    "2",
+                    "yes",
+                    "0",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FadeMusicVolume"
+                  },
+                  "parameters": [
+                    "",
+                    "2",
+                    "100*(game.setting.bgm/100)",
+                    "3.5"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "MENU LEVEL"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "current_level.scene",
+                    "=",
+                    "\"menu\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\BGM\\BGM - Menu Loop 1.wav",
+                    "3",
+                    "yes",
+                    "0",
+                    "1.05"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FadeMusicVolume"
+                  },
+                  "parameters": [
+                    "",
+                    "3",
+                    "15*(game.setting.bgm/100)",
+                    "3.5"
                   ]
                 }
               ]

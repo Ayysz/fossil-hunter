@@ -2105,7 +2105,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Animation Start",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -2604,6 +2603,19 @@
                 "0.7",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "",
+                "assets\\SFX\\Menu & UI\\Start Game.wav",
+                "3",
+                "",
+                "70*(game.setting.sfx/100)",
+                "0.2"
+              ]
             }
           ]
         },
@@ -2725,13 +2737,11 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "icon-dino",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2782,6 +2792,19 @@
                     "RandomFloatInRange(0.5, 1)",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\SFX\\Menu & UI\\Start Game.wav",
+                    "1",
+                    "",
+                    "70*(game.setting.sfx/100)",
+                    "0.5"
+                  ]
                 }
               ]
             }
@@ -2800,7 +2823,6 @@
           "comment": "Tween Opacity Area"
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2864,6 +2886,34 @@
                     "\"linear\"",
                     "RandomFloatInRange(0.5, 1)",
                     ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\SFX\\Menu & UI\\Start Game.wav",
+                        "1",
+                        "",
+                        "70*(game.setting.sfx/100)",
+                        "0.5"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -2983,6 +3033,80 @@
                     "area",
                     "=",
                     "game.dino[icon_dino.id].habitat"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "game.dino[index_icon_dino].unlocked",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\SFX\\Menu & UI\\Start Game.wav",
+                        "1",
+                        "",
+                        "70*(game.setting.sfx/100)",
+                        "1.5"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "game.dino[index_icon_dino].unlocked",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\SFX\\Menu & UI\\Level Select.wav",
+                        "1",
+                        "",
+                        "70*(game.setting.sfx/100)",
+                        "1.5"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -3229,6 +3353,80 @@
                         ""
                       ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "game.dino[index_icon_dino].unlocked",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySoundCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "assets\\SFX\\Menu & UI\\Start Game.wav",
+                            "1",
+                            "",
+                            "70*(game.setting.sfx/100)",
+                            "1.5"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "game.dino[index_icon_dino].unlocked",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySoundCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "assets\\SFX\\Menu & UI\\Level Select.wav",
+                            "1",
+                            "",
+                            "70*(game.setting.sfx/100)",
+                            "1.5"
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               ]
@@ -3440,7 +3638,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -3998,6 +4195,32 @@
                         }
                       ],
                       "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlaySoundCanal"
+                              },
+                              "parameters": [
+                                "",
+                                "assets\\SFX\\Menu & UI\\Level Select.wav",
+                                "3",
+                                "",
+                                "70*(game.setting.sfx/100)",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
                         {
                           "type": "BuiltinCommonInstructions::Comment",
                           "color": {
@@ -4572,7 +4795,7 @@
                       "parameters": [
                         "current_level.level_area",
                         "=",
-                        "game.dino[icon_dino.id].habitat"
+                        "game.habitat[game.dino[icon_dino.id].habitat].name"
                       ]
                     },
                     {
@@ -4582,7 +4805,7 @@
                       "parameters": [
                         "next_scene",
                         "=",
-                        "\"endless-game\""
+                        "\"start-endless-game\""
                       ]
                     }
                   ],
@@ -4630,6 +4853,27 @@
                       "actions": [
                         {
                           "type": {
+                            "value": "PlaySoundCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "assets\\SFX\\Menu & UI\\Button.wav",
+                            "3",
+                            "",
+                            "70*(game.setting.sfx/100)",
+                            "0.8"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.2"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "Scene"
                           },
                           "parameters": [
@@ -4654,7 +4898,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "btn-logic",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -4701,11 +4944,11 @@
                   },
                   "parameters": [
                     "",
-                    "assets\\SFX\\Menu & UI\\Button.wav",
+                    "assets\\SFX\\Menu & UI\\Back Button.wav",
                     "1",
                     "",
-                    "70",
-                    ""
+                    "80*(game.setting.sfx/100)",
+                    "0.6"
                   ]
                 }
               ]
@@ -4733,6 +4976,27 @@
                     "next_scene",
                     "=",
                     "\"home\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\SFX\\Menu & UI\\Back Button.wav",
+                    "1",
+                    "",
+                    "80*(game.setting.sfx/100)",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.2"
                   ]
                 },
                 {
@@ -4852,8 +5116,44 @@
                     "assets\\SFX\\Menu & UI\\Button.wav",
                     "1",
                     "",
-                    "70",
+                    "70*(game.setting.sfx/100)",
                     ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "btn-choice-level",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\SFX\\Menu & UI\\Button.wav",
+                    "1",
+                    "",
+                    "70*(game.setting.sfx/100)",
+                    "0.8"
                   ]
                 }
               ]

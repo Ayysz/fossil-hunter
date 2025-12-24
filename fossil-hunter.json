@@ -2564,6 +2564,46 @@
         "name": "assets\\dino\\tricera\\triceratops.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Menu & UI/Back Button.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Menu & UI\\Back Button.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Dino/1 - Petranodon.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Dino\\1 - Petranodon.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Menu & UI/Level Select.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Menu & UI\\Level Select.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Menu & UI/Start Game.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Menu & UI\\Start Game.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ]
   },
