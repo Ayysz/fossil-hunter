@@ -47,7 +47,7 @@
       "width": 0,
       "x": -9,
       "y": 903,
-      "zOrder": 7,
+      "zOrder": 5,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -179,7 +179,7 @@
       "width": 264,
       "x": 455,
       "y": 577,
-      "zOrder": 6,
+      "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -196,7 +196,7 @@
       "width": 187,
       "x": 493,
       "y": 801,
-      "zOrder": 5,
+      "zOrder": 6,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -230,7 +230,7 @@
       "width": 1280,
       "x": -9,
       "y": 1243,
-      "zOrder": 12,
+      "zOrder": 5,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -248,7 +248,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.5117784035210182,
+    "zoomFactor": 0.3216911764705891,
     "windowMask": false,
     "selectedLayer": ""
   }

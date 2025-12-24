@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.3010461197182506,
+    "zoomFactor": 0.4194339782759129,
     "windowMask": false,
     "selectedLayer": "ui"
   },
@@ -385,41 +385,6 @@
     },
     {
       "angle": 0,
-      "customSize": true,
-      "depth": 2,
-      "flippedY": true,
-      "height": 87,
-      "keepRatio": true,
-      "layer": "ui",
-      "name": "Dpad_Button",
-      "persistentUuid": "7c460737-0378-459c-9111-5d2ce9fb52b7",
-      "width": 129,
-      "x": 1097,
-      "y": 566,
-      "zOrder": 55,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 2,
-      "height": 87,
-      "keepRatio": true,
-      "layer": "ui",
-      "name": "Dpad_Button",
-      "persistentUuid": "4227306c-6dc2-4504-8935-bf918cf6e3b1",
-      "width": 129,
-      "x": 60,
-      "y": 558,
-      "zOrder": 54,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
       "customSize": false,
       "height": 0,
       "keepRatio": true,
@@ -446,6 +411,59 @@
       "x": 1280,
       "y": 0,
       "zOrder": 48,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0.9903713892709766,
+      "height": 720,
+      "keepRatio": true,
+      "layer": "transition",
+      "name": "backdrop",
+      "opacity": 0,
+      "persistentUuid": "5f7dfc33-7574-40fc-b026-aa952bbbecc3",
+      "width": 1282.530949105915,
+      "x": -5,
+      "y": -1,
+      "zOrder": 57,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 2,
+      "flippedY": true,
+      "height": 103,
+      "keepRatio": true,
+      "layer": "ui",
+      "name": "Dpad_Button",
+      "persistentUuid": "da40387d-7b79-450a-91e2-971d6d133762",
+      "width": 153,
+      "x": 1079,
+      "y": 539,
+      "zOrder": 59,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 2,
+      "height": 103,
+      "keepRatio": true,
+      "layer": "ui",
+      "name": "Dpad_Button",
+      "persistentUuid": "a656df24-614c-4d4d-9e47-af6baf3f2f55",
+      "width": 153,
+      "x": 63,
+      "y": 539,
+      "zOrder": 58,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -2221,9 +2239,9 @@
         {
           "name": "Anchor",
           "type": "AnchorBehavior::AnchorBehavior",
+          "relativeToOriginalWindowSize": false,
           "bottomEdgeAnchor": 2,
           "leftEdgeAnchor": 1,
-          "relativeToOriginalWindowSize": true,
           "rightEdgeAnchor": 2,
           "topEdgeAnchor": 0,
           "useLegacyBottomAndRightAnchors": false
@@ -2244,11 +2262,11 @@
           "Scale": "Scale",
           "ButtonFSM": "ButtonFSM",
           "Tween": "Tween",
-          "IdleScale": 1.8,
-          "FocusedScale": 1.85,
+          "IdleScale": 2,
+          "FocusedScale": 2.1,
           "FadeInDuration": 0.1,
           "FadeOutDuration": 0.2,
-          "PressedScale": 1.75,
+          "PressedScale": 1.9,
           "FadeInEasing": "easeInOutQuad",
           "FadeOutEasing": "easeInOutQuad",
           "PreviousState": "Idle"
@@ -2270,198 +2288,6 @@
                 {
                   "hasCustomCollisionMask": true,
                   "image": "Home.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 76,
-                        "y": 0
-                      },
-                      {
-                        "x": 76,
-                        "y": 51
-                      },
-                      {
-                        "x": 0,
-                        "y": 51
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Down",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "timeBetweenFrames": 0.025,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Dpad Button_Down.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 76,
-                        "y": 0
-                      },
-                      {
-                        "x": 76,
-                        "y": 51
-                      },
-                      {
-                        "x": 0,
-                        "y": 51
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Left",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "timeBetweenFrames": 0.025,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Dpad Button_Left.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 76,
-                        "y": 0
-                      },
-                      {
-                        "x": 76,
-                        "y": 51
-                      },
-                      {
-                        "x": 0,
-                        "y": 51
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Right",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "timeBetweenFrames": 0.025,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Dpad Button_Right.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 76,
-                        "y": 0
-                      },
-                      {
-                        "x": 76,
-                        "y": 51
-                      },
-                      {
-                        "x": 0,
-                        "y": 51
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Up2",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "timeBetweenFrames": 0.025,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Dpad Button_Up.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3320,6 +3146,7 @@
       "target": "debug"
     },
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -3431,6 +3258,60 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Transition Fade In",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "backdrop",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "backdrop",
+                    "Opacity",
+                    "=",
+                    "255"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "backdrop",
+                    "Tween",
+                    "\"fade-out\"",
+                    "0",
+                    "\"easeInOutQuad\"",
+                    "1.6",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
           "name": "Hide Point",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3522,50 +3403,6 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
-          "name": "Car smooth in",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "EllipseMovement::EllipseMovement::SetRadiusX"
-                  },
-                  "parameters": [
-                    "vehicle_body",
-                    "EllipseMovement",
-                    "11",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
-                  },
-                  "parameters": [
-                    "vehicle_body",
-                    "Tween",
-                    "\"vehicle-speed-up-in\"",
-                    "config.car.x_start_in",
-                    "\"linear\"",
-                    "3",
-                    ""
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "folded": true,
           "name": "Car to middle road",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3626,6 +3463,18 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "1 = Kanan"
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -3638,7 +3487,17 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "debug_text",
+                    ""
+                  ]
+                }
+              ],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -3715,36 +3574,68 @@
                   ]
                 }
               ],
-              "actions": [
+              "actions": [],
+              "events": [
                 {
-                  "type": {
-                    "value": "ObjectPickingTools::PickHighestZAction"
-                  },
-                  "parameters": [
-                    "",
-                    "Dpad_Button",
-                    ""
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SystemInfo::HasTouchScreen"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Dpad_Button",
+                        ""
+                      ]
+                    }
                   ]
                 },
                 {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "Dpad_Button",
-                    "id",
-                    "+",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SwipeGesture::EnableSwipeDetection"
-                  },
-                  "parameters": [
-                    "",
-                    "True",
-                    ""
+                  "disabled": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SystemInfo::HasTouchScreen"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ObjectPickingTools::PickHighestZAction"
+                      },
+                      "parameters": [
+                        "",
+                        "Dpad_Button",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Dpad_Button",
+                        "id",
+                        "+",
+                        "1"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -3755,6 +3646,68 @@
       ]
     },
     {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Car smooth in",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Tween::HasFinished"
+              },
+              "parameters": [
+                "backdrop",
+                "Tween",
+                "\"fade-out\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "EllipseMovement::EllipseMovement::SetRadiusX"
+              },
+              "parameters": [
+                "vehicle_body",
+                "EllipseMovement",
+                "11",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+              },
+              "parameters": [
+                "vehicle_body",
+                "Tween",
+                "\"vehicle-speed-up-in\"",
+                "config.car.x_start_in",
+                "\"linear\"",
+                "3",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -5602,7 +5555,7 @@
       "isLocked": false,
       "name": "transition",
       "renderingType": "",
-      "visibility": true,
+      "visibility": false,
       "cameras": [],
       "effects": [
         {

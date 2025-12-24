@@ -49,6 +49,13 @@
           "angle": 0
         }
       ],
+      "position_show": {
+        "x_minus": 100,
+        "y_minus": -80
+      },
+      "text": {
+        "position_y": 0
+      },
       "unlocked": 1
     },
     {
@@ -88,6 +95,13 @@
           "angle": 45
         }
       ],
+      "position_show": {
+        "x_minus": 70,
+        "y_minus": 80
+      },
+      "text": {
+        "position_y": 500 
+      },
       "unlocked": 0
     },
     {
@@ -139,6 +153,13 @@
           "angle": 45
         }
       ],
+      "position_show": {
+        "x_minus": 0,
+        "y_minus": -120
+      },
+      "text": {
+        "position_y": 0
+      },
       "unlocked": 1
     },
     {

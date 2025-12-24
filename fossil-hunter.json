@@ -2412,6 +2412,86 @@
         "name": "assets\\area\\berapi\\Frame 15.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/dino/bronto/brontosaurus.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\dino\\bronto\\brontosaurus.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/dino/pero/petranodon.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\dino\\pero\\petranodon.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/dino/plesi/plesiasaurus.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\dino\\plesi\\plesiasaurus.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/effect/puff-2/Group (1).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\effect\\puff-2\\Group (1).png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/effect/puff-2/Group (5).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\effect\\puff-2\\Group (5).png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/effect/puff-2/Group (4).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\effect\\puff-2\\Group (4).png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/effect/puff-2/Group (3).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\effect\\puff-2\\Group (3).png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/effect/puff-2/Group (2).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\effect\\puff-2\\Group (2).png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/area/air/Vector.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\area\\air\\Vector.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/area/air/Frame 16.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\area\\air\\Frame 16.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ]
   },
@@ -14351,7 +14431,13 @@
       "name": "backdrop",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "transition",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [
         {
@@ -15157,7 +15243,7 @@
       ],
       "animations": [
         {
-          "name": "berapi",
+          "name": "",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -15201,17 +15287,6 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": []
             }
           ]
         }
@@ -16367,6 +16442,405 @@
           "type": "Tween::TweenBehavior"
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "hole",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Sticker",
+          "type": "Sticker::Sticker",
+          "OnlyFollowPosition": true,
+          "IsDestroyedWithParent": false
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "default",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "default",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "gurun",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\area\\gurun\\Group 104.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 103.5,
+                    "y": 33
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\area\\gurun\\Group 105.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 177.5,
+                    "y": 41
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 177.5,
+                    "y": 41.5
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\area\\gurun\\Group 106.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 252.5,
+                    "y": 35
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 251.5,
+                    "y": 34
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "berapi",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": []
+            }
+          ]
+        },
+        {
+          "name": "hutan",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "berapi_tanah_dalam",
+      "texture": "assets\\area\\berapi\\Frame 15.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 1280,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Sticker",
+          "type": "Sticker::Sticker",
+          "OnlyFollowPosition": true,
+          "IsDestroyedWithParent": false
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "gurun_batu",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Sticker",
+          "type": "Sticker::Sticker",
+          "OnlyFollowPosition": true,
+          "IsDestroyedWithParent": false
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "0",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\area\\gurun\\gurun_batu (2).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 529,
+                        "y": 0
+                      },
+                      {
+                        "x": 529,
+                        "y": 430
+                      },
+                      {
+                        "x": 0,
+                        "y": 430
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "1",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\area\\gurun\\gurun_batu (3).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 529,
+                        "y": 0
+                      },
+                      {
+                        "x": 529,
+                        "y": 430
+                      },
+                      {
+                        "x": 0,
+                        "y": 430
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 720,
+      "name": "layer_air_tiled",
+      "texture": "assets\\area\\air\\Vector.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 1280,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Sticker",
+          "type": "Sticker::Sticker",
+          "OnlyFollowPosition": true,
+          "IsDestroyedWithParent": false
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 720,
+      "name": "laut_bg",
+      "texture": "assets\\area\\air\\Frame 16.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 1280,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Sticker",
+          "type": "Sticker::Sticker",
+          "OnlyFollowPosition": true,
+          "IsDestroyedWithParent": false
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -16386,6 +16860,9 @@
       {
         "folderName": "area",
         "children": [
+          {
+            "objectName": "hole"
+          },
           {
             "folderName": "vehicle_station",
             "children": [
@@ -16430,6 +16907,9 @@
             "folderName": "berapi",
             "children": [
               {
+                "objectName": "berapi_tanah_dalam"
+              },
+              {
                 "objectName": "berapi_bg"
               },
               {
@@ -16453,6 +16933,17 @@
             ]
           },
           {
+            "folderName": "laut",
+            "children": [
+              {
+                "objectName": "layer_air_tiled"
+              },
+              {
+                "objectName": "laut_bg"
+              }
+            ]
+          },
+          {
             "folderName": "gurun",
             "children": [
               {
@@ -16469,6 +16960,9 @@
               },
               {
                 "objectName": "gurun_tanah_dalam"
+              },
+              {
+                "objectName": "gurun_batu"
               }
             ]
           }
@@ -16627,6 +17121,111 @@
         },
         {
           "name": "bgm_icon"
+        }
+      ]
+    },
+    {
+      "name": "grup_gurun_awan",
+      "objects": [
+        {
+          "name": "gurun_awan"
+        },
+        {
+          "name": "gurun_awan2"
+        }
+      ]
+    },
+    {
+      "name": "grup_berapi_gunung",
+      "objects": [
+        {
+          "name": "berapi_gunung_lahar"
+        },
+        {
+          "name": "berapi_gunung"
+        }
+      ]
+    },
+    {
+      "name": "grup_station",
+      "objects": [
+        {
+          "name": "station"
+        },
+        {
+          "name": "facility"
+        },
+        {
+          "name": "station_alarm"
+        },
+        {
+          "name": "bridge"
+        },
+        {
+          "name": "metal_holder"
+        }
+      ]
+    },
+    {
+      "name": "grup_hutan",
+      "objects": [
+        {
+          "name": "hutan_tanah"
+        },
+        {
+          "name": "hutan_phon"
+        },
+        {
+          "name": "hutan_bg"
+        }
+      ]
+    },
+    {
+      "name": "grup_gurun",
+      "objects": [
+        {
+          "name": "gurun_tanah_dalam"
+        },
+        {
+          "name": "gurun_awan"
+        },
+        {
+          "name": "gurun_awan2"
+        },
+        {
+          "name": "gurun_tanah"
+        },
+        {
+          "name": "gurun_bg"
+        },
+        {
+          "name": "gurun_batu"
+        }
+      ]
+    },
+    {
+      "name": "grup_berapi",
+      "objects": [
+        {
+          "name": "berapi_tanah"
+        },
+        {
+          "name": "berapi_gunung"
+        },
+        {
+          "name": "berapi_gunung_lahar"
+        },
+        {
+          "name": "berapi_awan_kecil"
+        },
+        {
+          "name": "berapi_bg"
+        },
+        {
+          "name": "berapi_awan_besar"
+        },
+        {
+          "name": "berapi_tanah_dalam"
         }
       ]
     },
@@ -17020,7 +17619,7 @@
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalLayouts/area-berapi-show"
+      "referenceTo": "/externalLayouts/area-laut"
     }
   ]
 }

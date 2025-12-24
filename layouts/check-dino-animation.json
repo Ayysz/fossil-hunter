@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.1550857455159302,
+    "zoomFactor": 0.5117784035210204,
     "windowMask": false,
     "selectedLayer": ""
   },
@@ -164,6 +164,22 @@
       "x": 77,
       "y": 116,
       "zOrder": 2,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "dino_name",
+      "persistentUuid": "02dab127-71b2-461f-8957-1a0955752f89",
+      "width": 0,
+      "x": 291,
+      "y": 760,
+      "zOrder": 12,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -824,6 +840,622 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "dino_name",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "string": "BRONTOSAURUS",
+      "font": "assets\\fonts\\Bungee-Regular.ttf",
+      "textAlignment": "left",
+      "characterSize": 80,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": true,
+        "isShadowEnabled": true,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 25,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "BRONTOSAURUS",
+        "font": "assets\\fonts\\Bungee-Regular.ttf",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 80,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "dinos",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "0",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\dino\\bronto\\brontosaurus.png",
+                  "points": [
+                    {
+                      "name": "puff",
+                      "x": 312.5,
+                      "y": 291.5
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 503
+                      },
+                      {
+                        "x": 0,
+                        "y": 503
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "1",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\dino\\pero\\petranodon.png",
+                  "points": [
+                    {
+                      "name": "puff",
+                      "x": 249,
+                      "y": 216
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 503
+                      },
+                      {
+                        "x": 0,
+                        "y": 503
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "2",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\dino\\plesi\\plesiasaurus.png",
+                  "points": [
+                    {
+                      "name": "puff",
+                      "x": 237,
+                      "y": 186
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 503
+                      },
+                      {
+                        "x": 0,
+                        "y": 503
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "puff_effect",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\effect\\puff-2\\Group (1).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 447,
+                    "y": 403.5
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 805
+                      },
+                      {
+                        "x": 1,
+                        "y": 805
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\effect\\puff-2\\Group (1).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 447,
+                    "y": 403.5
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 805
+                      },
+                      {
+                        "x": 1,
+                        "y": 805
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\effect\\puff-2\\Group (2).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 341.5,
+                    "y": 416
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 805
+                      },
+                      {
+                        "x": 1,
+                        "y": 805
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\effect\\puff-2\\Group (2).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 341.5,
+                    "y": 416
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 805
+                      },
+                      {
+                        "x": 1,
+                        "y": 805
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\effect\\puff-2\\Group (3).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 357,
+                    "y": 341
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 805
+                      },
+                      {
+                        "x": 1,
+                        "y": 805
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\effect\\puff-2\\Group (3).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 357,
+                    "y": 341
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 805
+                      },
+                      {
+                        "x": 1,
+                        "y": 805
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\effect\\puff-2\\Group (4).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 272,
+                    "y": 262.5
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 805
+                      },
+                      {
+                        "x": 1,
+                        "y": 805
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\effect\\puff-2\\Group (4).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 272,
+                    "y": 262.5
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 805
+                      },
+                      {
+                        "x": 1,
+                        "y": 805
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\effect\\puff-2\\Group (5).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 285,
+                    "y": 255.5
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 805
+                      },
+                      {
+                        "x": 1,
+                        "y": 805
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\effect\\puff-2\\Group (5).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 285,
+                    "y": 255.5
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 1
+                      },
+                      {
+                        "x": 856,
+                        "y": 805
+                      },
+                      {
+                        "x": 1,
+                        "y": 805
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -859,6 +1491,15 @@
       },
       {
         "objectName": "PLATFORM"
+      },
+      {
+        "objectName": "dino_name"
+      },
+      {
+        "objectName": "dinos"
+      },
+      {
+        "objectName": "puff_effect"
       }
     ]
   },
@@ -878,10 +1519,75 @@
       "target": "debug"
     },
     {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "current_level.level_number",
+            "=",
+            "2"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetStringVariable"
+          },
+          "parameters": [
+            "current_level.level_area",
+            "=",
+            "game.habitat[game.dino[current_level.level_number].habitat].name"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "current_level.level_number",
+                "=",
+                "2"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "current_level.level_area",
+                "=",
+                "\"laut\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "colorB": 228,
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Transition-start",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -983,7 +1689,26 @@
               ]
             }
           ]
-        },
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "area-animation"
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Setup Dino",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -999,288 +1724,209 @@
           "actions": [
             {
               "type": {
-                "value": "SetStringVariable"
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
-                "current_level.level_area",
+                "dino_name",
+                "Text",
                 "=",
-                "\"berapi\""
+                "game.dino[current_level.level_number].name"
               ]
             },
             {
               "type": {
-                "value": "Create"
+                "value": "TextObject::ChangeColor"
               },
               "parameters": [
-                "",
-                "berapi_tanah",
-                "0",
-                "ScreenHeight()+180",
-                ""
+                "dino_name",
+                "game.dino[current_level.level_number].color"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetCenterX"
+              },
+              "parameters": [
+                "dino_name",
+                "=",
+                "CameraWidth(\"\", 0)/2"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "x",
+                "=",
+                "game.dino[current_level.level_number].position_show.x_minus"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "y",
+                "=",
+                "game.dino[current_level.level_number].position_show.y_minus"
               ]
             }
           ],
           "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "StringVariable"
-                  },
-                  "parameters": [
-                    "current_level.level_area",
-                    "=",
-                    "\"berapi\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "berapi_tanah",
-                    "Animation",
-                    "=",
-                    "current_level.level_area"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "berapi_gunung",
-                    "RandomInRange(45, berapi_tanah.BoundingBoxRight() - 50)",
-                    "berapi_tanah.BoundingBoxTop()",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Sticker::Sticker::Stick"
-                  },
-                  "parameters": [
-                    "berapi_gunung",
-                    "Sticker",
-                    "berapi_tanah",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "berapi_gunung_lahar",
-                    "berapi_gunung.PointX(\"lahar\")",
-                    "berapi_gunung.PointY(\"lahar\")",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Sticker::Sticker::Stick"
-                  },
-                  "parameters": [
-                    "berapi_gunung_lahar",
-                    "Sticker",
-                    "berapi_gunung",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
-                  },
-                  "parameters": [
-                    "berapi_awan_besar",
-                    "Tween",
-                    "\"awan-smooth-out\"",
-                    "berapi_bg.BoundingBoxTop()-195",
-                    "\"linear\"",
-                    "2",
-                    ""
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Repeat",
-                  "repeatExpression": "RandomInRange(3,4)",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "berapi_awan_kecil",
-                        "0",
-                        "RandomInRange(point_awan_berapi.BoundingBoxTop(), point_awan_berapi.BoundingBoxBottom())",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ChangePlan"
-                      },
-                      "parameters": [
-                        "berapi_awan_kecil",
-                        "=",
-                        "berapi_gunung.ZOrder()-1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "berapi_awan_kecil",
-                        "ScreenWrap",
-                        "no"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "MettreX"
-                      },
-                      "parameters": [
-                        "berapi_awan_kecil",
-                        "=",
-                        "RandomInRange(point_awan_berapi.X() - 800, point_awan_berapi.X())"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
                 {
                   "type": {
-                    "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                    "value": "Create"
                   },
                   "parameters": [
-                    "berapi_tanah",
-                    "Tween",
-                    "\"area-in\"",
-                    "490",
-                    "\"linear\"",
-                    "2",
+                    "",
+                    "dino_gray",
+                    "0",
+                    "0",
                     ""
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "StringVariable"
-              },
-              "parameters": [
-                "current_level.level_area",
-                "=",
-                "\"berapi\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "TiledSpriteObject::XOffset"
-              },
-              "parameters": [
-                "berapi_awan_besar",
-                "+",
-                "10"
-              ]
-            },
-            {
-              "type": {
-                "value": "TiledSpriteObject::XOffset"
-              },
-              "parameters": [
-                "berapi_bg",
-                "+",
-                "3"
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "Tween::IsPlaying"
-                      },
-                      "parameters": [
-                        "berapi_tanah",
-                        "Tween",
-                        "\"area-in\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::HasFinished"
-                      },
-                      "parameters": [
-                        "berapi_tanah",
-                        "Tween",
-                        "\"area-in\""
-                      ]
-                    }
                   ]
                 },
                 {
                   "type": {
-                    "value": "SceneInstancesCount"
+                    "value": "Create"
                   },
                   "parameters": [
                     "",
-                    "berapi_awan_kecil",
-                    ">",
+                    "dinos",
+                    "0",
+                    "0",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "dinos",
+                    "Animation",
+                    "=",
+                    "current_level.level_number"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                  },
+                  "parameters": [
+                    "dino_gray",
+                    "Animation",
+                    "=",
+                    "current_level.level_number"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetCenter"
+                  },
+                  "parameters": [
+                    "dino_gray",
+                    "=",
+                    "(CameraWidth(\"\",0)/2)-x",
+                    "=",
+                    "(CameraHeight(\"\",0)/2)-y"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetCenter"
+                  },
+                  "parameters": [
+                    "dinos",
+                    "=",
+                    "(CameraWidth(\"\",0)/2)-x",
+                    "=",
+                    "(CameraHeight(\"\",0)/2)-y"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "dino_gray",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "dinos",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EffectCapability::EffectBehavior::EnableEffect"
+                  },
+                  "parameters": [
+                    "dino_gray",
+                    "Effect",
+                    "\"Effect\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
                     "1"
                   ]
                 },
                 {
                   "type": {
-                    "value": "Vitesse"
+                    "value": "Tween::TweenBehavior::AddObjectScaleTween3"
                   },
                   "parameters": [
-                    "berapi_awan_kecil",
-                    "<",
-                    "100"
+                    "dino_gray",
+                    "Tween",
+                    "\"dino-scale\"",
+                    "dino_gray.Scale::Value()-0.18",
+                    "\"easeInOutQuad\"",
+                    "0.2",
+                    "",
+                    "yes"
                   ]
-                }
-              ],
-              "actions": [
+                },
                 {
                   "type": {
-                    "value": "AddForceXY"
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
                   },
                   "parameters": [
-                    "berapi_awan_kecil",
-                    "RandomInRange(90, 120)",
-                    "0",
+                    "dinos",
+                    "Tween",
+                    "\"dino-fade-in\"",
+                    "255",
+                    "\"easeInOutQuad\"",
+                    "3",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "puff_effect",
+                    "dinos.PointX(\"puff\")",
+                    "dinos.PointY(\"puff\")",
                     ""
                   ]
                 }
@@ -1291,53 +1937,24 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "PosX"
+                        "value": "NumberVariable"
                       },
                       "parameters": [
-                        "berapi_awan_kecil",
-                        ">=",
-                        "ScreenWidth()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "BehaviorActivated"
-                      },
-                      "parameters": [
-                        "berapi_awan_kecil",
-                        "ScreenWrap"
+                        "current_level.level_number",
+                        "=",
+                        "2"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "ActivateBehavior"
+                        "value": "ChangePlan"
                       },
                       "parameters": [
-                        "berapi_awan_kecil",
-                        "ScreenWrap",
-                        "yes"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Arreter"
-                      },
-                      "parameters": [
-                        "berapi_awan_kecil"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "AddForceXY"
-                      },
-                      "parameters": [
-                        "berapi_awan_kecil",
-                        "RandomInRange(110, 128)",
-                        "0",
-                        ""
+                        "dinos",
+                        "=",
+                        "layer_air_tiled.ZOrder()-1"
                       ]
                     }
                   ]
@@ -1345,30 +1962,143 @@
               ]
             },
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "BoundingBoxRight"
+                    "value": "NumberVariable"
                   },
                   "parameters": [
-                    "berapi_awan_besar",
-                    ">=",
-                    "ScreenWidth()+70"
+                    "current_level.level_number",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "game.dino[current_level.level_number].unlocked",
+                    ">",
+                    "0"
                   ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "MettreX"
+                    "value": "SetCenter"
                   },
                   "parameters": [
-                    "berapi_awan_besar",
-                    "-",
-                    "0.7"
+                    "puff_effect",
+                    "=",
+                    "dinos.CenterX()",
+                    "=",
+                    "dinos.CenterY()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "dino_gray",
+                    "Tween",
+                    "\"dino-fade-in\"",
+                    "255",
+                    "\"easeInOutQuad\"",
+                    "1",
+                    ""
                   ]
                 }
+              ]
+            }
+          ],
+          "variables": [
+            {
+              "name": "x",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+              },
+              "parameters": [
+                "puff_effect",
+                "Animation"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "puff_effect",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Tween::IsPlaying"
+              },
+              "parameters": [
+                "dinos",
+                "Tween",
+                "\"dino-fade-in\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::Progress"
+              },
+              "parameters": [
+                "dinos",
+                "Tween",
+                "\"dino-fade-in\"",
+                ">",
+                "0.5"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+              },
+              "parameters": [
+                "dino_name",
+                "Tween",
+                "\"dino-name-in\"",
+                "(dinos.BoundingBoxTop()-dino_name.Height())+game.dino[current_level.level_number].text.position_y",
+                "\"easeOutQuad\"",
+                "1",
+                ""
               ]
             }
           ]
@@ -1405,6 +2135,60 @@
           "width": 0
         }
       ],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Ambient Hemisphere Light",
+          "doubleParameters": {
+            "elevation": 40,
+            "intensity": 0.33,
+            "rotation": 300
+          },
+          "stringParameters": {
+            "groundColor": "127;127;127",
+            "skyColor": "255;255;255",
+            "top": "Z+"
+          },
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "Scene3D::DirectionalLight",
+          "name": "3D Sun Light",
+          "doubleParameters": {
+            "distanceFromCamera": 1500,
+            "elevation": 40,
+            "frustumSize": 4000,
+            "intensity": 0.75,
+            "minimumShadowBias": 0,
+            "rotation": 300
+          },
+          "stringParameters": {
+            "color": "255;255;255",
+            "shadowQuality": "medium",
+            "top": "Z+"
+          },
+          "booleanParameters": {
+            "isCastingShadow": true
+          }
+        }
+      ]
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera2DPlaneMaxDrawingDistance": 5000,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "machine_drill",
+      "renderingType": "",
+      "visibility": false,
+      "cameras": [],
       "effects": [
         {
           "effectType": "Scene3D::HemisphereLight",
