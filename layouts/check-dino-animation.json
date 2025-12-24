@@ -132,6 +132,11 @@
           ]
         }
       ]
+    },
+    {
+      "name": "is_peek",
+      "type": "boolean",
+      "value": false
     }
   ],
   "instances": [
@@ -180,6 +185,24 @@
       "x": 291,
       "y": 760,
       "zOrder": 12,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 720,
+      "keepRatio": true,
+      "layer": "",
+      "name": "backdrop",
+      "opacity": 0,
+      "persistentUuid": "4f4b7f73-134c-41cd-b398-1f9a3214ddca",
+      "width": 1288,
+      "x": 0,
+      "y": 0,
+      "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -849,7 +872,18 @@
       "smoothed": true,
       "type": "TextObject::Text",
       "underlined": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "y",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "effects": [],
       "behaviors": [
         {
@@ -1028,6 +1062,330 @@
                       "name": "puff",
                       "x": 237,
                       "y": 186
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 503
+                      },
+                      {
+                        "x": 0,
+                        "y": 503
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "3",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\dino\\parasuara\\parasauralaphus.png",
+                  "points": [
+                    {
+                      "name": "puff",
+                      "x": 321,
+                      "y": 140
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 503
+                      },
+                      {
+                        "x": 0,
+                        "y": 503
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "4",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\dino\\stego\\stegosaurus.png",
+                  "points": [
+                    {
+                      "name": "puff",
+                      "x": 312.5,
+                      "y": 87.5
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 503
+                      },
+                      {
+                        "x": 0,
+                        "y": 503
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "5",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\dino\\spino\\spinosaurus.png",
+                  "points": [
+                    {
+                      "name": "puff",
+                      "x": 282.5,
+                      "y": 107
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 503
+                      },
+                      {
+                        "x": 0,
+                        "y": 503
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "6",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\dino\\trex\\t rex.png",
+                  "points": [
+                    {
+                      "name": "puff",
+                      "x": 274,
+                      "y": 192
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 503
+                      },
+                      {
+                        "x": 0,
+                        "y": 503
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "7",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\dino\\tricera\\triceratops.png",
+                  "points": [
+                    {
+                      "name": "puff",
+                      "x": 346,
+                      "y": 150.5
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 0
+                      },
+                      {
+                        "x": 514,
+                        "y": 503
+                      },
+                      {
+                        "x": 0,
+                        "y": 503
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "8",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\dino\\allo\\allosaurus.png",
+                  "points": [
+                    {
+                      "name": "puff",
+                      "x": 375.5,
+                      "y": 114.5
                     }
                   ],
                   "originPoint": {
@@ -1519,6 +1877,7 @@
       "target": "debug"
     },
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -1538,7 +1897,7 @@
           "parameters": [
             "current_level.level_number",
             "=",
-            "2"
+            "8"
           ]
         },
         {
@@ -1771,6 +2130,16 @@
                 "=",
                 "game.dino[current_level.level_number].position_show.y_minus"
               ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "backdrop",
+                "ButtonFSM",
+                "yes"
+              ]
             }
           ],
           "events": [
@@ -1883,25 +2252,25 @@
                 },
                 {
                   "type": {
-                    "value": "Wait"
-                  },
-                  "parameters": [
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "Tween::TweenBehavior::AddObjectScaleTween3"
                   },
                   "parameters": [
                     "dino_gray",
                     "Tween",
                     "\"dino-scale\"",
-                    "dino_gray.Scale::Value()-0.18",
+                    "dino_gray.Scale::Value()-game.dino[current_level.level_number].dino_gray.scale_minus",
                     "\"easeInOutQuad\"",
                     "0.2",
                     "",
                     "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
                   ]
                 },
                 {
@@ -2052,6 +2421,72 @@
                 ""
               ]
             }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectPickingTools::UnpickCondition"
+                  },
+                  "parameters": [
+                    "",
+                    "tablet",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "tablet",
+                    "0",
+                    "0",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
+                  },
+                  "parameters": [
+                    "tablet",
+                    "Animation"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetCenter"
+                  },
+                  "parameters": [
+                    "tablet",
+                    "=",
+                    "dino_gray.CenterX()",
+                    "=",
+                    "dino_gray.CenterY()+CameraHeight(\"\", 0)"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -2089,19 +2524,316 @@
           "actions": [
             {
               "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "dino_name",
+                "y",
+                "=",
+                "(dinos.BoundingBoxTop()-dino_name.Height())+game.dino[current_level.level_number].text.position_y"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "dino_name",
+                "x",
+                "=",
+                "dino_name.X()"
+              ]
+            },
+            {
+              "type": {
                 "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
               },
               "parameters": [
                 "dino_name",
                 "Tween",
                 "\"dino-name-in\"",
-                "(dinos.BoundingBoxTop()-dino_name.Height())+game.dino[current_level.level_number].text.position_y",
+                "dino_name.y",
                 "\"easeOutQuad\"",
                 "1",
                 ""
               ]
             }
           ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Peek Dino Bones",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Layer"
+                  },
+                  "parameters": [
+                    "tablet",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Tween::HasFinished"
+                      },
+                      "parameters": [
+                        "tablet",
+                        "Tween",
+                        "\"tablet-in\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                      },
+                      "parameters": [
+                        "dino_name",
+                        "Tween",
+                        "\"dino-name-position-tablet-in\"",
+                        "tablet.BoundingBoxTop()-dino_name.Height()",
+                        "\"linear\"",
+                        "0.3",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "dino_gray",
+                        "Tween",
+                        "\"dino-gray-fade-in\"",
+                        "255",
+                        "\"linear\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "dino_gray",
+                        "=",
+                        "tablet.ZOrder()+1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "is_peek",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Tween::HasFinished"
+                      },
+                      "parameters": [
+                        "tablet",
+                        "Tween",
+                        "\"tablet-out\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "is_peek",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Tween::IsPlaying"
+                      },
+                      "parameters": [
+                        "tablet",
+                        "Tween",
+                        "\"tablet-in\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Tween::IsPlaying"
+                      },
+                      "parameters": [
+                        "tablet",
+                        "Tween",
+                        "\"tablet-out\""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "is_peek",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ButtonStates::ButtonFSM::IsClicked"
+                          },
+                          "parameters": [
+                            "backdrop",
+                            "ButtonFSM",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "dino_gray",
+                            "Tween",
+                            "\"dino-gray-fade-out\"",
+                            "0",
+                            "\"linear\"",
+                            "0.4",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                          },
+                          "parameters": [
+                            "dino_name",
+                            "Tween",
+                            "\"dino-name-position-tablet-out\"",
+                            "dino_name.y",
+                            "\"linear\"",
+                            "0.3",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                          },
+                          "parameters": [
+                            "tablet",
+                            "Tween",
+                            "\"tablet-out\"",
+                            "tablet.Y()+CameraHeight(\"\", 0)",
+                            "\"linear\"",
+                            "1",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "is_peek",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ButtonStates::ButtonFSM::IsClicked"
+                          },
+                          "parameters": [
+                            "backdrop",
+                            "ButtonFSM",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                          },
+                          "parameters": [
+                            "tablet",
+                            "Tween",
+                            "\"tablet-in\"",
+                            "tablet.Y()-CameraHeight(\"\", 0)",
+                            "\"linear\"",
+                            "1",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
         }
       ],
       "parameters": []

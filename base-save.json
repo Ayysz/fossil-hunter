@@ -56,6 +56,9 @@
       "text": {
         "position_y": 0
       },
+      "dino_gray": {
+        "scale_minus": 0.18
+      },
       "unlocked": 1
     },
     {
@@ -101,6 +104,9 @@
       },
       "text": {
         "position_y": 500 
+      },
+      "dino_gray": {
+        "scale_minus": 0.18
       },
       "unlocked": 0
     },
@@ -160,6 +166,9 @@
       "text": {
         "position_y": 0
       },
+      "dino_gray": {
+        "scale_minus": 0.3
+      },
       "unlocked": 1
     },
     {
@@ -211,6 +220,16 @@
           "angle": 45
         }
       ],
+      "position_show": {
+        "x_minus": 0,
+        "y_minus": -120
+      },
+      "text": {
+        "position_y": 0
+      },
+      "dino_gray": {
+        "scale_minus": 0.18
+      },
       "unlocked": 1
     },
     {
@@ -262,6 +281,16 @@
           "angle": 45
         }
       ],
+      "position_show": {
+        "x_minus": 0,
+        "y_minus": -180
+      },
+      "text": {
+        "position_y": -130
+      },
+      "dino_gray": {
+        "scale_minus": 0.1
+      },
       "unlocked": 0
     },
     {
@@ -320,6 +349,16 @@
           "angle": 28
         }
       ],
+      "position_show": {
+        "x_minus": 0,
+        "y_minus": -120
+      },
+      "text": {
+        "position_y": -100
+      },
+      "dino_gray": {
+        "scale_minus": 0.1
+      },
       "unlocked": 0
     },
     {
@@ -371,6 +410,16 @@
           "angle": 35
         }
       ],
+      "position_show": {
+        "x_minus": 0,
+        "y_minus": -120
+      },
+      "text": {
+        "position_y": -20
+      },
+      "dino_gray": {
+        "scale_minus": 0.27
+      },
       "unlocked": 0
     },
     {
@@ -415,6 +464,16 @@
           "angle": 0
         }
       ],
+      "position_show": {
+        "x_minus": 0,
+        "y_minus": -120
+      },
+      "text": {
+        "position_y": -20
+      },
+      "dino_gray": {
+        "scale_minus": 0.26
+      },
       "unlocked": 0
     },
     {
@@ -466,6 +525,16 @@
           "angle": -35
         }
       ],
+      "position_show": {
+        "x_minus": 0,
+        "y_minus": -120
+      },
+      "text": {
+        "position_y": -20
+      },
+      "dino_gray": {
+        "scale_minus": 0.1
+      },
       "unlocked": 1
     }
   ],

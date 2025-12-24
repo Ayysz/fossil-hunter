@@ -2492,6 +2492,78 @@
         "name": "assets\\area\\air\\Frame 16.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/area/berapi/Group 108.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\area\\berapi\\Group 108.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/area/berapi/Group 109.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\area\\berapi\\Group 109.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/area/berapi/Group 110.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\area\\berapi\\Group 110.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/dino/parasuara/parasauralaphus.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\dino\\parasuara\\parasauralaphus.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/dino/stego/stegosaurus.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\dino\\stego\\stegosaurus.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/dino/spino/spinosaurus.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\dino\\spino\\spinosaurus.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/dino/trex/t rex.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\dino\\trex\\t rex.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/dino/allo/allosaurus.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\dino\\allo\\allosaurus.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/dino/tricera/triceratops.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\dino\\tricera\\triceratops.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ]
   },
@@ -16640,7 +16712,116 @@
             {
               "looping": false,
               "timeBetweenFrames": 0.08,
-              "sprites": []
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\area\\berapi\\Group 108.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\area\\berapi\\Group 109.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\area\\berapi\\Group 110.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
             }
           ]
         },
