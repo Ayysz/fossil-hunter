@@ -20,7 +20,7 @@
             "value": "SetStringVariable"
           },
           "parameters": [
-            "current_scene",
+            "current_level.scene",
             "=",
             "CurrentSceneName()"
           ]
@@ -51,7 +51,7 @@
                 "value": "StringVariable"
               },
               "parameters": [
-                "current_scene",
+                "current_level.scene",
                 "!=",
                 "\"start-endless-game\""
               ]
@@ -75,7 +75,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Setup Area From External Layout",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -99,7 +98,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -210,7 +208,7 @@
                         "value": "StringVariable"
                       },
                       "parameters": [
-                        "current_scene",
+                        "current_level.scene",
                         "=",
                         "\"start-endless-game\""
                       ]
@@ -474,7 +472,7 @@
                         "value": "StringVariable"
                       },
                       "parameters": [
-                        "current_scene",
+                        "current_level.scene",
                         "=",
                         "\"start-endless-game\""
                       ]
@@ -703,7 +701,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -2113,7 +2110,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Transition",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",

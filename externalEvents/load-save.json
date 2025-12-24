@@ -14,17 +14,32 @@
           ]
         }
       ],
-      "actions": [
-        {
-          "type": {
-            "value": "DeleteFichier"
-          },
-          "parameters": [
-            "\"game\""
-          ]
-        }
-      ],
+      "actions": [],
       "events": [
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SystemInfo::IsPreview"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "DeleteFichier"
+              },
+              "parameters": [
+                "\"game\""
+              ]
+            }
+          ]
+        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [

@@ -81,21 +81,36 @@
                 "0",
                 ""
               ]
-            },
-            {
-              "type": {
-                "value": "FadeMusicVolume"
-              },
-              "parameters": [
-                "",
-                "2",
-                "100",
-                "1.5"
-              ]
             }
           ],
           "events": [
             {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FadeMusicVolume"
+                  },
+                  "parameters": [
+                    "",
+                    "2",
+                    "100*(game.setting.bgm/100)",
+                    "3.5"
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -110,16 +125,6 @@
                 }
               ],
               "actions": [
-                {
-                  "type": {
-                    "value": "DebuggerTools::ConsoleLog"
-                  },
-                  "parameters": [
-                    "\"READ SCENE NOW \"+current_level.level_area",
-                    "",
-                    ""
-                  ]
-                },
                 {
                   "type": {
                     "value": "StopMusicCanal"
@@ -155,7 +160,7 @@
                         "assets\\BGM\\BGM - Level Gurun.mp3",
                         "2",
                         "yes",
-                        "60",
+                        "60*(game.setting.bgm/100)",
                         "1"
                       ]
                     }
@@ -185,7 +190,7 @@
                         "assets\\BGM\\BGM - Level Hutan.wav",
                         "2",
                         "yes",
-                        "60",
+                        "60*(game.setting.bgm/100)",
                         "1"
                       ]
                     }
@@ -215,7 +220,7 @@
                         "assets\\BGM\\BGM - Level Magma.mp3",
                         "2",
                         "yes",
-                        "60",
+                        "60*(game.setting.bgm/100)",
                         "1"
                       ]
                     }
@@ -232,7 +237,7 @@
                       "parameters": [
                         "",
                         "2",
-                        "100",
+                        "100*(game.setting.bgm/100)",
                         "1.5"
                       ]
                     }
@@ -286,6 +291,7 @@
       ]
     },
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -399,6 +405,7 @@
       ]
     },
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -565,6 +572,17 @@
             "=",
             "sfx_slider.Value()"
           ]
+        },
+        {
+          "type": {
+            "value": "ModVolumeSoundCanal"
+          },
+          "parameters": [
+            "",
+            "1",
+            "=",
+            "sfx_slider.Value()"
+          ]
         }
       ]
     },
@@ -588,6 +606,17 @@
           },
           "parameters": [
             "game.setting.bgm",
+            "=",
+            "bgm_slider.Value()"
+          ]
+        },
+        {
+          "type": {
+            "value": "ModVolumeMusicCanal"
+          },
+          "parameters": [
+            "",
+            "2",
             "=",
             "bgm_slider.Value()"
           ]
@@ -646,7 +675,7 @@
             "assets\\SFX\\Menu & UI\\Button.wav",
             "1",
             "",
-            "80*(SoundChannelVolume(1)/100)",
+            "70*(game.setting.sfx/100)",
             "3"
           ]
         }
@@ -863,7 +892,7 @@
                 "assets\\SFX\\Menu & UI\\Button.wav",
                 "1",
                 "",
-                "80*(SoundChannelVolume(1)/100)",
+                "70*(game.setting.sfx/100)",
                 "3"
               ]
             }
@@ -949,8 +978,20 @@
       ]
     },
     {
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
+      "conditions": [
+        {
+          "type": {
+            "value": "StringVariable"
+          },
+          "parameters": [
+            "current_level.scene",
+            "!=",
+            "\"home\""
+          ]
+        }
+      ],
       "actions": [
         {
           "type": {

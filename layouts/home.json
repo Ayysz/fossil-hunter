@@ -1113,7 +1113,7 @@
                     "assets\\SFX\\Menu & UI\\Button.wav",
                     "1",
                     "",
-                    "80*(SoundChannelVolume(1)/100)",
+                    "80*(game.setting.sfx/100)",
                     ""
                   ]
                 }
@@ -1445,7 +1445,7 @@
                     "assets\\SFX\\Menu & UI\\Button.wav",
                     "1",
                     "",
-                    "80*(SoundChannelVolume(1)/100)",
+                    "80*(game.setting.sfx/100)",
                     ""
                   ]
                 }

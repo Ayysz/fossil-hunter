@@ -936,7 +936,6 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -1024,17 +1023,6 @@
                     "",
                     "2"
                   ]
-                },
-                {
-                  "type": {
-                    "value": "MusicCanalVolume"
-                  },
-                  "parameters": [
-                    "",
-                    "2",
-                    "!=",
-                    "0"
-                  ]
                 }
               ],
               "actions": [
@@ -1045,7 +1033,7 @@
                   "parameters": [
                     "",
                     "2",
-                    "45",
+                    "45*(game.setting.bgm/100)",
                     "0.9"
                   ]
                 }
@@ -1329,12 +1317,19 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                    "value": "Sprite"
                   },
                   "parameters": [
                     "load_logo",
-                    "Animation"
+                    ">",
+                    "2"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
                 }
               ],
               "actions": [
@@ -1345,11 +1340,26 @@
                   "parameters": [
                     "",
                     "2",
-                    "100",
+                    "100*(game.setting.bgm/100)",
                     "0.7"
                   ]
                 }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                  },
+                  "parameters": [
+                    "load_logo",
+                    "Animation"
+                  ]
+                }
               ],
+              "actions": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
