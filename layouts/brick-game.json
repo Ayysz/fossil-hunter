@@ -4282,95 +4282,222 @@
                     },
                     {
                       "type": {
-                        "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                        "value": "SetBooleanObjectVariable"
                       },
                       "parameters": [
                         "tools",
-                        "Tween",
-                        "\"tools-pickaxe-break-rock-1\"",
-                        "RandomInRange(38,70)",
-                        "\"linear\"",
-                        "0.3",
+                        "animation",
+                        "True",
                         ""
                       ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "NEED UPDATE: BUAT KAYAK TOOLS BRUSH"
                     },
                     {
-                      "type": {
-                        "value": "Wait"
-                      },
-                      "parameters": [
-                        "0.4"
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "repeatExpression": "4 - rock.step",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "rock",
+                            "step",
+                            "<=",
+                            "4"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                          },
+                          "parameters": [
+                            "tools",
+                            "Tween",
+                            "\"tools-pickaxe-break-rock-1\"",
+                            "RandomInRange(38,70)",
+                            "\"linear\"",
+                            "0.3",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.4"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySoundCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "assets\\SFX\\Gameplay\\2. Pecah Batu\\Pickaxe Hit.ogg",
+                            "1",
+                            "",
+                            "100 * (game.setting.sfx/100)",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                          },
+                          "parameters": [
+                            "tools",
+                            "Tween",
+                            "\"tools-pickaxe-break-rock-2\"",
+                            "RandomInRange(-40, -70)",
+                            "\"linear\"",
+                            "0.3",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.4"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySoundCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "assets\\SFX\\Gameplay\\2. Pecah Batu\\Pickaxe Hit.ogg",
+                            "2",
+                            "",
+                            "100 * (game.setting.sfx/100)",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                          },
+                          "parameters": [
+                            "rock",
+                            "ShakeObject_PositionAngle",
+                            "0.5",
+                            "5",
+                            "5",
+                            "10",
+                            "0.08",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "rock",
+                            "step",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "rock",
+                            "Animation",
+                            "=",
+                            "current_level.level_area+\"_ball\"+rock.step"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "rock",
+                                "step",
+                                "=",
+                                "4"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "tools",
+                                "animation",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
                       ]
                     },
                     {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectAngleTween2"
-                      },
-                      "parameters": [
-                        "tools",
-                        "Tween",
-                        "\"tools-pickaxe-break-rock-2\"",
-                        "RandomInRange(-40, -70)",
-                        "\"linear\"",
-                        "0.3",
-                        ""
-                      ]
+                      "disabled": true,
+                      "infiniteLoopWarning": true,
+                      "type": "BuiltinCommonInstructions::While",
+                      "whileConditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "rock",
+                            "step",
+                            "<",
+                            "4"
+                          ]
+                        }
+                      ],
+                      "conditions": [],
+                      "actions": []
                     },
                     {
-                      "type": {
-                        "value": "Wait"
-                      },
-                      "parameters": [
-                        "0.4"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
-                      },
-                      "parameters": [
-                        "rock",
-                        "ShakeObject_PositionAngle",
-                        "0.5",
-                        "5",
-                        "5",
-                        "10",
-                        "0.08",
-                        "",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "rock",
-                        "step",
-                        "+",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                      },
-                      "parameters": [
-                        "rock",
-                        "Animation",
-                        "=",
-                        "current_level.level_area+\"_ball\"+rock.step"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "EffectCapability::EffectBehavior::EnableEffect"
-                      },
-                      "parameters": [
-                        "rock",
-                        "Effect",
-                        "\"Effect\"",
-                        ""
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "EffectCapability::EffectBehavior::EnableEffect"
+                          },
+                          "parameters": [
+                            "rock",
+                            "Effect",
+                            "\"Effect\"",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -4378,6 +4505,17 @@
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "tools",
+                        "animation",
+                        "",
+                        ""
+                      ]
+                    },
                     {
                       "type": {
                         "value": "Tween::HasFinished"
@@ -5384,6 +5522,14 @@
                       "actions": [
                         {
                           "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.15"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
                           },
                           "parameters": [
@@ -5444,6 +5590,14 @@
                         }
                       ],
                       "actions": [
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.15"
+                          ]
+                        },
                         {
                           "type": {
                             "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
@@ -5535,6 +5689,14 @@
                         }
                       ],
                       "actions": [
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.08"
+                          ]
+                        },
                         {
                           "type": {
                             "value": "Tween::TweenBehavior::AddObjectAngleTween2"
@@ -6732,6 +6894,19 @@
                 "=",
                 "bones_puzzle.Animation::Name()"
               ]
+            },
+            {
+              "type": {
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "",
+                "assets\\SFX\\Gameplay\\2. Pecah Batu\\Bone Gathering.mp3",
+                "3",
+                "",
+                "100 * (game.setting.sfx/100)",
+                ""
+              ]
             }
           ],
           "events": [
@@ -7223,6 +7398,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Win-Events",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -7553,63 +7729,57 @@
             "ToString(FPS::FPS())"
           ]
         }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SystemInfo::IsPreview"
-          },
-          "parameters": [
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "KeyFromTextPressed"
-          },
-          "parameters": [
-            "",
-            "\"LAlt\""
-          ]
-        },
-        {
-          "type": {
-            "value": "KeyFromTextPressed"
-          },
-          "parameters": [
-            "",
-            "\"h\""
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
       ],
-      "actions": [
+      "events": [
         {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "rock",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "EffectCapability::EffectBehavior::EnableEffect"
-          },
-          "parameters": [
-            "bones_puzzle",
-            "Effect",
-            "\"change-color\"",
-            "yes"
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"LAlt\""
+              ]
+            },
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"h\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "rock",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "EffectCapability::EffectBehavior::EnableEffect"
+              },
+              "parameters": [
+                "bones_puzzle",
+                "Effect",
+                "\"change-color\"",
+                "yes"
+              ]
+            }
           ]
         }
       ]

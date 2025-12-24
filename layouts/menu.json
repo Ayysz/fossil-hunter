@@ -2613,8 +2613,8 @@
                 "assets\\SFX\\Menu & UI\\Start Game.wav",
                 "3",
                 "",
-                "70*(game.setting.sfx/100)",
-                "0.2"
+                "10*(game.setting.sfx/100)",
+                "2.1"
               ]
             }
           ]
@@ -3867,7 +3867,7 @@
                             "assets\\SFX\\Menu & UI\\Button.wav",
                             "1",
                             "",
-                            "50",
+                            "50*(game.setting.sfx/100)",
                             "0.5"
                           ]
                         },
@@ -4028,7 +4028,7 @@
                                 "assets\\SFX\\Menu & UI\\Button.wav",
                                 "1",
                                 "",
-                                "70",
+                                "70*(game.setting.sfx/100)",
                                 "4.5"
                               ]
                             }

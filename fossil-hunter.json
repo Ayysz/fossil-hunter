@@ -2604,6 +2604,206 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Gameplay/1. Endless/Level Start/Level Start.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Gameplay\\1. Endless\\Level Start\\Level Start.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Gameplay/1. Endless/Level Start/Ground Break.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Gameplay\\1. Endless\\Level Start\\Ground Break.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Gameplay/1. Endless/Mobil Bor/Mobil Bor belok.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Gameplay\\1. Endless\\Mobil Bor\\Mobil Bor belok.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Gameplay/1. Endless/Mobil Bor/Mobil Bor.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Gameplay\\1. Endless\\Mobil Bor\\Mobil Bor.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Gameplay/Game Win.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Gameplay\\Game Win.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Gameplay/2. Pecah Batu/Pickaxe pecah.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Gameplay\\2. Pecah Batu\\Pickaxe pecah.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Gameplay/2. Pecah Batu/Pickaxe Hit.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Gameplay\\2. Pecah Batu\\Pickaxe Hit.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Gameplay/2. Pecah Batu/Bone Gathering.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Gameplay\\2. Pecah Batu\\Bone Gathering.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Gameplay/3. Susun Tulang/Drag Start.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Gameplay\\3. Susun Tulang\\Drag Start.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Gameplay/3. Susun Tulang/Drag End.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Gameplay\\3. Susun Tulang\\Drag End.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Gameplay/3. Susun Tulang/Smoke Explosion.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Gameplay\\3. Susun Tulang\\Smoke Explosion.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Gameplay/3. Susun Tulang/Game Win.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Gameplay\\3. Susun Tulang\\Game Win.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Dino/3 - Brontosaurus.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Dino\\3 - Brontosaurus.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Dino/2 - Plesiosaurus.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Dino\\2 - Plesiosaurus.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Dino/7 - Parasuaralaphus.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Dino\\7 - Parasuaralaphus.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Dino/8 - Stegosaurus.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Dino\\8 - Stegosaurus.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Dino/9 - Spinosaurus.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Dino\\9 - Spinosaurus.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Dino/4 - T-Rex.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Dino\\4 - T-Rex.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Dino/5 - Triceratops.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Dino\\5 - Triceratops.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SFX/Dino/6 - Allosaurus.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\SFX\\Dino\\6 - Allosaurus.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ]
   },
@@ -17507,7 +17707,6 @@
       "value": "0"
     },
     {
-      "folded": true,
       "name": "current_level",
       "type": "structure",
       "children": [

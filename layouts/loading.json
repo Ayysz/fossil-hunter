@@ -927,6 +927,13 @@
   },
   "events": [
     {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "sound"
+    },
+    {
       "colorB": 228,
       "colorG": 176,
       "colorR": 74,

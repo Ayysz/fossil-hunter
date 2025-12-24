@@ -59,7 +59,7 @@
       "dino_gray": {
         "scale_minus": 0.18
       },
-      "unlocked": 1
+      "unlocked": 0
     },
     {
       "id": "1",
@@ -169,7 +169,7 @@
       "dino_gray": {
         "scale_minus": 0.3
       },
-      "unlocked": 1
+      "unlocked": 0
     },
     {
       "id": "3",
@@ -230,7 +230,7 @@
       "dino_gray": {
         "scale_minus": 0.18
       },
-      "unlocked": 1
+      "unlocked": 0
     },
     {
       "id": "4",
@@ -535,7 +535,7 @@
       "dino_gray": {
         "scale_minus": 0.1
       },
-      "unlocked": 1
+      "unlocked": 0
     }
   ],
   "habitat": {

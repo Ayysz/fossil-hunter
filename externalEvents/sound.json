@@ -92,7 +92,7 @@
                     "value": "Wait"
                   },
                   "parameters": [
-                    "0.2"
+                    "0.4"
                   ]
                 },
                 {
@@ -103,7 +103,7 @@
                     "",
                     "2",
                     "100*(game.setting.bgm/100)",
-                    "3.5"
+                    "2"
                   ]
                 }
               ]
@@ -302,6 +302,14 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.4"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "FadeMusicVolume"
                       },
                       "parameters": [
@@ -318,8 +326,6 @@
           ]
         },
         {
-          "disabled": true,
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -340,6 +346,16 @@
                 "!=",
                 "\"loading\""
               ]
+            },
+            {
+              "type": {
+                "value": "StringVariable"
+              },
+              "parameters": [
+                "current_level.scene",
+                "!=",
+                "\"home\""
+              ]
             }
           ],
           "actions": [
@@ -351,7 +367,7 @@
                 "",
                 "2",
                 "0",
-                "3.5"
+                "2"
               ]
             },
             {
@@ -359,7 +375,7 @@
                 "value": "Wait"
               },
               "parameters": [
-                "3.5"
+                "2.6"
               ]
             },
             {
@@ -382,8 +398,165 @@
                   },
                   "parameters": [
                     "current_level.scene",
+                    "!=",
+                    "\"menu\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "current_level.level_area",
+                        "=",
+                        "\"gurun\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlayMusicCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\BGM\\BGM - Level Gurun.mp3",
+                        "2",
+                        "yes",
+                        "0",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "current_level.level_area",
+                        "=",
+                        "\"hutan\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlayMusicCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\BGM\\BGM - Level Hutan.wav",
+                        "2",
+                        "yes",
+                        "0",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "current_level.level_area",
+                        "=",
+                        "\"berapi\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlayMusicCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\BGM\\BGM - Level Magma.mp3",
+                        "2",
+                        "yes",
+                        "0",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FadeMusicVolume"
+                      },
+                      "parameters": [
+                        "",
+                        "2",
+                        "100*(game.setting.bgm/100)",
+                        "1.5"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "current_level.scene",
                     "=",
-                    "\"home\""
+                    "\"menu\""
                   ]
                 }
               ],
@@ -431,31 +604,9 @@
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "MENU LEVEL"
-            },
-            {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "StringVariable"
-                  },
-                  "parameters": [
-                    "current_level.scene",
-                    "=",
-                    "\"menu\""
-                  ]
-                }
-              ],
+              "conditions": [],
               "actions": [
                 {
                   "type": {
@@ -870,6 +1021,17 @@
           },
           "parameters": [
             "",
+            "1",
+            "=",
+            "bgm_slider.Value()"
+          ]
+        },
+        {
+          "type": {
+            "value": "ModVolumeMusicCanal"
+          },
+          "parameters": [
+            "",
             "2",
             "=",
             "bgm_slider.Value()"
@@ -1049,6 +1211,72 @@
                 "=",
                 "sfx_icon.last_audio"
               ]
+            },
+            {
+              "type": {
+                "value": "ModVolumeSoundCanal"
+              },
+              "parameters": [
+                "",
+                "1",
+                "=",
+                "sfx_slider.Value()"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVolumeSoundCanal"
+              },
+              "parameters": [
+                "",
+                "2",
+                "=",
+                "sfx_slider.Value()"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVolumeSoundCanal"
+              },
+              "parameters": [
+                "",
+                "3",
+                "=",
+                "sfx_slider.Value()"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVolumeSoundCanal"
+              },
+              "parameters": [
+                "",
+                "4",
+                "=",
+                "sfx_slider.Value()"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVolumeSoundCanal"
+              },
+              "parameters": [
+                "",
+                "5",
+                "=",
+                "sfx_slider.Value()"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVolumeSoundCanal"
+              },
+              "parameters": [
+                "",
+                "6",
+                "=",
+                "sfx_slider.Value()"
+              ]
             }
           ]
         }
@@ -1225,6 +1453,28 @@
                 "game.setting.bgm_last",
                 "=",
                 "bgm_icon.last_audio"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVolumeMusicCanal"
+              },
+              "parameters": [
+                "",
+                "1",
+                "=",
+                "bgm_slider.Value()"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVolumeMusicCanal"
+              },
+              "parameters": [
+                "",
+                "2",
+                "=",
+                "bgm_slider.Value()"
               ]
             }
           ]

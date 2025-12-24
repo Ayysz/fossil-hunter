@@ -93,6 +93,46 @@
                 "",
                 "\"machine_drill\""
               ]
+            },
+            {
+              "type": {
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "",
+                "assets\\SFX\\Gameplay\\1. Endless\\Level Start\\Level Start.wav",
+                "1",
+                "yes",
+                "0",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.35"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FadeSoundVolume"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "70 * (game.setting.sfx/100)",
+                    "1.8"
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -1174,7 +1214,7 @@
                 "Tween",
                 "\"vehicle-dig-in\"",
                 ">",
-                "0.4"
+                "0.55"
               ]
             },
             {
@@ -1272,6 +1312,19 @@
                 "4",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "",
+                "assets\\SFX\\Gameplay\\1. Endless\\Level Start\\Ground Break.wav",
+                "2",
+                "80 * (game.settings.sfx/100)",
+                "100 * (game.setting.sfx/100)",
+                ""
+              ]
             }
           ]
         },
@@ -1319,6 +1372,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2137,6 +2191,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Transition",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -2195,6 +2250,17 @@
             },
             {
               "type": {
+                "value": "FadeSoundVolume"
+              },
+              "parameters": [
+                "",
+                "1",
+                "0",
+                "1.5"
+              ]
+            },
+            {
+              "type": {
                 "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
               },
               "parameters": [
@@ -2224,12 +2290,40 @@
             },
             {
               "type": {
+                "value": "SoundCanalVolume"
+              },
+              "parameters": [
+                "",
+                "1",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "StopSoundCanal"
+              },
+              "parameters": [
+                "",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "0.01"
+              ]
+            },
             {
               "type": {
                 "value": "Scene"
