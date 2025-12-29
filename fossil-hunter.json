@@ -2804,6 +2804,14 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/ui/Vector.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ui\\Vector.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ]
   },
@@ -14703,6 +14711,10 @@
           "type": "Sticker::Sticker",
           "OnlyFollowPosition": true,
           "IsDestroyedWithParent": true
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
         }
       ],
       "string": "Sample text lorem ipsum bla bla bla....",
@@ -14720,7 +14732,7 @@
         "isShadowEnabled": false,
         "italic": false,
         "outlineColor": "46;46;46",
-        "outlineThickness": 4,
+        "outlineThickness": 6,
         "shadowAngle": 90,
         "shadowBlurRadius": 2,
         "shadowColor": "0;0;0",
@@ -17732,9 +17744,150 @@
       "type": "structure",
       "children": [
         {
+          "name": "car",
+          "type": "structure",
+          "children": [
+            {
+              "folded": true,
+              "name": "animation_time",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "move_angle",
+                  "type": "number",
+                  "value": 0.4
+                },
+                {
+                  "name": "move_up_down",
+                  "type": "number",
+                  "value": 0.55
+                },
+                {
+                  "name": "stable",
+                  "type": "number",
+                  "value": 0.33
+                }
+              ]
+            },
+            {
+              "name": "move",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "road_id",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "speed_increment",
+              "type": "number",
+              "value": 50
+            },
+            {
+              "name": "stop",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "touch_start_y",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "x_start_in",
+              "type": "number",
+              "value": 100
+            }
+          ]
+        },
+        {
+          "name": "obstacle",
+          "type": "structure",
+          "children": [
+            {
+              "name": "fossil_refresh_time",
+              "type": "number",
+              "value": 50
+            },
+            {
+              "name": "move_speed",
+              "type": "number",
+              "value": 110
+            },
+            {
+              "name": "rock_refresh_time",
+              "type": "number",
+              "value": 4.5
+            },
+            {
+              "name": "total_repeat",
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
           "name": "parallax",
           "type": "number",
           "value": 1.35
+        },
+        {
+          "name": "road",
+          "type": "structure",
+          "children": [
+            {
+              "name": "id",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "is_transition",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "max_position",
+              "type": "number",
+              "value": 180
+            },
+            {
+              "name": "speed",
+              "type": "number",
+              "value": 560
+            },
+            {
+              "name": "speed_increment",
+              "type": "number",
+              "value": 250
+            },
+            {
+              "name": "tolerance_offset",
+              "type": "number",
+              "value": -110
+            },
+            {
+              "name": "transition_time",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "end",
+                  "type": "number",
+                  "value": 28
+                },
+                {
+                  "name": "start",
+                  "type": "number",
+                  "value": 19
+                }
+              ]
+            },
+            {
+              "name": "x_position_move",
+              "type": "number",
+              "value": 1280
+            }
+          ]
         },
         {
           "name": "transition",

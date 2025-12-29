@@ -3,6 +3,7 @@
   "name": "area-animation",
   "events": [
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -1187,7 +1188,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Vehicle_animation",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1387,11 +1387,42 @@
             },
             {
               "type": {
+                "inverted": true,
+                "value": "ButtonStates::ButtonFSM::IsClicked"
+              },
+              "parameters": [
+                "btn_pause",
+                "ButtonFSM",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "LayerVisible"
               },
               "parameters": [
                 "",
                 "\"machine_drill\""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "LayerVisible"
+              },
+              "parameters": [
+                "",
+                "\"setting\""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "LayerVisible"
+              },
+              "parameters": [
+                "",
+                "\"sound\""
               ]
             }
           ],

@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.4194339782759129,
+    "zoomFactor": 0.31119749424452625,
     "windowMask": false,
     "selectedLayer": "ui"
   },
@@ -94,157 +94,20 @@
           "name": "btn_setting"
         }
       ]
-    }
-  ],
-  "variables": [
+    },
     {
-      "name": "config",
-      "type": "structure",
-      "children": [
+      "name": "opening-text",
+      "objects": [
         {
-          "name": "car",
-          "type": "structure",
-          "children": [
-            {
-              "folded": true,
-              "name": "animation_time",
-              "type": "structure",
-              "children": [
-                {
-                  "name": "move_angle",
-                  "type": "number",
-                  "value": 0.4
-                },
-                {
-                  "name": "move_up_down",
-                  "type": "number",
-                  "value": 0.55
-                },
-                {
-                  "name": "stable",
-                  "type": "number",
-                  "value": 0.33
-                }
-              ]
-            },
-            {
-              "name": "move",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "road_id",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "speed_increment",
-              "type": "number",
-              "value": 50
-            },
-            {
-              "name": "stop",
-              "type": "boolean",
-              "value": false
-            },
-            {
-              "name": "touch_start_y",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "x_start_in",
-              "type": "number",
-              "value": 100
-            }
-          ]
+          "name": "text_tablet"
         },
         {
-          "name": "obstacle",
-          "type": "structure",
-          "children": [
-            {
-              "name": "fossil_refresh_time",
-              "type": "number",
-              "value": 50
-            },
-            {
-              "name": "move_speed",
-              "type": "number",
-              "value": 110
-            },
-            {
-              "name": "rock_refresh_time",
-              "type": "number",
-              "value": 4.5
-            },
-            {
-              "name": "total_repeat",
-              "type": "number",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "road",
-          "type": "structure",
-          "children": [
-            {
-              "name": "id",
-              "type": "number",
-              "value": 1
-            },
-            {
-              "name": "is_transition",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "max_position",
-              "type": "number",
-              "value": 180
-            },
-            {
-              "name": "speed",
-              "type": "number",
-              "value": 500
-            },
-            {
-              "name": "speed_increment",
-              "type": "number",
-              "value": 250
-            },
-            {
-              "name": "tolerance_offset",
-              "type": "number",
-              "value": -110
-            },
-            {
-              "name": "transition_time",
-              "type": "structure",
-              "children": [
-                {
-                  "name": "end",
-                  "type": "number",
-                  "value": 18
-                },
-                {
-                  "name": "start",
-                  "type": "number",
-                  "value": 11
-                }
-              ]
-            },
-            {
-              "name": "x_position_move",
-              "type": "number",
-              "value": 1280
-            }
-          ]
+          "name": "dialog_text"
         }
       ]
     }
   ],
+  "variables": [],
   "instances": [
     {
       "angle": 0,
@@ -390,7 +253,7 @@
       "name": "point_fossil",
       "persistentUuid": "9c4c6a83-43b8-47cf-bdfe-0d75524a36a4",
       "width": 0,
-      "x": -96,
+      "x": -115,
       "y": -222,
       "zOrder": 53,
       "numberProperties": [],
@@ -695,6 +558,39 @@
       "x": 47,
       "y": 34,
       "zOrder": 50,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 2,
+      "height": 238,
+      "keepRatio": true,
+      "layer": "ui",
+      "name": "dialog_text",
+      "persistentUuid": "b9cb13ec-4037-421a-9abc-e15753a96166",
+      "width": 1291,
+      "x": -2,
+      "y": 484,
+      "zOrder": 111,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "ui",
+      "name": "text_tablet",
+      "persistentUuid": "5ed5baa1-1747-44ad-a077-17f420146472",
+      "width": 0,
+      "x": 56,
+      "y": 519,
+      "zOrder": 112,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -3295,6 +3191,71 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "dialog_text",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\ui\\Vector.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 629,
+                        "y": 0
+                      },
+                      {
+                        "x": 629,
+                        "y": 116
+                      },
+                      {
+                        "x": 0,
+                        "y": 116
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -3358,6 +3319,9 @@
       },
       {
         "objectName": "Dpad_Button"
+      },
+      {
+        "objectName": "dialog_text"
       }
     ]
   },
@@ -3391,6 +3355,15 @@
       "actions": [
         {
           "type": {
+            "value": "ShowLayer"
+          },
+          "parameters": [
+            "",
+            "\"transition\""
+          ]
+        },
+        {
+          "type": {
             "value": "PrioritizeLoadingOfScene"
           },
           "parameters": [
@@ -3421,6 +3394,311 @@
         }
       ],
       "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Mobile Control",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "PRODUCTION DETECTED"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "SystemInfo::IsPreview"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "debug_text",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SystemInfo::HasTouchScreen"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Dpad_Button",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "1 = Kanan"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SystemInfo::HasTouchScreen"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Dpad_Button",
+                        "ButtonScaleTween",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectPickingTools::PickHighestZAction"
+                      },
+                      "parameters": [
+                        "",
+                        "Dpad_Button",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Dpad_Button",
+                        "id",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SystemInfo::IsPreview"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SystemInfo::HasTouchScreen"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Dpad_Button",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "disabled": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SystemInfo::HasTouchScreen"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Dpad_Button",
+                        "ButtonScaleTween",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectPickingTools::PickHighestZAction"
+                      },
+                      "parameters": [
+                        "",
+                        "Dpad_Button",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Dpad_Button",
+                        "id",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Setup Opening Text",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "opening-text",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "text_tablet",
+                    "Text",
+                    "=",
+                    "\" \""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::SetWrapping"
+                  },
+                  "parameters": [
+                    "text_tablet",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::WrappingWidth"
+                  },
+                  "parameters": [
+                    "text_tablet",
+                    "=",
+                    "dialog_text.Width()-50"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "text_tablet",
+                    "step",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Sticker::Sticker::Stick"
+                  },
+                  "parameters": [
+                    "text_tablet",
+                    "Sticker",
+                    "dialog_text",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
         {
           "colorB": 228,
           "colorG": 176,
@@ -3592,18 +3870,20 @@
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
+              "conditions": [
                 {
                   "type": {
-                    "value": "ActivateBehavior"
+                    "value": "TextContainerCapability::TextContainerBehavior::Value"
                   },
                   "parameters": [
-                    "backdrop",
-                    "ButtonFSM",
-                    ""
+                    "text_tablet",
+                    "Text",
+                    "=",
+                    "\" \""
                   ]
-                },
+                }
+              ],
+              "actions": [
                 {
                   "type": {
                     "value": "OpacityCapability::OpacityBehavior::SetValue"
@@ -3719,6 +3999,15 @@
                     "",
                     "\"goals\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"play\""
+                  ]
                 }
               ]
             }
@@ -3773,209 +4062,6 @@
                     "config.car.road_id",
                     "=",
                     "2"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "folded": true,
-          "name": "Mobile Control",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "PRODUCTION DETECTED"
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "SystemInfo::IsPreview"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "debug_text",
-                    ""
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "SystemInfo::HasTouchScreen"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Dpad_Button",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "1 = Kanan"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "SystemInfo::HasTouchScreen"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ObjectPickingTools::PickHighestZAction"
-                      },
-                      "parameters": [
-                        "",
-                        "Dpad_Button",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Dpad_Button",
-                        "id",
-                        "+",
-                        "1"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SystemInfo::IsPreview"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "SystemInfo::HasTouchScreen"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Dpad_Button",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "disabled": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "SystemInfo::HasTouchScreen"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ObjectPickingTools::PickHighestZAction"
-                      },
-                      "parameters": [
-                        "",
-                        "Dpad_Button",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Dpad_Button",
-                        "id",
-                        "+",
-                        "1"
-                      ]
-                    }
                   ]
                 }
               ]
@@ -4040,6 +4126,327 @@
                 "3",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+              },
+              "parameters": [
+                "opening-text",
+                "Tween",
+                "\"fade-in\"",
+                "255",
+                "\"easeInOutQuad\"",
+                "2",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Tween::HasFinished"
+              },
+              "parameters": [
+                "opening-text",
+                "Tween",
+                "\"fade-in\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "text_tablet",
+                    "step",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "text_tablet",
+                    "Text",
+                    "=",
+                    "\"Mesin bor melaju siap menjelajah!\nHati-hati akan rintangan batu yang datang dan cari 1 fosil tersembunyi!\n\nKlik dimana saja untuk melanjutkan...\""
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "backdrop",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "btn_pause",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AutoTyping::AutoTyping::IsFinished"
+                      },
+                      "parameters": [
+                        "text_tablet",
+                        "AutoTyping",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "text_tablet",
+                            "step",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "SystemInfo::HasTouchScreen"
+                              },
+                              "parameters": [
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "text_tablet",
+                                "Text",
+                                "=",
+                                "\"Gunakan tombol keyboard 'w' dan 'd' \""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "SystemInfo::HasTouchScreen"
+                              },
+                              "parameters": [
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "text_tablet",
+                                "Text",
+                                "=",
+                                "\"Gunakan tombol atas dan bawah \""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "text_tablet",
+                                "Text",
+                                "+",
+                                "\"\nuntuk memindahkan mesin bor ke atas dan ke bawah\n\nKlik dimana saja untuk melanjutkan...\""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "text_tablet",
+                            "step",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "opening-text",
+                            "Tween",
+                            "\"fade-out\"",
+                            "0",
+                            "\"easeInOutQuad\"",
+                            "2.5",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "text_tablet",
+                            "step",
+                            "<",
+                            "2"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "text_tablet",
+                            "step",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AutoTyping::AutoTyping::HasJustTyped"
+                      },
+                      "parameters": [
+                        "text_tablet",
+                        "AutoTyping",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "AutoTyping::AutoTyping::IsFinished"
+                      },
+                      "parameters": [
+                        "text_tablet",
+                        "AutoTyping",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AutoTyping::AutoTyping::RestartFromBeginning"
+                      },
+                      "parameters": [
+                        "text_tablet",
+                        "AutoTyping",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AutoTyping::AutoTyping::ShowFullText"
+                      },
+                      "parameters": [
+                        "text_tablet",
+                        "AutoTyping",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -4047,7 +4454,6 @@
       "parameters": []
     },
     {
-      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -4121,274 +4527,237 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Car Movement",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Unpause The Timer"
-            },
-            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "Tween::HasFinished"
+                    "value": "NumberObjectVariable"
                   },
                   "parameters": [
-                    "vehicle_body",
-                    "Tween",
-                    "\"vehicle-speed-up-in\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "UnPauseTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"obstacle\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "UnPauseTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"goals\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "Tween::HasFinished"
-                  },
-                  "parameters": [
-                    "vehicle_body",
-                    "Tween",
-                    "\"up\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectAngleTween2"
-                  },
-                  "parameters": [
-                    "vehicle_body",
-                    "Tween",
-                    "\"stable\"",
-                    "0",
-                    "\"linear\"",
-                    "config.car.animation_time.stable",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "Tween::HasFinished"
-                  },
-                  "parameters": [
-                    "vehicle_body",
-                    "Tween",
-                    "\"down\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectAngleTween2"
-                  },
-                  "parameters": [
-                    "vehicle_body",
-                    "Tween",
-                    "\"stable\"",
-                    "0",
-                    "\"linear\"",
-                    "config.car.animation_time.stable",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Kalau ingin movement hanya bisa ketika slesai animasi"
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "Tween::IsPlaying"
-                  },
-                  "parameters": [
-                    "vehicle_body",
-                    "Tween",
-                    "\"move-down\""
-                  ]
-                },
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "Tween::IsPlaying"
-                  },
-                  "parameters": [
-                    "vehicle_body",
-                    "Tween",
-                    "\"move-up\""
+                    "text_tablet",
+                    "step",
+                    "=",
+                    "2"
                   ]
                 }
               ],
               "actions": [],
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "NumberVariable"
+                        "value": "SystemInfo::HasTouchScreen"
                       },
                       "parameters": [
-                        "config.car.move",
-                        "=",
-                        "1"
+                        ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "SetNumberVariable"
+                        "value": "ActivateBehavior"
                       },
                       "parameters": [
-                        "config.car.move",
-                        "=",
-                        "0"
+                        "Dpad_Button",
+                        "ButtonScaleTween",
+                        "yes"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Unpause The Timer"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Tween::HasFinished"
+                      },
+                      "parameters": [
+                        "vehicle_body",
+                        "Tween",
+                        "\"vehicle-speed-up-in\""
                       ]
                     },
                     {
                       "type": {
-                        "value": "SetNumberVariable"
+                        "value": "BuiltinCommonInstructions::Once"
                       },
-                      "parameters": [
-                        "config.car.road_id",
-                        "-",
-                        "1"
-                      ]
+                      "parameters": []
                     }
                   ],
-                  "events": [
+                  "actions": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "config.car.road_id",
-                            "<",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "road_point",
-                            "id",
-                            "=",
-                            "config.car.road_id"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectAngleTween2"
-                          },
-                          "parameters": [
-                            "vehicle_body",
-                            "Tween",
-                            "\"up\"",
-                            "-35",
-                            "\"linear\"",
-                            "config.car.animation_time.move_angle",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
-                          },
-                          "parameters": [
-                            "vehicle_body",
-                            "Tween",
-                            "\"move-up\"",
-                            "road_point.CenterY()-(vehicle_body.Height()/2)",
-                            "\"easeInOutQuad\"",
-                            "config.car.animation_time.move_up_down",
-                            ""
-                          ]
-                        }
+                      "type": {
+                        "value": "UnPauseTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"obstacle\""
                       ]
                     },
                     {
+                      "type": {
+                        "value": "UnPauseTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"goals\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "UnPauseTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"play\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Tween::HasFinished"
+                      },
+                      "parameters": [
+                        "vehicle_body",
+                        "Tween",
+                        "\"up\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                      },
+                      "parameters": [
+                        "vehicle_body",
+                        "Tween",
+                        "\"stable\"",
+                        "0",
+                        "\"linear\"",
+                        "config.car.animation_time.stable",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Tween::HasFinished"
+                      },
+                      "parameters": [
+                        "vehicle_body",
+                        "Tween",
+                        "\"down\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                      },
+                      "parameters": [
+                        "vehicle_body",
+                        "Tween",
+                        "\"stable\"",
+                        "0",
+                        "\"linear\"",
+                        "config.car.animation_time.stable",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Kalau ingin movement hanya bisa ketika slesai animasi"
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Tween::IsPlaying"
+                      },
+                      "parameters": [
+                        "vehicle_body",
+                        "Tween",
+                        "\"move-down\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Tween::IsPlaying"
+                      },
+                      "parameters": [
+                        "vehicle_body",
+                        "Tween",
+                        "\"move-up\""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -4396,8 +4765,8 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "config.car.road_id",
-                            "<",
+                            "config.car.move",
+                            "=",
                             "1"
                           ]
                         }
@@ -4408,125 +4777,11 @@
                             "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "config.car.road_id",
-                            "+",
-                            "1"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "folded": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "NumberVariable"
-                      },
-                      "parameters": [
-                        "config.car.move",
-                        "=",
-                        "2"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "config.car.move",
-                        "=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "config.car.road_id",
-                        "+",
-                        "1"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "config.car.road_id",
-                            ">",
-                            "3"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "road_point",
-                            "id",
+                            "config.car.move",
                             "=",
-                            "config.car.road_id"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectAngleTween2"
-                          },
-                          "parameters": [
-                            "vehicle_body",
-                            "Tween",
-                            "\"down\"",
-                            "35",
-                            "\"linear\"",
-                            "config.car.animation_time.move_angle",
-                            ""
+                            "0"
                           ]
                         },
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
-                          },
-                          "parameters": [
-                            "vehicle_body",
-                            "Tween",
-                            "\"move-down\"",
-                            "road_point.CenterY()-(vehicle_body.Height()/2)",
-                            "\"easeInOutQuad\"",
-                            "config.car.animation_time.move_up_down",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "config.car.road_id",
-                            ">",
-                            "3"
-                          ]
-                        }
-                      ],
-                      "actions": [
                         {
                           "type": {
                             "value": "SetNumberVariable"
@@ -4537,148 +4792,101 @@
                             "1"
                           ]
                         }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "name": "Sound ",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                      ],
+                      "events": [
                         {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::Or"
-                          },
-                          "parameters": [],
-                          "subInstructions": [
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
                             {
                               "type": {
-                                "value": "KeyFromTextJustPressed"
+                                "inverted": true,
+                                "value": "NumberVariable"
                               },
                               "parameters": [
-                                "",
-                                "\"w\""
+                                "config.car.road_id",
+                                "<",
+                                "1"
                               ]
                             },
                             {
                               "type": {
-                                "value": "KeyFromTextJustPressed"
+                                "value": "NumberObjectVariable"
                               },
                               "parameters": [
-                                "",
-                                "\"s\""
+                                "road_point",
+                                "id",
+                                "=",
+                                "config.car.road_id"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                              },
+                              "parameters": [
+                                "vehicle_body",
+                                "Tween",
+                                "\"up\"",
+                                "-35",
+                                "\"linear\"",
+                                "config.car.animation_time.move_angle",
+                                ""
                               ]
                             },
                             {
                               "type": {
-                                "value": "ButtonStates::ButtonFSM::IsClicked"
+                                "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
                               },
                               "parameters": [
-                                "Dpad_Button",
-                                "ButtonFSM",
+                                "vehicle_body",
+                                "Tween",
+                                "\"move-up\"",
+                                "road_point.CenterY()-(vehicle_body.Height()/2)",
+                                "\"easeInOutQuad\"",
+                                "config.car.animation_time.move_up_down",
                                 ""
                               ]
                             }
                           ]
                         },
                         {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlaySoundCanal"
-                          },
-                          "parameters": [
-                            "",
-                            "assets\\SFX\\Gameplay\\1. Endless\\Mobil Bor\\Mobil Bor belok.wav",
-                            "2",
-                            "",
-                            "38 * (game.setting.sfx/100)",
-                            "5.7"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "parameters": []
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "name": "Pc / Keyboard Control",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "KeyFromTextJustPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "\"w\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "config.car.move",
-                            "=",
-                            "1"
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "config.car.road_id",
+                                "<",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "config.car.road_id",
+                                "+",
+                                "1"
+                              ]
+                            }
                           ]
                         }
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "KeyFromTextJustPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "\"s\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
+                            "value": "NumberVariable"
                           },
                           "parameters": [
                             "config.car.move",
@@ -4686,60 +4894,83 @@
                             "2"
                           ]
                         }
-                      ]
-                    }
-                  ],
-                  "parameters": []
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "name": "Mobile Button Control",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                      ],
+                      "actions": [
                         {
                           "type": {
-                            "value": "ButtonStates::ButtonFSM::IsClicked"
+                            "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "Dpad_Button",
-                            "ButtonFSM",
-                            ""
+                            "config.car.move",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "config.car.road_id",
+                            "+",
+                            "1"
                           ]
                         }
                       ],
-                      "actions": [],
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
                               "type": {
+                                "inverted": true,
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "config.car.road_id",
+                                ">",
+                                "3"
+                              ]
+                            },
+                            {
+                              "type": {
                                 "value": "NumberObjectVariable"
                               },
                               "parameters": [
-                                "Dpad_Button",
+                                "road_point",
                                 "id",
                                 "=",
-                                "0"
+                                "config.car.road_id"
                               ]
                             }
                           ],
                           "actions": [
                             {
                               "type": {
-                                "value": "SetNumberVariable"
+                                "value": "Tween::TweenBehavior::AddObjectAngleTween2"
                               },
                               "parameters": [
-                                "config.car.move",
-                                "=",
-                                "1"
+                                "vehicle_body",
+                                "Tween",
+                                "\"down\"",
+                                "35",
+                                "\"linear\"",
+                                "config.car.animation_time.move_angle",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                              },
+                              "parameters": [
+                                "vehicle_body",
+                                "Tween",
+                                "\"move-down\"",
+                                "road_point.CenterY()-(vehicle_body.Height()/2)",
+                                "\"easeInOutQuad\"",
+                                "config.car.animation_time.move_up_down",
+                                ""
                               ]
                             }
                           ]
@@ -4749,13 +4980,12 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "NumberObjectVariable"
+                                "value": "NumberVariable"
                               },
                               "parameters": [
-                                "Dpad_Button",
-                                "id",
-                                "=",
-                                "1"
+                                "config.car.road_id",
+                                ">",
+                                "3"
                               ]
                             }
                           ],
@@ -4765,105 +4995,108 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "config.car.move",
-                                "=",
-                                "2"
+                                "config.car.road_id",
+                                "-",
+                                "1"
                               ]
                             }
                           ]
                         }
                       ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Soon feature"
                     },
                     {
                       "colorB": 228,
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
-                      "name": "Swipe Detection",
+                      "name": "Sound ",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
-                          "disabled": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
                               "type": {
-                                "value": "SwipeGesture::EndY"
+                                "value": "BuiltinCommonInstructions::Or"
                               },
-                              "parameters": [
-                                "",
-                                ">",
-                                "SwipeGesture::StartY()",
-                                ""
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "KeyFromTextJustPressed"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"w\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "KeyFromTextJustPressed"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"s\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                                  },
+                                  "parameters": [
+                                    "Dpad_Button",
+                                    "ButtonFSM",
+                                    ""
+                                  ]
+                                }
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
                             }
                           ],
                           "actions": [
                             {
                               "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "config.car.move",
-                                "=",
-                                "1"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "disabled": true,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "SwipeGesture::EndY"
+                                "value": "PlaySoundCanal"
                               },
                               "parameters": [
                                 "",
-                                "<",
-                                "SwipeGesture::StartY()",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "config.car.move",
-                                "=",
-                                "2"
+                                "assets\\SFX\\Gameplay\\1. Endless\\Mobil Bor\\Mobil Bor belok.wav",
+                                "2",
+                                "",
+                                "38 * (game.setting.sfx/100)",
+                                "5.7"
                               ]
                             }
                           ]
-                        },
+                        }
+                      ],
+                      "parameters": []
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "Pc / Keyboard Control",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
                               "type": {
-                                "value": "MouseButtonFromTextPressed"
+                                "value": "KeyFromTextJustPressed"
                               },
                               "parameters": [
                                 "",
-                                "\"Left\""
+                                "\"w\""
                               ]
                             },
                             {
@@ -4879,29 +5112,261 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "config.car.touch_start_y",
+                                "config.car.move",
                                 "=",
-                                "MouseY()"
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "KeyFromTextJustPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "\"s\""
                               ]
                             },
                             {
                               "type": {
-                                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "debug_text",
-                                "Text",
+                                "config.car.move",
                                 "=",
-                                "ToString(MouseY())"
+                                "2"
                               ]
                             }
                           ]
                         }
                       ],
                       "parameters": []
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "Mobile Button Control",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "ButtonStates::ButtonFSM::IsClicked"
+                              },
+                              "parameters": [
+                                "Dpad_Button",
+                                "ButtonFSM",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Dpad_Button",
+                                    "id",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "config.car.move",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Dpad_Button",
+                                    "id",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "config.car.move",
+                                    "=",
+                                    "2"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Soon feature"
+                        },
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "folded": true,
+                          "name": "Swipe Detection",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "disabled": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "SwipeGesture::EndY"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    ">",
+                                    "SwipeGesture::StartY()",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "config.car.move",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "disabled": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "SwipeGesture::EndY"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "<",
+                                    "SwipeGesture::StartY()",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "config.car.move",
+                                    "=",
+                                    "2"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "MouseButtonFromTextPressed"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"Left\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "config.car.touch_start_y",
+                                    "=",
+                                    "MouseY()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                                  },
+                                  "parameters": [
+                                    "debug_text",
+                                    "Text",
+                                    "=",
+                                    "ToString(MouseY())"
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "parameters": []
+                        }
+                      ],
+                      "parameters": []
                     }
-                  ],
-                  "parameters": []
+                  ]
                 }
               ]
             }
@@ -4913,7 +5378,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Endless Road Logic",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5365,6 +5829,7 @@
                   "comment": "Create Obstacle"
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5563,7 +6028,7 @@
                         "",
                         "\"goals\"",
                         ">=",
-                        "config.obstacle.fossil_refresh_time + (current_level.level_number * 3.5)"
+                        "config.obstacle.fossil_refresh_time + (current_level.level_number * 3.5) + (config.obstacle.rock_refresh_time * 0.5)"
                       ]
                     }
                   ],
@@ -5651,7 +6116,7 @@
                   "parameters": [
                     "obstacles_group",
                     "-",
-                    "(config.road.speed + config.obstacle.move_speed) * TimeDelta() * LayerTimeScale(\"\")"
+                    "((config.road.speed * 0.9) + config.obstacle.move_speed) * TimeDelta() * LayerTimeScale(\"\")"
                   ]
                 }
               ]
@@ -5691,6 +6156,43 @@
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "vehicle_drill",
+                        "obstacles",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Flash::Flash::Flash"
+                          },
+                          "parameters": [
+                            "vehicle",
+                            "Flash",
+                            "1",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -5777,7 +6279,7 @@
                             "vehicle_body",
                             "Tween",
                             "\"vehicle-finish-play\"",
-                            "vehicle_body.X()+ScreenWidth()",
+                            "vehicle_body.X()+(ScreenWidth()*1.5)",
                             "\"easeInOutQuad\"",
                             "3.5",
                             ""
@@ -5841,6 +6343,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Win Logic",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5962,6 +6465,7 @@
       "colorG": 192,
       "colorR": 207,
       "creationTime": 0,
+      "folded": true,
       "name": "btn-pause-logic",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -6004,13 +6508,134 @@
               },
               "parameters": [
                 "config.car.stop",
-                "Toggle",
+                "True",
                 ""
               ]
             }
           ],
           "events": [
             {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "config.car.stop",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "vehicle_body",
+                    "EllipseMovement",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "vehicle_body",
+                    "Tween",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
+                  },
+                  "parameters": [
+                    "vehicle_drill",
+                    "Animation"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "opening-text",
+                    "Tween",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "text_tablet",
+                    "AutoTyping",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"obstacle\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"goals\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"play\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SoundPlaying"
+                      },
+                      "parameters": [
+                        "",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PauseSoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6073,79 +6698,6 @@
                     {
                       "type": {
                         "value": "RePlaySoundCanal"
-                      },
-                      "parameters": [
-                        "",
-                        "1"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "config.car.stop",
-                    "True",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "vehicle_body",
-                    "EllipseMovement",
-                    "no"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "vehicle_body",
-                    "Tween",
-                    "no"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
-                  },
-                  "parameters": [
-                    "vehicle_drill",
-                    "Animation"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "SoundPlaying"
-                      },
-                      "parameters": [
-                        "",
-                        "1"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PauseSoundCanal"
                       },
                       "parameters": [
                         "",
@@ -6673,6 +7225,128 @@
                     ""
                   ]
                 }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "config.car.stop",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "vehicle_body",
+                        "EllipseMovement",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "vehicle_body",
+                        "Tween",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                      },
+                      "parameters": [
+                        "vehicle_drill",
+                        "Animation"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "text_tablet",
+                        "AutoTyping",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "opening-text",
+                        "Tween",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "UnPauseTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"obstacle\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "UnPauseTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"goals\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "UnPauseTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"play\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SoundPaused"
+                          },
+                          "parameters": [
+                            "",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "RePlaySoundCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -6711,6 +7385,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6838,7 +7513,7 @@
       "cameraType": "",
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
-      "isLocked": true,
+      "isLocked": false,
       "name": "ui",
       "renderingType": "",
       "visibility": true,
