@@ -107,7 +107,29 @@
       ]
     }
   ],
-  "variables": [],
+  "variables": [
+    {
+      "name": "swipe",
+      "type": "structure",
+      "children": [
+        {
+          "name": "end_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "start_y",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "swipe_y_min_distance",
+          "type": "number",
+          "value": 50
+        }
+      ]
+    }
+  ],
   "instances": [
     {
       "angle": 0,
@@ -3399,7 +3421,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Mobile Control",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3454,17 +3475,7 @@
                       ]
                     }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Dpad_Button",
-                        ""
-                      ]
-                    }
-                  ]
+                  "actions": []
                 },
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -3520,6 +3531,25 @@
                         "id",
                         "+",
                         "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Dpad_Button",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SwipeGesture::EnableSwipeDetection"
+                      },
+                      "parameters": [
+                        "",
+                        "True",
+                        ""
                       ]
                     }
                   ]
@@ -4144,6 +4174,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4203,7 +4234,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -4454,404 +4484,318 @@
       "parameters": []
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "BooleanVariable"
-          },
-          "parameters": [
-            "config.car.stop",
-            "",
-            ""
-          ]
-        }
-      ],
-      "actions": [],
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Game Core Logic",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "PlaySoundCanal"
+                "value": "BooleanVariable"
               },
               "parameters": [
+                "config.car.stop",
                 "",
-                "assets\\SFX\\Gameplay\\1. Endless\\Mobil Bor\\Mobil Bor.wav",
-                "1",
-                "yes",
-                "0",
                 ""
               ]
             }
           ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Wait"
-                  },
-                  "parameters": [
-                    "0.3"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "FadeSoundVolume"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "40 * (game.setting.sfx/100)",
-                    "2"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "Car Movement",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
+          "actions": [],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "NumberObjectVariable"
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
                   },
                   "parameters": [
-                    "text_tablet",
-                    "step",
-                    "=",
-                    "2"
+                    "",
+                    "assets\\SFX\\Gameplay\\1. Endless\\Mobil Bor\\Mobil Bor.wav",
+                    "1",
+                    "yes",
+                    "0",
+                    ""
                   ]
                 }
               ],
-              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FadeSoundVolume"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "40 * (game.setting.sfx/100)",
+                        "2"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Car Movement",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "SystemInfo::HasTouchScreen"
+                        "value": "NumberObjectVariable"
                       },
                       "parameters": [
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "Dpad_Button",
-                        "ButtonScaleTween",
-                        "yes"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Unpause The Timer"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "Tween::HasFinished"
-                      },
-                      "parameters": [
-                        "vehicle_body",
-                        "Tween",
-                        "\"vehicle-speed-up-in\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "UnPauseTimer"
-                      },
-                      "parameters": [
-                        "",
-                        "\"obstacle\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "UnPauseTimer"
-                      },
-                      "parameters": [
-                        "",
-                        "\"goals\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "UnPauseTimer"
-                      },
-                      "parameters": [
-                        "",
-                        "\"play\""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "Tween::HasFinished"
-                      },
-                      "parameters": [
-                        "vehicle_body",
-                        "Tween",
-                        "\"up\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectAngleTween2"
-                      },
-                      "parameters": [
-                        "vehicle_body",
-                        "Tween",
-                        "\"stable\"",
-                        "0",
-                        "\"linear\"",
-                        "config.car.animation_time.stable",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "Tween::HasFinished"
-                      },
-                      "parameters": [
-                        "vehicle_body",
-                        "Tween",
-                        "\"down\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectAngleTween2"
-                      },
-                      "parameters": [
-                        "vehicle_body",
-                        "Tween",
-                        "\"stable\"",
-                        "0",
-                        "\"linear\"",
-                        "config.car.animation_time.stable",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Kalau ingin movement hanya bisa ketika slesai animasi"
-                },
-                {
-                  "folded": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "Tween::IsPlaying"
-                      },
-                      "parameters": [
-                        "vehicle_body",
-                        "Tween",
-                        "\"move-down\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "Tween::IsPlaying"
-                      },
-                      "parameters": [
-                        "vehicle_body",
-                        "Tween",
-                        "\"move-up\""
+                        "text_tablet",
+                        "step",
+                        "=",
+                        "2"
                       ]
                     }
                   ],
                   "actions": [],
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "NumberVariable"
+                            "value": "SystemInfo::HasTouchScreen"
                           },
                           "parameters": [
-                            "config.car.move",
-                            "=",
-                            "1"
+                            ""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "value": "SetNumberVariable"
+                            "value": "ActivateBehavior"
                           },
                           "parameters": [
-                            "config.car.move",
-                            "=",
-                            "0"
+                            "Dpad_Button",
+                            "ButtonScaleTween",
+                            "yes"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Unpause The Timer"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "vehicle_body",
+                            "Tween",
+                            "\"vehicle-speed-up-in\""
                           ]
                         },
                         {
                           "type": {
-                            "value": "SetNumberVariable"
+                            "value": "BuiltinCommonInstructions::Once"
                           },
-                          "parameters": [
-                            "config.car.road_id",
-                            "-",
-                            "1"
-                          ]
+                          "parameters": []
                         }
                       ],
-                      "events": [
+                      "actions": [
                         {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": true,
-                                "value": "NumberVariable"
-                              },
-                              "parameters": [
-                                "config.car.road_id",
-                                "<",
-                                "1"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "road_point",
-                                "id",
-                                "=",
-                                "config.car.road_id"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Tween::TweenBehavior::AddObjectAngleTween2"
-                              },
-                              "parameters": [
-                                "vehicle_body",
-                                "Tween",
-                                "\"up\"",
-                                "-35",
-                                "\"linear\"",
-                                "config.car.animation_time.move_angle",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
-                              },
-                              "parameters": [
-                                "vehicle_body",
-                                "Tween",
-                                "\"move-up\"",
-                                "road_point.CenterY()-(vehicle_body.Height()/2)",
-                                "\"easeInOutQuad\"",
-                                "config.car.animation_time.move_up_down",
-                                ""
-                              ]
-                            }
+                          "type": {
+                            "value": "UnPauseTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"obstacle\""
                           ]
                         },
                         {
+                          "type": {
+                            "value": "UnPauseTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"goals\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "UnPauseTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"play\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "vehicle_body",
+                            "Tween",
+                            "\"up\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                          },
+                          "parameters": [
+                            "vehicle_body",
+                            "Tween",
+                            "\"stable\"",
+                            "0",
+                            "\"linear\"",
+                            "config.car.animation_time.stable",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "vehicle_body",
+                            "Tween",
+                            "\"down\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                          },
+                          "parameters": [
+                            "vehicle_body",
+                            "Tween",
+                            "\"stable\"",
+                            "0",
+                            "\"linear\"",
+                            "config.car.animation_time.stable",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Kalau ingin movement hanya bisa ketika slesai animasi"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "Tween::IsPlaying"
+                          },
+                          "parameters": [
+                            "vehicle_body",
+                            "Tween",
+                            "\"move-down\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "Tween::IsPlaying"
+                          },
+                          "parameters": [
+                            "vehicle_body",
+                            "Tween",
+                            "\"move-up\""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -4859,8 +4803,8 @@
                                 "value": "NumberVariable"
                               },
                               "parameters": [
-                                "config.car.road_id",
-                                "<",
+                                "config.car.move",
+                                "=",
                                 "1"
                               ]
                             }
@@ -4871,125 +4815,11 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "config.car.road_id",
-                                "+",
-                                "1"
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "folded": true,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "config.car.move",
-                            "=",
-                            "2"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "config.car.move",
-                            "=",
-                            "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "config.car.road_id",
-                            "+",
-                            "1"
-                          ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": true,
-                                "value": "NumberVariable"
-                              },
-                              "parameters": [
-                                "config.car.road_id",
-                                ">",
-                                "3"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "road_point",
-                                "id",
+                                "config.car.move",
                                 "=",
-                                "config.car.road_id"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Tween::TweenBehavior::AddObjectAngleTween2"
-                              },
-                              "parameters": [
-                                "vehicle_body",
-                                "Tween",
-                                "\"down\"",
-                                "35",
-                                "\"linear\"",
-                                "config.car.animation_time.move_angle",
-                                ""
+                                "0"
                               ]
                             },
-                            {
-                              "type": {
-                                "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
-                              },
-                              "parameters": [
-                                "vehicle_body",
-                                "Tween",
-                                "\"move-down\"",
-                                "road_point.CenterY()-(vehicle_body.Height()/2)",
-                                "\"easeInOutQuad\"",
-                                "config.car.animation_time.move_up_down",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberVariable"
-                              },
-                              "parameters": [
-                                "config.car.road_id",
-                                ">",
-                                "3"
-                              ]
-                            }
-                          ],
-                          "actions": [
                             {
                               "type": {
                                 "value": "SetNumberVariable"
@@ -5000,148 +4830,101 @@
                                 "1"
                               ]
                             }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "colorB": 228,
-                      "colorG": 176,
-                      "colorR": 74,
-                      "creationTime": 0,
-                      "name": "Sound ",
-                      "source": "",
-                      "type": "BuiltinCommonInstructions::Group",
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
+                          ],
+                          "events": [
                             {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Or"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
                                 {
                                   "type": {
-                                    "value": "KeyFromTextJustPressed"
+                                    "inverted": true,
+                                    "value": "NumberVariable"
                                   },
                                   "parameters": [
-                                    "",
-                                    "\"w\""
+                                    "config.car.road_id",
+                                    "<",
+                                    "1"
                                   ]
                                 },
                                 {
                                   "type": {
-                                    "value": "KeyFromTextJustPressed"
+                                    "value": "NumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "",
-                                    "\"s\""
+                                    "road_point",
+                                    "id",
+                                    "=",
+                                    "config.car.road_id"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                                  },
+                                  "parameters": [
+                                    "vehicle_body",
+                                    "Tween",
+                                    "\"up\"",
+                                    "-35",
+                                    "\"linear\"",
+                                    "config.car.animation_time.move_angle",
+                                    ""
                                   ]
                                 },
                                 {
                                   "type": {
-                                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                                    "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
                                   },
                                   "parameters": [
-                                    "Dpad_Button",
-                                    "ButtonFSM",
+                                    "vehicle_body",
+                                    "Tween",
+                                    "\"move-up\"",
+                                    "road_point.CenterY()-(vehicle_body.Height()/2)",
+                                    "\"easeInOutQuad\"",
+                                    "config.car.animation_time.move_up_down",
                                     ""
                                   ]
                                 }
                               ]
                             },
                             {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Once"
-                              },
-                              "parameters": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PlaySoundCanal"
-                              },
-                              "parameters": [
-                                "",
-                                "assets\\SFX\\Gameplay\\1. Endless\\Mobil Bor\\Mobil Bor belok.wav",
-                                "2",
-                                "",
-                                "38 * (game.setting.sfx/100)",
-                                "5.7"
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "parameters": []
-                    },
-                    {
-                      "colorB": 228,
-                      "colorG": 176,
-                      "colorR": 74,
-                      "creationTime": 0,
-                      "name": "Pc / Keyboard Control",
-                      "source": "",
-                      "type": "BuiltinCommonInstructions::Group",
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "KeyFromTextJustPressed"
-                              },
-                              "parameters": [
-                                "",
-                                "\"w\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Once"
-                              },
-                              "parameters": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "config.car.move",
-                                "=",
-                                "1"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "config.car.road_id",
+                                    "<",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "config.car.road_id",
+                                    "+",
+                                    "1"
+                                  ]
+                                }
                               ]
                             }
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
                               "type": {
-                                "value": "KeyFromTextJustPressed"
-                              },
-                              "parameters": [
-                                "",
-                                "\"s\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Once"
-                              },
-                              "parameters": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
+                                "value": "NumberVariable"
                               },
                               "parameters": [
                                 "config.car.move",
@@ -5149,60 +4932,83 @@
                                 "2"
                               ]
                             }
-                          ]
-                        }
-                      ],
-                      "parameters": []
-                    },
-                    {
-                      "colorB": 228,
-                      "colorG": 176,
-                      "colorR": 74,
-                      "creationTime": 0,
-                      "name": "Mobile Button Control",
-                      "source": "",
-                      "type": "BuiltinCommonInstructions::Group",
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
+                          ],
+                          "actions": [
                             {
                               "type": {
-                                "value": "ButtonStates::ButtonFSM::IsClicked"
+                                "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Dpad_Button",
-                                "ButtonFSM",
-                                ""
+                                "config.car.move",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "config.car.road_id",
+                                "+",
+                                "1"
                               ]
                             }
                           ],
-                          "actions": [],
                           "events": [
                             {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
                                   "type": {
+                                    "inverted": true,
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "config.car.road_id",
+                                    ">",
+                                    "3"
+                                  ]
+                                },
+                                {
+                                  "type": {
                                     "value": "NumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Dpad_Button",
+                                    "road_point",
                                     "id",
                                     "=",
-                                    "0"
+                                    "config.car.road_id"
                                   ]
                                 }
                               ],
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetNumberVariable"
+                                    "value": "Tween::TweenBehavior::AddObjectAngleTween2"
                                   },
                                   "parameters": [
-                                    "config.car.move",
-                                    "=",
-                                    "1"
+                                    "vehicle_body",
+                                    "Tween",
+                                    "\"down\"",
+                                    "35",
+                                    "\"linear\"",
+                                    "config.car.animation_time.move_angle",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                                  },
+                                  "parameters": [
+                                    "vehicle_body",
+                                    "Tween",
+                                    "\"move-down\"",
+                                    "road_point.CenterY()-(vehicle_body.Height()/2)",
+                                    "\"easeInOutQuad\"",
+                                    "config.car.animation_time.move_up_down",
+                                    ""
                                   ]
                                 }
                               ]
@@ -5212,13 +5018,12 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberObjectVariable"
+                                    "value": "NumberVariable"
                                   },
                                   "parameters": [
-                                    "Dpad_Button",
-                                    "id",
-                                    "=",
-                                    "1"
+                                    "config.car.road_id",
+                                    ">",
+                                    "3"
                                   ]
                                 }
                               ],
@@ -5228,105 +5033,108 @@
                                     "value": "SetNumberVariable"
                                   },
                                   "parameters": [
-                                    "config.car.move",
-                                    "=",
-                                    "2"
+                                    "config.car.road_id",
+                                    "-",
+                                    "1"
                                   ]
                                 }
                               ]
                             }
                           ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 109,
-                            "g": 230,
-                            "r": 255,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
-                          },
-                          "comment": "Soon feature"
                         },
                         {
                           "colorB": 228,
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
-                          "name": "Swipe Detection",
+                          "name": "Sound ",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
                             {
-                              "disabled": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "SwipeGesture::EndY"
+                                    "value": "BuiltinCommonInstructions::Or"
                                   },
-                                  "parameters": [
-                                    "",
-                                    ">",
-                                    "SwipeGesture::StartY()",
-                                    ""
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "KeyFromTextJustPressed"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "\"w\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "KeyFromTextJustPressed"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "\"s\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ButtonStates::ButtonFSM::IsClicked"
+                                      },
+                                      "parameters": [
+                                        "Dpad_Button",
+                                        "ButtonFSM",
+                                        ""
+                                      ]
+                                    }
                                   ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
                                 }
                               ],
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetNumberVariable"
-                                  },
-                                  "parameters": [
-                                    "config.car.move",
-                                    "=",
-                                    "1"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "disabled": true,
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "SwipeGesture::EndY"
+                                    "value": "PlaySoundCanal"
                                   },
                                   "parameters": [
                                     "",
-                                    "<",
-                                    "SwipeGesture::StartY()",
-                                    ""
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetNumberVariable"
-                                  },
-                                  "parameters": [
-                                    "config.car.move",
-                                    "=",
-                                    "2"
+                                    "assets\\SFX\\Gameplay\\1. Endless\\Mobil Bor\\Mobil Bor belok.wav",
+                                    "2",
+                                    "",
+                                    "38 * (game.setting.sfx/100)",
+                                    "5.7"
                                   ]
                                 }
                               ]
-                            },
+                            }
+                          ],
+                          "parameters": []
+                        },
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "Pc / Keyboard Control",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
                             {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "MouseButtonFromTextPressed"
+                                    "value": "KeyFromTextJustPressed"
                                   },
                                   "parameters": [
                                     "",
-                                    "\"Left\""
+                                    "\"w\""
                                   ]
                                 },
                                 {
@@ -5342,494 +5150,292 @@
                                     "value": "SetNumberVariable"
                                   },
                                   "parameters": [
-                                    "config.car.touch_start_y",
+                                    "config.car.move",
                                     "=",
-                                    "MouseY()"
+                                    "1"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "KeyFromTextJustPressed"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"s\""
                                   ]
                                 },
                                 {
                                   "type": {
-                                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
                                   },
                                   "parameters": [
-                                    "debug_text",
-                                    "Text",
+                                    "config.car.move",
                                     "=",
-                                    "ToString(MouseY())"
+                                    "2"
                                   ]
                                 }
                               ]
                             }
                           ],
                           "parameters": []
-                        }
-                      ],
-                      "parameters": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "Endless Road Logic",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreX"
-                  },
-                  "parameters": [
-                    "road2",
-                    "-",
-                    "config.road.speed * TimeDelta() * LayerTimeScale(\"\")"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "MettreX"
-                  },
-                  "parameters": [
-                    "road3",
-                    "-",
-                    "config.road.speed * TimeDelta() * LayerTimeScale(\"\")"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "CompareTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"play\"",
-                    ">=",
-                    "RandomInRange(config.road.transition_time.start, config.road.transition_time.end)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberVariable"
-                  },
-                  "parameters": [
-                    "config.road.id",
-                    "<",
-                    "3"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "config.road.is_transition",
-                    "=",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"play\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "road3",
-                    "<=",
-                    "-road2.Width()"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreX"
-                  },
-                  "parameters": [
-                    "road3",
-                    "=",
-                    "road2.X() + road3.Width()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "road3",
-                    "Animation",
-                    "=",
-                    "current_level.level_area + config.road.id + \"_\" + config.road.is_transition"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "NumberVariable"
-                      },
-                      "parameters": [
-                        "config.road.is_transition",
-                        "=",
-                        "1"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "config.road.is_transition",
-                        "=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "config.road.x_position_move",
-                        "-",
-                        "5"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenSceneVariableNumber3"
-                      },
-                      "parameters": [
-                        "",
-                        "\"vehicle-max-speed-up\"",
-                        "config.road.speed",
-                        "config.road.speed+config.road.speed_increment",
-                        "\"linear\"",
-                        "2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
-                      },
-                      "parameters": [
-                        "vehicle_body",
-                        "Tween",
-                        "\"vehicle-visual-more-speed\"",
-                        "vehicle_body.X()-config.car.speed_increment",
-                        "\"linear\"",
-                        "2",
-                        ""
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "config.road.id",
-                            "<",
-                            "3"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "config.road.id",
-                            "+",
-                            "1"
-                          ]
                         },
                         {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "config.obstacle.total_repeat",
-                            "+",
-                            "1"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "config.obstacle.total_repeat",
-                            ">",
-                            "2"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "config.obstacle.total_repeat",
-                            "=",
-                            "2"
-                          ]
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "Mobile Button Control",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "folded": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                                  },
+                                  "parameters": [
+                                    "Dpad_Button",
+                                    "ButtonFSM",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Dpad_Button",
+                                        "id",
+                                        "=",
+                                        "0"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "config.car.move",
+                                        "=",
+                                        "1"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Dpad_Button",
+                                        "id",
+                                        "=",
+                                        "1"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "config.car.move",
+                                        "=",
+                                        "2"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Soon feature"
+                            },
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "name": "Swipe Detection",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "MouseButtonFromTextReleased"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "\"Left\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::DistanceY"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        ">",
+                                        "swipe.swipe_y_min_distance",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": []
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "SwipeGesture::StartY"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            ">",
+                                            "SwipeGesture::EndY()",
+                                            ""
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberVariable"
+                                          },
+                                          "parameters": [
+                                            "config.car.move",
+                                            "=",
+                                            "1"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "SwipeGesture::StartY"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "<",
+                                            "SwipeGesture::EndY()",
+                                            ""
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberVariable"
+                                          },
+                                          "parameters": [
+                                            "config.car.move",
+                                            "=",
+                                            "2"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "parameters": []
+                            }
+                          ],
+                          "parameters": []
                         }
                       ]
                     }
                   ]
                 }
-              ]
+              ],
+              "parameters": []
             },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "road2",
-                    "<=",
-                    "-road3.Width()"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreX"
-                  },
-                  "parameters": [
-                    "road2",
-                    "=",
-                    "road3.X() + road2.Width()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "road2",
-                    "Animation",
-                    "=",
-                    "current_level.level_area + config.road.id + \"_\" + config.road.is_transition"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "NumberVariable"
-                      },
-                      "parameters": [
-                        "config.road.is_transition",
-                        "=",
-                        "1"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "config.road.is_transition",
-                        "=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "config.road.x_position_move",
-                        "-",
-                        "5"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenSceneVariableNumber3"
-                      },
-                      "parameters": [
-                        "",
-                        "\"vehicle-max-speed-up\"",
-                        "config.road.speed",
-                        "config.road.speed+config.road.speed_increment",
-                        "\"linear\"",
-                        "2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
-                      },
-                      "parameters": [
-                        "vehicle_body",
-                        "Tween",
-                        "\"vehicle-visual-more-speed\"",
-                        "vehicle_body.X()-config.car.speed_increment",
-                        "\"linear\"",
-                        "2",
-                        ""
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "config.road.id",
-                            "<",
-                            "3"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "config.road.id",
-                            "+",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "config.obstacle.total_repeat",
-                            "+",
-                            "1"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "config.obstacle.total_repeat",
-                            ">",
-                            "2"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "config.obstacle.total_repeat",
-                            "=",
-                            "2"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "Obstacle Logic",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
             {
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "name": "Create Obstacle",
+              "name": "Endless Road Logic",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Create Obstacle"
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "road2",
+                        "-",
+                        "config.road.speed * TimeDelta() * LayerTimeScale(\"\")"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "road3",
+                        "-",
+                        "config.road.speed * TimeDelta() * LayerTimeScale(\"\")"
+                      ]
+                    }
+                  ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5838,17 +5444,589 @@
                       },
                       "parameters": [
                         "",
-                        "\"obstacle\"",
+                        "\"play\"",
                         ">=",
-                        "config.obstacle.rock_refresh_time"
+                        "RandomInRange(config.road.transition_time.start, config.road.transition_time.end)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "config.road.id",
+                        "<",
+                        "3"
                       ]
                     }
                   ],
-                  "actions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "config.road.is_transition",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"play\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "road3",
+                        "<=",
+                        "-road2.Width()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "road3",
+                        "=",
+                        "road2.X() + road3.Width()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "road3",
+                        "Animation",
+                        "=",
+                        "current_level.level_area + config.road.id + \"_\" + config.road.is_transition"
+                      ]
+                    }
+                  ],
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::Repeat",
-                      "repeatExpression": "config.obstacle.total_repeat",
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "config.road.is_transition",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "config.road.is_transition",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "config.road.x_position_move",
+                            "-",
+                            "5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenSceneVariableNumber3"
+                          },
+                          "parameters": [
+                            "",
+                            "\"vehicle-max-speed-up\"",
+                            "config.road.speed",
+                            "config.road.speed+config.road.speed_increment",
+                            "\"linear\"",
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "vehicle_body",
+                            "Tween",
+                            "\"vehicle-visual-more-speed\"",
+                            "vehicle_body.X()-config.car.speed_increment",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "config.road.id",
+                                "<",
+                                "3"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "config.road.id",
+                                "+",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "config.obstacle.total_repeat",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "config.obstacle.total_repeat",
+                                ">",
+                                "2"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "config.obstacle.total_repeat",
+                                "=",
+                                "2"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "road2",
+                        "<=",
+                        "-road3.Width()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "road2",
+                        "=",
+                        "road3.X() + road2.Width()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "road2",
+                        "Animation",
+                        "=",
+                        "current_level.level_area + config.road.id + \"_\" + config.road.is_transition"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "config.road.is_transition",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "config.road.is_transition",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "config.road.x_position_move",
+                            "-",
+                            "5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenSceneVariableNumber3"
+                          },
+                          "parameters": [
+                            "",
+                            "\"vehicle-max-speed-up\"",
+                            "config.road.speed",
+                            "config.road.speed+config.road.speed_increment",
+                            "\"linear\"",
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "vehicle_body",
+                            "Tween",
+                            "\"vehicle-visual-more-speed\"",
+                            "vehicle_body.X()-config.car.speed_increment",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "config.road.id",
+                                "<",
+                                "3"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "config.road.id",
+                                "+",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "config.obstacle.total_repeat",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "config.obstacle.total_repeat",
+                                ">",
+                                "2"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "config.obstacle.total_repeat",
+                                "=",
+                                "2"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Obstacle Logic",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Create Obstacle",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Create Obstacle"
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"obstacle\"",
+                            ">=",
+                            "config.obstacle.rock_refresh_time"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Repeat",
+                          "repeatExpression": "config.obstacle.total_repeat",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AjoutHasard"
+                              },
+                              "parameters": [
+                                "",
+                                "road_point"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "obstacles",
+                                "0",
+                                "0",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ScalableCapability::ScalableBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "obstacles",
+                                "Scale",
+                                "=",
+                                "0.38"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetCenter"
+                              },
+                              "parameters": [
+                                "obstacles",
+                                "=",
+                                "road_point.CenterX()+ScreenWidth()",
+                                "=",
+                                "road_point.CenterY()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "obstacles",
+                                "Animation",
+                                "=",
+                                "current_level.level_area+ToString(RandomInRange(0,2))"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Prevent Double Obstacle"
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "AjoutObjConcern"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "obstacles"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "CollisionNP"
+                                  },
+                                  "parameters": [
+                                    "obstacles",
+                                    "obstacles",
+                                    "",
+                                    "",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "AjoutHasard"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "obstacles"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Delete"
+                                  },
+                                  "parameters": [
+                                    "obstacles",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ResetTimer"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"obstacle\""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Create the obstacle goal"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
@@ -5857,6 +6035,27 @@
                           "parameters": [
                             "",
                             "road_point"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "config.road.id",
+                            ">=",
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CompareTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"goals\"",
+                            ">=",
+                            "config.obstacle.fossil_refresh_time + (current_level.level_number * 3.5) + (config.obstacle.rock_refresh_time * 0.5)"
                           ]
                         }
                       ],
@@ -5867,7 +6066,7 @@
                           },
                           "parameters": [
                             "",
-                            "obstacles",
+                            "fossil_rock",
                             "0",
                             "0",
                             ""
@@ -5878,10 +6077,10 @@
                             "value": "ScalableCapability::ScalableBehavior::SetValue"
                           },
                           "parameters": [
-                            "obstacles",
+                            "fossil_rock",
                             "Scale",
                             "=",
-                            "0.38"
+                            "0.42"
                           ]
                         },
                         {
@@ -5889,7 +6088,7 @@
                             "value": "SetCenter"
                           },
                           "parameters": [
-                            "obstacles",
+                            "fossil_rock",
                             "=",
                             "road_point.CenterX()+ScreenWidth()",
                             "=",
@@ -5901,90 +6100,25 @@
                             "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
-                            "obstacles",
+                            "fossil_rock",
                             "Animation",
                             "=",
-                            "current_level.level_area+ToString(RandomInRange(0,2))"
+                            "current_level.level_area"
                           ]
-                        }
-                      ],
-                      "events": [
+                        },
                         {
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 109,
-                            "g": 230,
-                            "r": 255,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
+                          "type": {
+                            "value": "ResetTimer"
                           },
-                          "comment": "Prevent Double Obstacle"
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "AjoutObjConcern"
-                              },
-                              "parameters": [
-                                "",
-                                "obstacles"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "CollisionNP"
-                              },
-                              "parameters": [
-                                "obstacles",
-                                "obstacles",
-                                "",
-                                "",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "AjoutHasard"
-                              },
-                              "parameters": [
-                                "",
-                                "obstacles"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Delete"
-                              },
-                              "parameters": [
-                                "obstacles",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "ResetTimer"
-                              },
-                              "parameters": [
-                                "",
-                                "\"obstacle\""
-                              ]
-                            }
+                          "parameters": [
+                            "",
+                            "\"goals\""
                           ]
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "parameters": []
                 },
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -5996,163 +6130,248 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Create the obstacle goal"
+                  "comment": "Movement Obstacle"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "obstacles_group",
+                        "-",
+                        "((config.road.speed * 0.9) + config.obstacle.move_speed) * TimeDelta() * LayerTimeScale(\"\")"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "AjoutHasard"
+                        "value": "PosX"
                       },
                       "parameters": [
-                        "",
-                        "road_point"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "NumberVariable"
-                      },
-                      "parameters": [
-                        "config.road.id",
-                        ">=",
-                        "2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "CompareTimer"
-                      },
-                      "parameters": [
-                        "",
-                        "\"goals\"",
-                        ">=",
-                        "config.obstacle.fossil_refresh_time + (current_level.level_number * 3.5) + (config.obstacle.rock_refresh_time * 0.5)"
+                        "obstacles_group",
+                        "<=",
+                        "-(ScreenWidth()*0.45)"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "Create"
+                        "value": "Delete"
                       },
                       "parameters": [
-                        "",
-                        "fossil_rock",
-                        "0",
-                        "0",
+                        "obstacles_group",
                         ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ScalableCapability::ScalableBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "fossil_rock",
-                        "Scale",
-                        "=",
-                        "0.42"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetCenter"
-                      },
-                      "parameters": [
-                        "fossil_rock",
-                        "=",
-                        "road_point.CenterX()+ScreenWidth()",
-                        "=",
-                        "road_point.CenterY()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                      },
-                      "parameters": [
-                        "fossil_rock",
-                        "Animation",
-                        "=",
-                        "current_level.level_area"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResetTimer"
-                      },
-                      "parameters": [
-                        "",
-                        "\"goals\""
                       ]
                     }
                   ]
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Collision Obstacle",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "vehicle_drill",
+                            "obstacles",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Flash::Flash::Flash"
+                              },
+                              "parameters": [
+                                "vehicle",
+                                "Flash",
+                                "1",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "vehicle_drill",
+                            "fossil_rock",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlaySoundCanal"
+                              },
+                              "parameters": [
+                                "",
+                                "assets\\SFX\\Gameplay\\Game Win.mp3",
+                                "4",
+                                "no",
+                                "40 * (game.setting.sfx/100)",
+                                "0.6"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Wait"
+                              },
+                              "parameters": [
+                                "0.1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySoundCanal"
+                              },
+                              "parameters": [
+                                "",
+                                "assets\\SFX\\Gameplay\\Game Win.mp3",
+                                "5",
+                                "no",
+                                "55 * (game.setting.sfx/100)",
+                                "2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                              },
+                              "parameters": [
+                                "fossil_rock",
+                                "Tween",
+                                "\"got-fossil\"",
+                                "point_fossil.X()",
+                                "point_fossil.Y()",
+                                "\"linear\"",
+                                "2",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                              },
+                              "parameters": [
+                                "vehicle_body",
+                                "Tween",
+                                "\"vehicle-finish-play\"",
+                                "vehicle_body.X()+(ScreenWidth()*1.5)",
+                                "\"easeInOutQuad\"",
+                                "3.5",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModPitchSoundChannel"
+                              },
+                              "parameters": [
+                                "",
+                                "1",
+                                "=",
+                                "1.3"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Wait"
+                              },
+                              "parameters": [
+                                "0.4"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "FadeSoundVolume"
+                              },
+                              "parameters": [
+                                "",
+                                "1",
+                                "17 * (game.setting.sfx/100)",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySoundCanal"
+                              },
+                              "parameters": [
+                                "",
+                                "assets\\SFX\\Gameplay\\2. Pecah Batu\\Pickaxe pecah.wav",
+                                "6",
+                                "yes",
+                                "40 * (game.setting.sfx/100)",
+                                "2.9"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
                 }
               ],
               "parameters": []
-            },
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Movement Obstacle"
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreX"
-                  },
-                  "parameters": [
-                    "obstacles_group",
-                    "-",
-                    "((config.road.speed * 0.9) + config.obstacle.move_speed) * TimeDelta() * LayerTimeScale(\"\")"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "obstacles_group",
-                    "<=",
-                    "-(ScreenWidth()*0.45)"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "obstacles_group",
-                    ""
-                  ]
-                }
-              ]
             },
             {
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "name": "Collision Obstacle",
+              "folded": true,
+              "name": "Win Logic",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
@@ -6161,34 +6380,45 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "CollisionNP"
+                        "value": "Tween::HasFinished"
                       },
                       "parameters": [
-                        "vehicle_drill",
-                        "obstacles",
-                        "",
-                        "",
-                        ""
+                        "fossil_rock",
+                        "Tween",
+                        "\"got-fossil\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
-                  "actions": [],
-                  "events": [
+                  "actions": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Flash::Flash::Flash"
-                          },
-                          "parameters": [
-                            "vehicle",
-                            "Flash",
-                            "1",
-                            ""
-                          ]
-                        }
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "transition_brick_game",
+                        "Animation",
+                        "=",
+                        "current_level.level_area"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                      },
+                      "parameters": [
+                        "transition_brick_game",
+                        "Tween",
+                        "\"transition_brick_game\"",
+                        "-4",
+                        "\"linear\"",
+                        "4",
+                        ""
                       ]
                     }
                   ]
@@ -6198,136 +6428,56 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "CollisionNP"
+                        "value": "Tween::HasFinished"
                       },
                       "parameters": [
-                        "vehicle_drill",
-                        "fossil_rock",
-                        "",
-                        "",
-                        ""
+                        "transition_brick_game",
+                        "Tween",
+                        "\"transition_brick_game\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
-                  "actions": [],
-                  "events": [
+                  "actions": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlaySoundCanal"
-                          },
-                          "parameters": [
-                            "",
-                            "assets\\SFX\\Gameplay\\Game Win.mp3",
-                            "4",
-                            "no",
-                            "40 * (game.setting.sfx/100)",
-                            "0.6"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Wait"
-                          },
-                          "parameters": [
-                            "0.1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlaySoundCanal"
-                          },
-                          "parameters": [
-                            "",
-                            "assets\\SFX\\Gameplay\\Game Win.mp3",
-                            "5",
-                            "no",
-                            "55 * (game.setting.sfx/100)",
-                            "2"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectPositionTween2"
-                          },
-                          "parameters": [
-                            "fossil_rock",
-                            "Tween",
-                            "\"got-fossil\"",
-                            "point_fossil.X()",
-                            "point_fossil.Y()",
-                            "\"linear\"",
-                            "2",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
-                          },
-                          "parameters": [
-                            "vehicle_body",
-                            "Tween",
-                            "\"vehicle-finish-play\"",
-                            "vehicle_body.X()+(ScreenWidth()*1.5)",
-                            "\"easeInOutQuad\"",
-                            "3.5",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ModPitchSoundChannel"
-                          },
-                          "parameters": [
-                            "",
-                            "1",
-                            "=",
-                            "1.3"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Wait"
-                          },
-                          "parameters": [
-                            "0.4"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "FadeSoundVolume"
-                          },
-                          "parameters": [
-                            "",
-                            "1",
-                            "17 * (game.setting.sfx/100)",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlaySoundCanal"
-                          },
-                          "parameters": [
-                            "",
-                            "assets\\SFX\\Gameplay\\2. Pecah Batu\\Pickaxe pecah.wav",
-                            "6",
-                            "yes",
-                            "40 * (game.setting.sfx/100)",
-                            "2.9"
-                          ]
-                        }
+                      "type": {
+                        "value": "StopSoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StopSoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "6"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.8"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Scene"
+                      },
+                      "parameters": [
+                        "",
+                        "\"brick-game\"",
+                        ""
                       ]
                     }
                   ]
@@ -6335,130 +6485,10 @@
               ],
               "parameters": []
             }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "folded": true,
-          "name": "Win Logic",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "Tween::HasFinished"
-                  },
-                  "parameters": [
-                    "fossil_rock",
-                    "Tween",
-                    "\"got-fossil\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "transition_brick_game",
-                    "Animation",
-                    "=",
-                    "current_level.level_area"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
-                  },
-                  "parameters": [
-                    "transition_brick_game",
-                    "Tween",
-                    "\"transition_brick_game\"",
-                    "-4",
-                    "\"linear\"",
-                    "4",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "Tween::HasFinished"
-                  },
-                  "parameters": [
-                    "transition_brick_game",
-                    "Tween",
-                    "\"transition_brick_game\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "StopSoundCanal"
-                  },
-                  "parameters": [
-                    "",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "StopSoundCanal"
-                  },
-                  "parameters": [
-                    "",
-                    "6"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Wait"
-                  },
-                  "parameters": [
-                    "0.8"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"brick-game\"",
-                    ""
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
+          ]
         }
-      ]
+      ],
+      "parameters": []
     },
     {
       "colorB": 30,

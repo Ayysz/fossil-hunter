@@ -1,7 +1,7 @@
 {
   "firstLayout": "home",
   "gdVersion": {
-    "build": 250,
+    "build": 251,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -17788,11 +17788,6 @@
               "name": "stop",
               "type": "boolean",
               "value": false
-            },
-            {
-              "name": "touch_start_y",
-              "type": "number",
-              "value": 0
             },
             {
               "name": "x_start_in",
